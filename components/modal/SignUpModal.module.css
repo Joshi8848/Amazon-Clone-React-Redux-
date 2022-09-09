@@ -42,7 +42,8 @@
   line-height: 0;
 }
 
-.signin-modal button {
+.sign-in__btn {
+  display: inline-block;
   cursor: pointer;
   font-weight: 600;
   background: -webkit-linear-gradient(top, #f8e3ad, #eeba37);
@@ -56,7 +57,7 @@
   transition: all 0.3s;
 }
 
-.signin-modal button:hover {
+.sign-in__btn:hover {
   background: -webkit-linear-gradient(top, #eeba37, #f8e3ad);
 }
 

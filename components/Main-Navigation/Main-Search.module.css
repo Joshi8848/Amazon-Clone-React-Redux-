@@ -18,7 +18,7 @@
   font-family: inherit;
   font-size: 1.8rem;
   color: #111;
-  padding: 7px 10px 7px 10px;
+  padding: 10px 10px 10px 10px;
   line-height: 10px;
 }
 
@@ -30,7 +30,7 @@
   padding: 0 1rem 0 1rem;
   transition: all 0.3s;
   background-color: rgb(221, 156, 35);
-  height: 3.8rem;
+  height: 4.4rem;
 }
 
 .search-icon__container:hover {

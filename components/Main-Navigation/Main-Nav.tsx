@@ -1,4 +1,6 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+import ShoppingCartLogo from "../../images/shopping-cart-icon.png";
 import styles from "./Main-Nav.module.css";
 import AmazonLogo from "../../images/amazon-logo.svg";
 import MainSearchBar from "./Main-Search-Bar";
@@ -10,6 +12,8 @@ interface NavProps {
 }
 
 const MainNavigation: React.FC<NavProps> = React.memo((props) => {
+  const [numberOfCartItems, setNumberOfCartItems] = useState(0);
+
   return (
     <nav className={styles.nav}>
       <AmazonLogo className={styles.logo} />
@@ -19,6 +23,15 @@ const MainNavigation: React.FC<NavProps> = React.memo((props) => {
         <h3>Hello, sign in</h3>
       </div>
       <SignUpModal />
+      <div className={styles["cart-container"]}>
+        <Image
+          width={50}
+          height={50}
+          src={ShoppingCartLogo}
+          className={styles.cart}
+        />
+        <span className={styles["number-ofItems"]}>{numberOfCartItems}</span>
+      </div>
     </nav>
   );
 });

@@ -1,11 +1,14 @@
-import { eventNames } from "process";
+import { useRouter } from "next/router";
 import { Fragment, useState, useRef } from "react";
 import Backdrop from "./Backdrop";
 import styles from "./SignUpModal.module.css";
+import Link from "next/link";
 
 let open: boolean = false;
 
 const SignUpModal = () => {
+  const router = useRouter();
+
   const [modalOpen, setModalOpen] = useState(false);
 
   const modalEl = useRef<HTMLDivElement>(null);
@@ -37,6 +40,10 @@ const SignUpModal = () => {
     }, 500);
   };
 
+  const handleSignInChange = () => {
+    router.push("/login");
+  };
+
   const modal = (
     <div
       className={styles["signin-modal"]}
@@ -45,9 +52,11 @@ const SignUpModal = () => {
       onMouseLeave={handleClose}
     >
       <div className={styles.arrow2}></div>
-      <button className={styles.noselect} onMouseEnter={handleModalOpen}>
-        Sign in
+
+      <button className={styles["sign-in__btn"]}>
+        <Link href="/login">Sign in</Link>
       </button>
+
       <h4 className={styles.noselect}>
         New Customer? <span>Start here</span>
       </h4>

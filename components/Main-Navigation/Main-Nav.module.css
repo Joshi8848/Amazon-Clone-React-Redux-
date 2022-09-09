@@ -3,7 +3,7 @@
 }
 
 .nav {
-  height: 6rem;
+  height: 7rem;
   width: 100vw;
   background-color: #131921;
   display: flex;
@@ -22,4 +22,19 @@
   font-size: 1.7rem;
   margin-right: 0.8rem;
   letter-spacing: 0.2px;
+}
+
+.cart-container {
+  margin-left: 5rem;
+  max-width: fit-content;
+  position: relative;
+}
+
+.number-ofItems {
+  position: absolute;
+  top: 2px;
+  left: 22px;
+  font-weight: 700;
+  color: orange;
+  font-size: 2rem;
 }

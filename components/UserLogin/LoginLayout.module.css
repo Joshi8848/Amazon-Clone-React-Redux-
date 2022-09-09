@@ -1,0 +1,110 @@
+.amazon-logo {
+  margin: 2rem 0 2rem 0rem;
+  fill: black;
+  align-self: center;
+}
+
+.sign-in__box {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  align-items: flex-start;
+  align-self: center;
+  width: 37rem;
+  min-height: 30rem;
+  background-color: white;
+  box-shadow: 0 0 2px 1px rgb(158, 153, 153);
+}
+
+.sign-in__box h1 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.username-info {
+  flex-basis: 90%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.username-info label {
+  margin: 2rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.username-info input {
+  font-family: inherit;
+  border-radius: 3px;
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  height: 2.8rem;
+  margin-bottom: 0.6rem;
+  outline: none;
+  transition: all 0.3s;
+  border: 1px solid #8d9096;
+}
+
+.username-info input:focus {
+  border: 1px solid orange;
+  box-shadow: 0 0 5px 3px rgba(192, 127, 53, 1);
+}
+
+.username-info button {
+  color: black;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1.8rem;
+  border: none;
+  padding: 1rem 15rem;
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-style: solid;
+  border-width: 1px;
+  transition: all 0.3s;
+}
+
+.username-info button:hover {
+  background: linear-gradient(to bottom, #f0c14b, #f7dfa5);
+}
+
+.username-info button:active {
+  transform: scale(0.95);
+}
+
+.sign-in__box p {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.sign-in__box p a {
+  color: blue;
+}
+
+.sign-in__box p a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.show-error {
+  margin: 0 !important;
+  color: red;
+}
+
+.user-email {
+  font-size: 2rem;
+  color: black;
+}
+
+.user-email {
+  margin-bottom: -0.5rem;
+}
+
+.change-email {
+  cursor: pointer;
+}
