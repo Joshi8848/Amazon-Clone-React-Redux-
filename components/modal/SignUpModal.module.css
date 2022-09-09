@@ -1,0 +1,86 @@
+.arrow {
+  position: relative;
+  cursor: pointer;
+  border-style: solid;
+  top: 2px;
+  border-width: 5px;
+  border-color: transparent;
+  border-bottom-width: 0;
+  border-top: 7px solid #ccc;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.signin-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 13px;
+  left: -120px;
+  width: 25rem;
+  height: 20rem;
+  background-color: wheat;
+  box-shadow: 0 0 2px 1px white;
+}
+
+.arrow2 {
+  position: absolute;
+  border-style: solid;
+  border-width: 9px;
+  left: 111px;
+  top: -10px;
+  border-color: transparent;
+  border-top-width: 0;
+  border-bottom: 10px solid white;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.signin-modal button {
+  cursor: pointer;
+  font-weight: 600;
+  background: -webkit-linear-gradient(top, #f8e3ad, #eeba37);
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #c89411 #b0820f #99710d;
+  font-family: inherit;
+  font-size: 1.5rem;
+  margin-top: -3rem;
+  padding: 0.7rem 5rem;
+  transition: all 0.3s;
+}
+
+.signin-modal button:hover {
+  background: -webkit-linear-gradient(top, #eeba37, #f8e3ad);
+}
+
+.signin-modal h4 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.signin-modal h4 span {
+  cursor: pointer;
+  color: blue;
+}
+
+.signin-modal h4 span:hover {
+  text-decoration: underline;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

@@ -9,6 +9,7 @@ const Header = () => {
   const [country, setCountry] = useState(null);
 
   useEffect(() => {
+    return;
     const currentUserCountry = async () => {
       const location = await getLocation();
       setCountry(location);

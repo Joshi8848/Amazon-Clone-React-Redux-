@@ -1,73 +1,25 @@
 .logo {
-  padding: 1rem 2rem 0.5rem 1rem;
-}
-
-.location {
-  font-size: 2rem;
-  margin-right: 0.3rem;
-  stroke: white;
-}
-
-.deliver {
-  color: white;
-  font-size: 1.5rem;
-}
-
-.country {
-  margin: 0;
-  font-size: 1.5rem;
+  padding: 1rem 4rem 0.5rem 1rem;
 }
 
 .nav {
   height: 6rem;
-  max-width: 100%;
+  width: 100vw;
   background-color: #131921;
   display: flex;
   align-items: center;
 }
 
-.search-container {
-  width: fit-content;
-  margin-left: 4rem;
+.sign-in__link {
   display: flex;
-  border-radius: 7px;
   align-items: center;
+
+  margin-left: 4rem;
+  color: white;
 }
 
-.search {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  width: 40rem;
-  height: 3.8rem;
-  border: none;
-  outline: none;
-  font-family: inherit;
-  font-size: 1.8rem;
-  color: #111;
-  padding: 7px 10px 7px 10px;
-  line-height: 10px;
-}
-
-.search-icon__container {
-  cursor: pointer;
-  display: flex;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 0 1rem 0 1rem;
-  transition: all 0.3s;
-  background-color: rgb(221, 156, 35);
-  height: 3.8rem;
-}
-
-.search-icon__container:hover {
-  background-color: rgb(184, 121, 3);
-}
-
-.search-icon {
-  align-self: center;
-  font-size: 24px;
-}
-
-.active {
-  box-shadow: 0 0 2px 4px orange;
+.sign-in__link h3 {
+  font-size: 1.7rem;
+  margin-right: 0.8rem;
+  letter-spacing: 0.2px;
 }

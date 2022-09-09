@@ -1,52 +1,24 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment } from "react";
 import styles from "./Main-Nav.module.css";
 import AmazonLogo from "../../images/amazon-logo.svg";
-import { BiSearch } from "react-icons/bi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
+import MainSearchBar from "./Main-Search-Bar";
+import SignUpModal from "../modal/SignUpModal";
+import UserLocation from "../location/User-Location";
 
 interface NavProps {
   userCountry: string | null;
 }
 
 const MainNavigation: React.FC<NavProps> = React.memo((props) => {
-  const divEl = useRef<HTMLDivElement>(null);
-
-  const inputFocusHandler = () => {
-    divEl.current!.classList.add(styles.active);
-  };
-
-  const inputBlurHandler = () => {
-    divEl.current!.classList.remove(styles.active);
-  };
-
-  const locationEl = (
-    <Fragment>
-      <HiOutlineLocationMarker className={styles.location} />
-      <span className={styles.deliver}>
-        Deliver To
-        <br />
-        <h2 className={styles.country}>{props.userCountry}</h2>
-      </span>
-    </Fragment>
-  );
-
   return (
     <nav className={styles.nav}>
       <AmazonLogo className={styles.logo} />
-
-      {props.userCountry && locationEl}
-      <div className={styles["search-container"]} ref={divEl} tabIndex={-1}>
-        <input
-          className={styles.search}
-          type="text"
-          onFocus={inputFocusHandler}
-          onBlur={inputBlurHandler}
-        />
-        <div className={styles["search-icon__container"]}>
-          {/* <input type="submit" value="" /> */}
-          <BiSearch className={styles["search-icon"]} />
-        </div>
+      {props.userCountry && <UserLocation userCountry={props.userCountry} />}
+      <MainSearchBar />
+      <div className={styles["sign-in__link"]}>
+        <h3>Hello, sign in</h3>
       </div>
+      <SignUpModal />
     </nav>
   );
 });
