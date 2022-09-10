@@ -3,10 +3,10 @@ import LoginLayout from "./LoginLayout";
 import { useRouter } from "next/router";
 import styles from "./UsernameLogin.module.css";
 
-export const AmazonPolicy = () => {
+export const AmazonPolicy: React.FC<{ str: string }> = (props) => {
   return (
     <p>
-      By continuing, you agree to Amazon's{" "}
+      By {props.str}, you agree to Amazon's{" "}
       <a
         href="https://www.amazon.sg/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=201909000"
         target="_blank"

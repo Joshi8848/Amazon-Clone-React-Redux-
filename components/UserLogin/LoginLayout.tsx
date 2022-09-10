@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useContext } from "react";
 import { AmazonPolicy } from "./UsernameLogin";
 import styles from "./LoginLayout.module.css";
 import AmazonLogo from "../../images/amazon-logo.svg";
-import { useFormik } from "formik";
+import {  useFormik } from "formik";
 import * as Yup from "yup";
-
+import { LoginContext, LoginParams } from "../../context/login-context";
 import { useRouter } from "next/router";
 
 let emailPage: boolean = true;
@@ -15,36 +15,40 @@ const emailAddress: { email: string | null; password: string | null } = {
 };
 
 const LoginLayout = () => {
-  const router = useRouter();
-  if (router.pathname === "/login") {
+  const loginCtx = useContext(LoginContext)
+  const [loginCreds, setLoginCreds] = useState();
+  const { pathname, push } = useRouter();
+
+  if (pathname === "/login") {
     emailPage = true;
-  } else if (router.pathname === "/login/password") {
+  } else if (pathname === "/login/password") {
     emailPage = false;
   }
+
   const labelText: string = emailPage
     ? "Email or mobile phone number"
     : "Password";
 
   const handleFormSubmission = (event: React.FormEvent) => {
     event.preventDefault();
-    if (router.pathname === "/login" && formik.values.email.trim().length > 0) {
+    if (pathname === "/login" && formik.values.email.trim().length > 0) {
       emailPage = false;
-      router.push("/login/password");
+      push("/login/password");
       emailAddress.email = formik.values.email;
       return;
     }
     if (
-      router.pathname === "/login/password" &&
+      pathname === "/login/password" &&
       formik.values.password.trim().length > 0
     ) {
-      router.push("/");
+      push("/");
       emailAddress.password = formik.values.password;
     }
   };
 
   const switchToEmailPageHandler = () => {
     emailPage = true;
-    router.push("/login");
+    push("/login");
   };
 
   const formik = useFormik({

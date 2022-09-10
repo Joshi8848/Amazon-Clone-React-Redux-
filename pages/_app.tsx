@@ -1,8 +1,12 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-
+import LoginContextProvider from "../context/login-context";
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <LoginContextProvider>
+      <Component {...pageProps} />{" "}
+    </LoginContextProvider>
+  );
 }
 
 export default MyApp;

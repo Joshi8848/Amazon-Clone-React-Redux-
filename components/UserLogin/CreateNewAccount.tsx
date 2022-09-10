@@ -1,17 +1,39 @@
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import AmazonLogo from "../../images/amazon-logo.svg";
 import styles from "./LoginLayout.module.css";
 import { AmazonPolicy } from "./UsernameLogin";
+import { LoginParams } from "../../context/login-context";
+import { useRouter } from "next/router";
+import classes from "./CreateNewAccount.module.css";
 
-const CreateNewAccount = () => {
-  const formik = useFormik({
+interface SignInCreds {
+  name: string;
+  email: string;
+  password: string;
+}
+
+let confirmPassword: string;
+
+const CreateNewAccount: React.FC<{
+  onCreateAccount: (loginObj: LoginParams) => void;
+}> = React.memo((props) => {
+  const [pwError, setPwError] = useState(false);
+  const Router = useRouter();
+
+  const { values, errors, touched, handleBlur, handleChange } = useFormik({
     initialValues: {
       name: "",
       email: "",
       password: "",
     },
     validationSchema: Yup.object({
+      name: Yup.string()
+        .max(20, "Name cannot be more than 20 characters!")
+        .required("Required!")
+        .min(5, "Name must be at least 5 characters")
+        .matches(/^[a-z]+$/i, "Name must contain only letters"),
       email: Yup.string()
         .max(30, "Email must be 30 characters or less")
         .required("Required!")
@@ -31,44 +53,92 @@ const CreateNewAccount = () => {
         .matches(/^(?=.*[0-9])/, "Must contain at least one number")
         .matches(
           /^(?=.*[!@#%&])/,
-          "Must contain at least one special character"
+          "Must contain at least one special character (i.e: !@#%&)"
         ),
     }),
-    onSubmit: (values: object) => {},
+    onSubmit: (values: SignInCreds) => {},
   });
+
+  const createFormSubmitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (pwError) return;
+    const loginObj = { name: values.name, email: values.email };
+    props.onCreateAccount(loginObj);
+    Router.push("/");
+  };
+
+  const handlePasswordMatch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    confirmPassword = event.target.value;
+    if (
+      confirmPassword.length === values.password.length &&
+      confirmPassword !== values.password
+    ) {
+      setPwError(true);
+    } else if (confirmPassword.length > values.password.length) {
+      setPwError(true);
+    } else {
+      setPwError(false);
+    }
+  };
+
   return (
-    <div>
+    <div className={classes["create-account__page"]}>
       <AmazonLogo className={styles["amazon-logo"]} />
       <div className={styles["sign-in__box"]}>
         <h1>Sign in</h1>
 
         <form
-          onSubmit={formik.handleSubmit}
+          onSubmit={createFormSubmitHandler}
           className={styles["username-info"]}
         >
           <label htmlFor="name">Your Name</label>
 
           <input
+            id="name"
+            type="text"
+            onBlur={handleBlur}
+            value={values.name}
+            onChange={handleChange}
+          />
+          {errors.name && touched.name && (
+            <p className={styles["show-error"]}>{errors.name}</p>
+          )}
+
+          <label htmlFor="email">Your Email</label>
+
+          <input
             id="email"
             type="text"
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-            onChange={formik.handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+            onChange={handleChange}
           />
+
+          {errors.email && touched.email && (
+            <p className={styles["show-error"]}>{errors.email}</p>
+          )}
+
+          <label htmlFor="password">Password</label>
 
           <input
             id="password"
-            type="text"
-            onBlur={formik.handleBlur}
-            value={formik.values.password}
-            onChange={formik.handleChange}
+            type="password"
+            onBlur={handleBlur}
+            value={values.password}
+            onChange={handleChange}
           />
 
-          <p className={styles["show-error"]}>{formik.errors.email}</p>
+          {errors.password && touched.password && (
+            <p className={styles["show-error"]}>{errors.password}</p>
+          )}
 
-          <p className={styles["show-error"]}>{formik.errors.password}</p>
+          <label htmlFor="confirm-password">Confirm Password</label>
 
-          <p className={styles["show-error"]}>No Email Found</p>
+          <input id="password" type="password" onChange={handlePasswordMatch} />
+
+          {pwError && (
+            <p className={styles["show-error"]}>Password mismatch.</p>
+          )}
 
           <button>Continue</button>
         </form>
@@ -76,6 +146,6 @@ const CreateNewAccount = () => {
       </div>
     </div>
   );
-};
+});
 
 export default CreateNewAccount;

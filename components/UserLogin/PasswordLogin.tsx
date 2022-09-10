@@ -5,6 +5,7 @@ const PasswordLoginPage = () => {
   return (
     <div className={styles["password-page"]}>
       <LoginLayout />
+      
     </div>
   );
 };

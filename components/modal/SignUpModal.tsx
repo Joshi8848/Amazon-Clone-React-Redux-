@@ -1,12 +1,14 @@
 import { useRouter } from "next/router";
-import { Fragment, useState, useRef } from "react";
+import React, { Fragment, useState, useRef, useContext } from "react";
 import Backdrop from "./Backdrop";
 import styles from "./SignUpModal.module.css";
 import Link from "next/link";
+import { LoginContext } from "../../context/login-context";
 
 let open: boolean = false;
 
-const SignUpModal = () => {
+const SignUpModal = React.memo(() => {
+  const { loggedInStatus, logoutFunc } = useContext(LoginContext);
   const router = useRouter();
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -44,6 +46,15 @@ const SignUpModal = () => {
     router.push("/login");
   };
 
+  const logoutHandler = () => {
+    if (!loggedInStatus) return;
+    logoutFunc();
+  };
+
+  const redirectToNewAccountCreatePageHandler = () => {
+    router.push("/create-account");
+  };
+
   const modal = (
     <div
       className={styles["signin-modal"]}
@@ -53,13 +64,25 @@ const SignUpModal = () => {
     >
       <div className={styles.arrow2}></div>
 
-      <button className={styles["sign-in__btn"]}>
-        <Link href="/login">Sign in</Link>
-      </button>
+      <Link href={!loggedInStatus ? "/login" : "/"}>
+        <button onClick={logoutHandler} className={styles["sign-in__btn"]}>
+          {!loggedInStatus ? "Sign in" : "Sign out"}
+        </button>
+      </Link>
 
-      <h4 className={styles.noselect}>
-        New Customer? <span>Start here</span>
-      </h4>
+      {!loggedInStatus && (
+        <h4 className={styles.noselect}>
+          New Customer?{" "}
+          <span onClick={redirectToNewAccountCreatePageHandler}>
+            Start here
+          </span>
+        </h4>
+      )}
+      {loggedInStatus && (
+        <h4 className={styles.noselect}>
+          <span onClick={handleSignInChange}>Change Account</span>
+        </h4>
+      )}
     </div>
   );
 
@@ -75,6 +98,6 @@ const SignUpModal = () => {
       </div>
     </Fragment>
   );
-};
+});
 
 export default SignUpModal;

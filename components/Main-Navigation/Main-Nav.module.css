@@ -24,8 +24,18 @@
   letter-spacing: 0.2px;
 }
 
+.sign-in__link h3 span:first-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.sign-in__link h3 span:last-child {
+  font-weight: 600;
+}
+
 .cart-container {
-  margin-left: 5rem;
+  margin-left: 8rem;
   max-width: fit-content;
   position: relative;
 }
