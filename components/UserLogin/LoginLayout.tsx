@@ -2,54 +2,20 @@ import React, { Fragment, useState, useContext } from "react";
 import { AmazonPolicy } from "./UsernameLogin";
 import styles from "./LoginLayout.module.css";
 import AmazonLogo from "../../images/amazon-logo.svg";
-import {  useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
 import { LoginContext, LoginParams } from "../../context/login-context";
 import { useRouter } from "next/router";
 
 let emailPage: boolean = true;
 
-const emailAddress: { email: string | null; password: string | null } = {
+const emailAddress: { email: string | null } = {
   email: null,
-  password: null,
 };
 
 const LoginLayout = () => {
-  const loginCtx = useContext(LoginContext)
-  const [loginCreds, setLoginCreds] = useState();
+  const loginCtx = useContext(LoginContext);
   const { pathname, push } = useRouter();
-
-  if (pathname === "/login") {
-    emailPage = true;
-  } else if (pathname === "/login/password") {
-    emailPage = false;
-  }
-
-  const labelText: string = emailPage
-    ? "Email or mobile phone number"
-    : "Password";
-
-  const handleFormSubmission = (event: React.FormEvent) => {
-    event.preventDefault();
-    if (pathname === "/login" && formik.values.email.trim().length > 0) {
-      emailPage = false;
-      push("/login/password");
-      emailAddress.email = formik.values.email;
-      return;
-    }
-    if (
-      pathname === "/login/password" &&
-      formik.values.password.trim().length > 0
-    ) {
-      push("/");
-      emailAddress.password = formik.values.password;
-    }
-  };
-
-  const switchToEmailPageHandler = () => {
-    emailPage = true;
-    push("/login");
-  };
 
   const formik = useFormik({
     initialValues: {
@@ -81,6 +47,40 @@ const LoginLayout = () => {
     }),
     onSubmit: (values: object) => {},
   });
+
+  if (pathname === "/login") {
+    emailPage = true;
+  } else if (pathname === "/login/password") {
+    emailPage = false;
+  }
+
+  const labelText: string = emailPage
+    ? "Email or mobile phone number"
+    : "Password";
+
+  const handleFormSubmission = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (pathname === "/login" && formik.values.email.trim().length > 0) {
+      emailPage = false;
+      push("/login/password");
+      emailAddress.email = formik.values.email;
+      return;
+    }
+    if (
+      pathname === "/login/password" &&
+      formik.values.password.trim().length > 0
+    ) {
+      const userEmail = { email: emailAddress.email };
+      console.log(userEmail);
+      loginCtx.shareLoginCredentials(userEmail);
+      push("/");
+    }
+  };
+
+  const switchToEmailPageHandler = () => {
+    emailPage = true;
+    push("/login");
+  };
 
   return (
     <Fragment>

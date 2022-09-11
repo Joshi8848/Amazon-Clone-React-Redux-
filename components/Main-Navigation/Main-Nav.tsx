@@ -15,12 +15,13 @@ interface NavProps {
 const MainNavigation: React.FC<NavProps> = React.memo((props) => {
   const [numberOfCartItems, setNumberOfCartItems] = useState(0);
   const { loginInfo, loggedInStatus } = useContext(LoginContext);
-  const { name, email } = loginInfo;
+  const { email } = loginInfo;
 
+  console.log(email);
   const ifLoggedIn = (
     <h3>
-      <span>Hello, {name}</span> <br />
-      <span>{email}</span>
+      <span>Hello, {email}</span> <br />
+      <span>Welcome to Amazon</span>
     </h3>
   );
   const ifNotLoggedIn = (

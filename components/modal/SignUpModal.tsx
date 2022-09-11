@@ -2,8 +2,10 @@ import { useRouter } from "next/router";
 import React, { Fragment, useState, useRef, useContext } from "react";
 import Backdrop from "./Backdrop";
 import styles from "./SignUpModal.module.css";
+import classes from "../../styles/index.module.css";
 import Link from "next/link";
 import { LoginContext } from "../../context/login-context";
+import { time } from "console";
 
 let open: boolean = false;
 
@@ -28,7 +30,7 @@ const SignUpModal = React.memo(() => {
     setTimeout(() => {
       setModalOpen(false);
       open = false;
-    }, 500);
+    }, 600);
   };
 
   const handleLeave = () => {
@@ -39,7 +41,7 @@ const SignUpModal = React.memo(() => {
         setModalOpen(false);
         open = false;
       }
-    }, 500);
+    }, 600);
   };
 
   const handleSignInChange = () => {
@@ -71,7 +73,7 @@ const SignUpModal = React.memo(() => {
       </Link>
 
       {!loggedInStatus && (
-        <h4 className={styles.noselect}>
+        <h4 className={classes.noselect}>
           New Customer?{" "}
           <span onClick={redirectToNewAccountCreatePageHandler}>
             Start here
@@ -79,7 +81,7 @@ const SignUpModal = React.memo(() => {
         </h4>
       )}
       {loggedInStatus && (
-        <h4 className={styles.noselect}>
+        <h4 className={classes.noselect}>
           <span onClick={handleSignInChange}>Change Account</span>
         </h4>
       )}
@@ -88,7 +90,7 @@ const SignUpModal = React.memo(() => {
 
   return (
     <Fragment>
-      {/* <Backdrop /> */}
+      {modalOpen && <Backdrop />}
       <div
         className={styles.arrow}
         onMouseEnter={handleModalOpen}

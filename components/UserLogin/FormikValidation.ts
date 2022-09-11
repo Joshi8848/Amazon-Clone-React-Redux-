@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-export const formik = useFormik({
+const formik = useFormik({
   initialValues: {
     email: "",
     password: "",

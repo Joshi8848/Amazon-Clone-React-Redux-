@@ -6,8 +6,7 @@ interface Props {
 }
 
 export type LoginParams = {
-  name: string;
-  email: string;
+  email: string | null;
 };
 
 type LoginObj = {
