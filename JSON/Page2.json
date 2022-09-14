@@ -1,0 +1,156 @@
+[
+  {
+    "_Movies_&_TV": {
+      "name": "Movies_&_TV",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A2625373011&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_1&ds=v1%3AZD3sCYctlq5LbypLgCzQKmBE7TS2%2BDkv34nnK9iZ1vg",
+      "refinementID": "n:2625373011"
+    }
+  },
+  {
+    "_TV_Shows": {
+      "name": "TV_Shows",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A2625373011%2Cn%3A2649513011&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_2&ds=v1%3AKLni5ivI6ISWBiGr389%2BMJRazAQZezJbsyWY%2FsoRgtQ",
+      "refinementID": "n:2625373011,n:2649513011"
+    }
+  },
+  {
+    "_Prime_Video": {
+      "name": "Prime_Video",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A2625373011%2Cn%3A2858778011&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_3&ds=v1%3AeJUcVcWACWGJE%2FJlulRClux6lZDw3bN116yHxCMmLys",
+      "refinementID": "n:2625373011,n:2858778011"
+    }
+  },
+  {
+    "_Movies_&_Films": {
+      "name": "Movies_&_Films",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A2625373011%2Cn%3A2649512011&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_4&ds=v1%3AU3LsejY42psTpxuyGZ4WjBnERsPMlg%2BpwuDS81orkRQ",
+      "refinementID": "n:2625373011,n:2649512011"
+    }
+  },
+  {
+    "_Laundry_Detergent": {
+      "name": "Laundry_Detergent",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A17572415011&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_5&ds=v1%3AtZHwsQsh19YD5Y1oXAAIpRK3FjhUnH7qZ0f5tBGERbU",
+      "refinementID": "n:17572415011"
+    }
+  },
+  {
+    "_Laundry_Detergent_Pacs_&_Tablets": {
+      "name": "Laundry_Detergent_Pacs_&_Tablets",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A17572415011%2Cn%3A14529075011&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_6&ds=v1%3AWJ3lYQ%2BrvtVBXlO2wDXL8%2FyjuG59zQ6z0vS%2BVFuU8Ic",
+      "refinementID": "n:17572415011,n:14529075011"
+    }
+  },
+  {
+    "_Liquid_Laundry_Detergent": {
+      "name": "Liquid_Laundry_Detergent",
+      "id": "https://www.amazon.com/s?k=All&rh=n%3A17572415011%2Cn%3A15342931&dc&qid=1663158736&rnid=2941120011&ref=sr_nr_n_7&ds=v1%3Al5AKyjJE4%2B05DRhloRn%2FPWZqnkeZHvhX7lRC%2FJOvjt8",
+      "refinementID": "n:17572415011,n:15342931"
+    }
+  },
+  {
+    "_Prime_Video": {
+      "name": "Prime_Video",
+      "id": "https://www.amazon.com/s?k=All&i=instant-video&dc&qid=1663158736&ref=sr_nr_i_8&ds=v1%3APNwgfdMt81Yr9Jpjl2fFBtFIBkHtdwJwJc9T2y5WYFA",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Sports_&_Outdoors": {
+      "name": "Sports_&_Outdoors",
+      "id": "https://www.amazon.com/s?k=All&i=sporting&dc&qid=1663158736&ref=sr_nr_i_9&ds=v1%3ACNq%2FpKDpUVHU7oyYgueKh0kxZufzoXwVz1YyamEKphQ",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Toys_&_Games": {
+      "name": "Toys_&_Games",
+      "id": "https://www.amazon.com/s?k=All&i=toys-and-games&dc&qid=1663158736&ref=sr_nr_i_10&ds=v1%3ASsCVGCVo1J1WNFslBgwU4pl0oaKXcmzTk83jnpyRcVA",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Health,_Household_&_Baby_Care": {
+      "name": "Health,_Household_&_Baby_Care",
+      "id": "https://www.amazon.com/s?k=All&i=hpc&dc&qid=1663158736&ref=sr_nr_i_11&ds=v1%3Av09%2BxIAIQzu8H1AQb5ayyNcaxWBosEBn0e4MAQUrHSo",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Office_Products": {
+      "name": "Office_Products",
+      "id": "https://www.amazon.com/s?k=All&i=office-products&dc&qid=1663158736&ref=sr_nr_i_12&ds=v1%3AWgRfYMO26YWgfn%2FDQM9845CzaEihq6Bp8nIzvkyirMQ",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Electronics": {
+      "name": "Electronics",
+      "id": "https://www.amazon.com/s?k=All&i=electronics&dc&qid=1663158736&ref=sr_nr_i_13&ds=v1%3ARLNjnTqoIKPM3So0UVlYlT68Q%2B26dUUe7RvtgoM7ia4",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Grocery_&_Gourmet_Food": {
+      "name": "Grocery_&_Gourmet_Food",
+      "id": "https://www.amazon.com/s?k=All&i=grocery&dc&qid=1663158736&ref=sr_nr_i_14&ds=v1%3ABN69dFg8QoyCB%2Bq1OrSQ8PsVm%2B7zdhsZwM9PFQie%2BIE",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Baby": {
+      "name": "Baby",
+      "id": "https://www.amazon.com/s?k=All&i=baby-products&dc&qid=1663158736&ref=sr_nr_i_15&ds=v1%3AUmZw1xF8mbUDvhoN%2B%2B21uK5vUB2Yh2gBOU%2Fjp1qOUgk",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Home_&_Kitchen": {
+      "name": "Home_&_Kitchen",
+      "id": "https://www.amazon.com/s?k=All&i=garden&dc&qid=1663158736&ref=sr_nr_i_16&ds=v1%3ANuRpPIAjoQAM5tt%2BgyHnUcua9DL545D7ARe%2BNC%2FQ1rc",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Industrial_&_Scientific": {
+      "name": "Industrial_&_Scientific",
+      "id": "https://www.amazon.com/s?k=All&i=industrial&dc&qid=1663158736&ref=sr_nr_i_17&ds=v1%3ALKMIffH5RsBnJUbejOYwCAg21bOvoQPXp0aHBq06cpo",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Everything_Else": {
+      "name": "Everything_Else",
+      "id": "https://www.amazon.com/s?k=All&i=misc&dc&qid=1663158736&ref=sr_nr_i_18&ds=v1%3A%2Bux4HWIns1oG7Oo3vNkJjZ0xNn9XNEYG%2FsJMD3imiyY",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Garden_&_Outdoor": {
+      "name": "Garden_&_Outdoor",
+      "id": "https://www.amazon.com/s?k=All&i=lawngarden&dc&qid=1663158736&ref=sr_nr_i_19&ds=v1%3AaC%2FCBENcoAtq4VYvXVPlJ5MJSWpitSWuLzr%2BKCePmT0",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Musical_Instruments": {
+      "name": "Musical_Instruments",
+      "id": "https://www.amazon.com/s?k=All&i=mi&dc&qid=1663158736&ref=sr_nr_i_20&ds=v1%3AZ4krcV0wJj%2F%2BCYPZ974M4FMTxWuAqIDcTAynq37dhgI",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Beauty_&_Personal_Care": {
+      "name": "Beauty_&_Personal_Care",
+      "id": "https://www.amazon.com/s?k=All&i=beauty&dc&qid=1663158736&ref=sr_nr_i_21&ds=v1%3AG02OcWPGKC4CHh9x%2FMcD1Xy8SGEmSjO4rLIb3DYyZBE",
+      "refinementID": ""
+    }
+  },
+  {
+    "_Tools_&_Home_Improvement": {
+      "name": "Tools_&_Home_Improvement",
+      "id": "https://www.amazon.com/s?k=All&i=tools&dc&qid=1663158736&ref=sr_nr_i_22&ds=v1%3A7%2FbCbu5H4zas8Zlyve9fgYOWBWi%2B7%2BE%2Blf23rIPKf5Y",
+      "refinementID": ""
+    }
+  }
+]

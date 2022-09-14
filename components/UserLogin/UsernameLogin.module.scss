@@ -1,0 +1,65 @@
+.username-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up__footer {
+  display: flex;
+  text-align: center;
+  width: 42rem;
+  flex-direction: column;
+  align-self: center;
+  gap: 2rem;
+  position: relative;
+
+  & span {
+    display: flex;
+    align-self: center;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 1.4rem;
+    color: #545557;
+    position: relative;
+    margin-top: 2.5rem;
+    display: inline-block;
+    z-index: 3;
+    width: fit-content;
+    background-color: #fff;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-top: 1px solid #e7e7e7;
+    position: absolute;
+    top: 35%;
+    margin-top: -1px;
+    z-index: 1;
+  }
+
+  & button {
+    font-family: inherit;
+    font-size: 1.5rem;
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.8rem;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #d2d4d6;
+    }
+
+    &:active {
+      transform: scale(0.95);
+      color: #0066c0;
+    }
+  }
+}

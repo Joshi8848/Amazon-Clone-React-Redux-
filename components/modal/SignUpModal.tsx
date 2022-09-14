@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React, { Fragment, useState, useRef, useContext } from "react";
 import Backdrop from "./Backdrop";
-import styles from "./SignUpModal.module.css";
-import classes from "../../styles/index.module.css";
+import styles from "./SignUpModal.module.scss";
+import classes from "../../styles/index.module.scss";
 import Link from "next/link";
 import { LoginContext } from "../../context/login-context";
 import { time } from "console";

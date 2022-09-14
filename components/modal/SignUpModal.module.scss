@@ -6,6 +6,7 @@
   left: 15px;
   z-index: 999;
   border-width: 5px;
+
   border-color: transparent;
   border-bottom-width: 0;
   border-top: 7px solid #ccc;
@@ -13,22 +14,6 @@
   height: 0;
   font-size: 0;
   line-height: 0;
-}
-
-.signin-modal {
-  z-index: 99;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 13px;
-  left: -120px;
-  width: 25rem;
-  height: 20rem;
-  background-color: white;
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .arrow2 {
@@ -46,6 +31,37 @@
   line-height: 0;
 }
 
+.signin-modal {
+  z-index: 9999;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 13px;
+  left: -120px;
+  width: 25rem;
+  height: 20rem;
+  background-color: white;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+
+  & h4 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  & h4 span {
+    cursor: pointer;
+    color: blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .sign-in__btn {
   display: inline-block;
   cursor: pointer;
@@ -59,23 +75,8 @@
   margin-top: -3rem;
   padding: 0.7rem 5rem;
   transition: all 0.3s;
-}
 
-.sign-in__btn:hover {
-  background: -webkit-linear-gradient(top, #eeba37, #f8e3ad);
-}
-
-.signin-modal h4 {
-  margin-top: 3rem;
-  font-size: 1.5rem;
-  color: black;
-}
-
-.signin-modal h4 span {
-  cursor: pointer;
-  color: blue;
-}
-
-.signin-modal h4 span:hover {
-  text-decoration: underline;
+  &:hover {
+    background: -webkit-linear-gradient(top, #eeba37, #f8e3ad);
+  }
 }

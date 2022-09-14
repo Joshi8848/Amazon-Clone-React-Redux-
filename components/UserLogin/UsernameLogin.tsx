@@ -1,7 +1,7 @@
 import React from "react";
 import LoginLayout from "./LoginLayout";
 import { useRouter } from "next/router";
-import styles from "./UsernameLogin.module.css";
+import styles from "./UsernameLogin.module.scss";
 
 export const AmazonPolicy: React.FC<{ str: string }> = (props) => {
   return (

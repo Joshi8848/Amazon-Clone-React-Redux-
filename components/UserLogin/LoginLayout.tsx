@@ -1,7 +1,8 @@
 import React, { Fragment, useState, useContext } from "react";
 import { AmazonPolicy } from "./UsernameLogin";
-import styles from "./LoginLayout.module.css";
-import AmazonLogo from "../../images/amazon-logo.svg";
+import Image from "next/image";
+import styles from "./LoginLayout.module.scss";
+import AmazonLogo from "../../images/amazon1.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { LoginContext, LoginParams } from "../../context/login-context";
@@ -84,14 +85,21 @@ const LoginLayout = () => {
 
   return (
     <Fragment>
-      <AmazonLogo className={styles["amazon-logo"]} />
+      <div className={styles["amazon-logo__box"]}>
+        <Image
+          width={100}
+          height={100}
+          src={AmazonLogo}
+          className={styles["amazon-logo"]}
+        />
+      </div>
       <div className={styles["sign-in__box"]}>
         <h1>Sign in</h1>
         {!emailPage && emailAddress.email && (
-          <p className={styles["user-email"]}>
+          <p className={styles["sign-in__box-email"]}>
             {emailAddress.email}{" "}
             <a
-              className={styles["change-email"]}
+              className={styles["sign-in__box-change-email"]}
               onClick={switchToEmailPageHandler}
             >
               Change

@@ -1,17 +1,17 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { Fragment } from "react";
-import styles from "./User-Location.module.css";
+import styles from "./User-Location.module.scss";
 
 const UserLocation: React.FC<{ userCountry: string }> = (props) => {
   return (
-    <Fragment>
-      <HiOutlineLocationMarker className={styles.location} />
-      <span className={styles.deliver}>
+    <div className={styles["location-box"]}>
+      <HiOutlineLocationMarker className={styles["location-box__logo"]} />
+      <span>
         Deliver To
         <br />
-        <h2 className={styles.country}>{props.userCountry}</h2>
+        <h2>{props.userCountry}</h2>
       </span>
-    </Fragment>
+    </div>
   );
 };
 

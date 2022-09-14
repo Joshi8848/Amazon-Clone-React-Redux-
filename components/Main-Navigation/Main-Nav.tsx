@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import Image from "next/image";
 import ShoppingCartLogo from "../../images/shopping-cart-icon.png";
-import styles from "./Main-Nav.module.css";
-import AmazonLogo from "../../images/amazon-logo.svg";
+import styles from "./Main-Nav.module.scss";
+import AmazonLogo from "../../images/amazon.svg";
 import MainSearchBar from "./Main-Search-Bar";
 import SignUpModal from "../modal/SignUpModal";
 import UserLocation from "../location/User-Location";
@@ -33,21 +33,18 @@ const MainNavigation: React.FC<NavProps> = React.memo((props) => {
   );
 
   return (
-    <nav className={styles.nav}>
-      <AmazonLogo className={styles.logo} />
+    <nav className={styles["main-nav"]}>
+      <div className={styles["main-nav__logo-container"]}>
+        <Image width={100} height={100} src={AmazonLogo} />
+      </div>
       {props.userCountry && <UserLocation userCountry={props.userCountry} />}
       <MainSearchBar />
-      <div className={styles["sign-in__link"]}>
+      <div className={styles["main-nav__sign-in"]}>
         {!loggedInStatus ? ifNotLoggedIn : ifLoggedIn}
       </div>
       <SignUpModal />
-      <div className={styles["cart-container"]}>
-        <Image
-          width={50}
-          height={50}
-          src={ShoppingCartLogo}
-          className={styles.cart}
-        />
+      <div className={styles["main-nav__cart-container"]}>
+        <Image src={ShoppingCartLogo} className={styles.cart} />
         <span className={styles["number-ofItems"]}>{numberOfCartItems}</span>
       </div>
     </nav>

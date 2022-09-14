@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import styles from "./Main-Slider.module.css";
-import classes from "../../../styles/index.module.css";
+import styles from "./Main-Slider.module.scss";
+import classes from "../../../styles/index.module.scss";
 import Image from "next/image";
 import SliderPic1 from "../../../images/slider-pic1.jpg";
 import SliderPic2 from "../../../images/slider-pic2.jpg";
@@ -54,47 +54,47 @@ const MainSlider = () => {
   };
 
   return (
-    <div className={styles["slider-container"]}>
-      <div
-        className={`${styles["slider-image__container"]} ${classes.noselect}`}
-      >
+    <div className={styles["slider-box"]}>
+      <div className={`${styles["slider-box__inside"]} ${classes.noselect}`}>
         <AiOutlineLeft
+          tabIndex={0}
           onClick={changeToPrevSlideHandler}
           className={`${styles["slider-icon"]} ${styles["slider-icon__left"]}`}
         />
         <AiOutlineRight
+          tabIndex={0}
           onClick={changeToNextSlideHandler}
           className={`${styles["slider-icon"]} ${styles["slider-icon__right"]}`}
         />
-        <div className={styles["slider--pictures__box"]}>
-          <div className={`${styles["slider-picture__box"]}`} ref={pic1}>
+        <div className={styles["slider-pictures-box"]}>
+          <div ref={pic1}>
             <Image
               src={SliderPic1}
-              className={`${styles["slider--picture"]}`}
+              className={`${styles["slider-pictures-box__picture"]}`}
             />
           </div>
-          <div className={`${styles["slider-picture__box"]}`} ref={pic2}>
+          <div ref={pic2}>
             <Image
               src={SliderPic2}
-              className={`${styles["slider--picture"]}`}
+              className={`${styles["slider-pictures-box__picture"]}`}
             />
           </div>
-          <div className={`${styles["slider-picture__box"]}`} ref={pic3}>
+          <div ref={pic3}>
             <Image
               src={SliderPic3}
-              className={`${styles["slider--picture"]} `}
+              className={`${styles["slider-pictures-box__picture"]} `}
             />
           </div>
-          <div className={`${styles["slider-picture__box"]}`} ref={pic4}>
+          <div ref={pic4}>
             <Image
               src={SliderPic4}
-              className={`${styles["slider--picture"]}`}
+              className={`${styles["slider-pictures-box__picture"]}`}
             />
           </div>
-          <div className={`${styles["slider-picture__box"]}`} ref={pic5}>
+          <div ref={pic5}>
             <Image
               src={SliderPic5}
-              className={`${styles["slider--picture"]} `}
+              className={`${styles["slider-pictures-box__picture"]} `}
             />
           </div>
         </div>

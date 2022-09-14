@@ -1,4 +1,4 @@
-import styles from "./Backdrop.module.css";
+import styles from "./Backdrop.module.scss";
 
 const Backdrop = () => {
   return <div className={styles.backdrop}></div>;

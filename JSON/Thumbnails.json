@@ -1,0 +1,122 @@
+[
+  {
+    "id": "computers",
+    "name": "Computers",
+    "picture": {
+      "src": "/_next/static/media/Computer.22178a1e.avif",
+      "height": 580,
+      "width": 1031,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FComputer.22178a1e.avif&w=8&q=70"
+    }
+  },
+  {
+    "id": "luxury",
+    "name": "Luxury",
+    "picture": {
+      "src": "/_next/static/media/Luxury.309d3a67.jpg",
+      "height": 390,
+      "width": 585,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLuxury.309d3a67.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "baby-products",
+    "name": "Baby Products",
+    "picture": {
+      "src": "/_next/static/media/baby.6569d705.jpg",
+      "height": 408,
+      "width": 612,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbaby.6569d705.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "electronic-products",
+    "name": "Electronics",
+    "picture": {
+      "src": "/_next/static/media/electronic.071c665c.jpg",
+      "height": 1000,
+      "width": 1000,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Felectronic.071c665c.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "audio-books",
+    "name": "Audio Books",
+    "picture": {
+      "src": "/_next/static/media/audiobook.d89d0951.jpg",
+      "height": 440,
+      "width": 660,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faudiobook.d89d0951.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "video-games",
+    "name": "Video Games",
+    "picture": {
+      "src": "/_next/static/media/videogame.379e48b3.webp",
+      "height": 933,
+      "width": 1400,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvideogame.379e48b3.webp&w=8&q=70"
+    }
+  },
+  {
+    "id": "pet-products",
+    "name": "Pet",
+    "picture": {
+      "src": "/_next/static/media/pets.fe31b61d.png",
+      "height": 695,
+      "width": 989,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpets.fe31b61d.png&w=8&q=70"
+    }
+  },
+  {
+    "id": "mens-fashion",
+    "name": "Mens Fashion",
+    "picture": {
+      "src": "/_next/static/media/mensclothes.369929b4.jpg",
+      "height": 408,
+      "width": 612,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmensclothes.369929b4.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "womens-fashion",
+    "name": "Womens Fashion",
+    "picture": {
+      "src": "/_next/static/media/womenclothes.dea127f6.jpg",
+      "height": 429,
+      "width": 612,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwomenclothes.dea127f6.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "kitchen-appliances",
+    "name": "Kitchen",
+    "picture": {
+      "src": "/_next/static/media/kitchen.1f6855bf.jpg",
+      "height": 302,
+      "width": 538,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fkitchen.1f6855bf.jpg&w=8&q=70"
+    }
+  },
+  {
+    "id": "mobile-phones",
+    "name": "Mobile",
+    "picture": {
+      "src": "/_next/static/media/mobiles.84ae88f3.webp",
+      "height": 675,
+      "width": 1200,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmobiles.84ae88f3.webp&w=8&q=70"
+    }
+  },
+  {
+    "id": "musical-instruments",
+    "name": "Musical Instruments",
+    "picture": {
+      "src": "/_next/static/media/music.caba0d89.jpg",
+      "height": 338,
+      "width": 508,
+      "blurDataURL": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmusic.caba0d89.jpg&w=8&q=70"
+    }
+  }
+]

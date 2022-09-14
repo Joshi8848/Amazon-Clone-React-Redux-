@@ -5,9 +5,7 @@
 //   swcMinify: true,
 // };
 
-const withSvgr = require("next-svgr");
-
-module.exports = withSvgr({
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-});
+};

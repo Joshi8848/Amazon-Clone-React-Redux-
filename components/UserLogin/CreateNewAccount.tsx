@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import AmazonLogo from "../../images/amazon-logo.svg";
-import styles from "./LoginLayout.module.css";
+import Image from "next/image";
+import AmazonLogo from "../../images/amazon1.svg";
+import styles from "./LoginLayout.module.scss";
 import { AmazonPolicy } from "./UsernameLogin";
 import { LoginParams } from "../../context/login-context";
 import { useRouter } from "next/router";
-import classes from "./CreateNewAccount.module.css";
+import classes from "./CreateNewAccount.module.scss";
 
 interface SignInCreds {
   name: string;
@@ -81,10 +82,16 @@ const CreateNewAccount: React.FC<{
 
   return (
     <div className={classes["create-account__page"]}>
-      <AmazonLogo className={styles["amazon-logo"]} />
+      <div className={classes["amazon-logo__container"]}>
+        <Image
+          width={100}
+          height={100}
+          src={AmazonLogo}
+          className={styles["amazon-logo"]}
+        />
+      </div>
       <div className={styles["sign-in__box"]}>
         <h1>Sign in</h1>
-
         <form onSubmit={handleSubmit} className={styles["username-info"]}>
           <label htmlFor="name">Your Name</label>
 
