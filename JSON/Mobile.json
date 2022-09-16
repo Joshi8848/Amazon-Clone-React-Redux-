@@ -1,714 +1,398 @@
-{
-  "docs": [
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy A13 5G Cell Phone, Factory Unlocked Android Smartphone, 64GB, Triple Lens Camera, Infinity Display Screen, Long Battery Life, Expandable Storage, US Version, Green",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/614Bt9UXztL._AC_UL320_.jpg",
-      "app_sale_price": "249.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09MZCWH4J",
-      "product_id": "B09MZCWH4J",
-      "evaluate_rate": "4.2 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy S22 Ultra Cell Phone, Factory Unlocked Android Smartphone, 128GB, 8K Camera & Video, Brightest Display Screen, S Pen, Long Battery Life, Fast 4nm Processor, US Version, Phantom Black",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/614Bt9UXztL._AC_UL320_.jpg",
-      "app_sale_price": "999.99",
-      "app_sale_price_currency": "$",
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B09MVZSW5V",
-      "product_id": "B09MVZSW5V",
-      "evaluate_rate": "4.6 out of 5 stars",
-      "original_price": "$1,199.99"
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy A02s SM-A025V 32GB Android Smartphone Verizon Locked - Black - (Renewed)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/41BFdYiwdnL._AC_UL320_.jpg",
-      "app_sale_price": "78.14",
-      "app_sale_price_currency": "$",
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B09HY6N45T",
-      "product_id": "B09HY6N45T",
-      "evaluate_rate": "3.7 out of 5 stars",
-      "original_price": "$84.03"
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "Nokia 225 | GSM Unlocked Mobile Phone | 4G | Blue",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/41ItGSqmliL._AC_US40_.jpg",
-      "app_sale_price": "49.97",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B08Q1RN311",
-      "product_id": "B08Q1RN311",
-      "evaluate_rate": "3.6 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy A13 5G Cell Phone, Factory Unlocked Android Smartphone, 64GB, Triple Lens Camera, Infinity Display Screen, Long Battery Life, Expandable Storage, US Version, Green",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/417fYctf6rL._AC_US40_.jpg",
-      "app_sale_price": "249.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09MZCWH4J",
-      "product_id": "B09MZCWH4J",
-      "evaluate_rate": "4.2 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy S20 FE 5G Cell Phone, Factory Unlocked Android Smartphone, 128GB, Pro Grade Camera, 30X Space Zoom, Night Mode, US Version, Cloud Mint Green",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/417fYctf6rL._AC_US40_.jpg",
-      "app_sale_price": "499.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B08FYVMRM5",
-      "product_id": "B08FYVMRM5",
-      "evaluate_rate": "4.6 out of 5 stars",
-      "original_price": "$599.99"
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy A03s Cell Phone, Factory Unlocked Android Smartphone, 32GB, 3 Camera Lenses, Infinity Display Screen, Long Battery Life, Expandable Storage, US Version, Black",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/31-knlOilOL._AC_US40_.jpg",
-      "app_sale_price": "172.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09MZBTMQQ",
-      "product_id": "B09MZBTMQQ",
-      "evaluate_rate": "4.2 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "I13 Pro Max Smart Phones 1+8GB Smartphones 6.3 Inch HD Cellphones Mobile Phones Face ID Adnroid 6.0",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61cTi9MBqOL._AC_UL320_.jpg",
-      "app_sale_price": "798.90",
-      "app_sale_price_currency": "$",
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B0BDDL1T5G",
-      "product_id": "B0BDDL1T5G",
-      "evaluate_rate": null,
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "SAMSUNG Galaxy S21 Ultra 5G Factory Unlocked Android Cell Phone 128GB US Version Smartphone Pro-Grade Camera 8K Video 108MP High Res, Phantom Black",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/41hvvC7QnJL._AC_US40_.jpg",
-      "app_sale_price": null,
-      "app_sale_price_currency": null,
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B08N2MSSZY",
-      "product_id": "B08N2MSSZY",
-      "evaluate_rate": "4.6 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "2022 Unlocked Phones,i13 Pro Max Smart Phones 1+8gb Smartphones 6.3 Inch Hd Cellphones Mobile Phones Face Id Adnroid 6.0 Unlocked Android Smartphone Long Lasting Battery 123",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61uq5hw1V9L._AC_UL320_.jpg",
-      "app_sale_price": "99.48",
-      "app_sale_price_currency": "$",
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B0B35WT92P",
-      "product_id": "B0B35WT92P",
-      "evaluate_rate": null,
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "TCL 30XL |2022| Unlocked Cell Phone, 6.82 inch Vast Display, 5000mAh Battery, Android 12 Smartphone, 50MP AI Quad-Camera, 6GB RAM + 64GB ROM, US Version Mobile Phone, Dual Speaker Phone, Night Mist",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/71uG3rCr0kL._AC_UL320_.jpg",
-      "app_sale_price": "151.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B11L6YNN",
-      "product_id": "B0B11L6YNN",
-      "evaluate_rate": "4.1 out of 5 stars",
-      "original_price": "$199.99"
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "Moto G Power | 2021 | 3-Day battery | Unlocked | Made for US by Motorola | 4/64GB | 48MP Camera | Blue",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/71uG3rCr0kL._AC_UL320_.jpg",
-      "app_sale_price": "149.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09L2SC7V1",
-      "product_id": "B09L2SC7V1",
-      "evaluate_rate": "4.4 out of 5 stars",
-      "original_price": "$249.99"
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "$30/Month Mint Mobile Phone Plan | Unlimited Talk, Text & Data for 3-Months (3-in-1 SIM Card)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/51d1OFTh+LL._AC_UL320_.jpg",
-      "app_sale_price": "90.00",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B08FXRTYPH",
-      "product_id": "B08FXRTYPH",
-      "evaluate_rate": "4.2 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "Google Pixel 6a - 5G Android Phone - Unlocked Smartphone with 12 Megapixel Camera and 24-Hour Battery - Charcoal",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61ePWSuIfwL._AC_UL320_.jpg",
-      "app_sale_price": "390.42",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B3PSRHHN",
-      "product_id": "B0B3PSRHHN",
-      "evaluate_rate": "4.1 out of 5 stars",
-      "original_price": "$449.00"
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "Phone Cooler,Cell Phone Cooler For Gaming,Magnetic Phone Cooling Fan, Mobile Phone Radiator Compatible With All Mobile Gaming,Live Streaming, Outdoor Vlog (Black, 2A)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61O3QG3XKIL._AC_UL320_.jpg",
-      "app_sale_price": "29.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B58MKN3H",
-      "product_id": "B0B58MKN3H",
-      "evaluate_rate": "2.0 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "I13 Pro Max Cell Phones, 6.3 Inch HD Smart Phones, Mobile Phones Face ID, HD Camera & Video, Dual Standby Card Slot, Brightest Display Screen, Long Battery Life",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61cTi9MBqOL._AC_UL320_.jpg",
-      "app_sale_price": "1,099.99",
-      "app_sale_price_currency": "$",
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B0BDLZTXMG",
-      "product_id": "B0BDLZTXMG",
-      "evaluate_rate": null,
-      "original_price": null
-    },
-    {
-      "isBestSeller": false,
-      "product_title": "Multifunctional Mobile Phone Bracket - 2022 New Self Adhesive Dashboard Mount Car Phone Holder, Self Adhesive Cell Phone Wall Mount, Suction Cup Phone Holder for Car, for Mobile Phones Width<0.5in",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/713b-p-0K3L._AC_UL320_.jpg",
-      "app_sale_price": "9.98",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B8B5WYXD",
-      "product_id": "B0B8B5WYXD",
-      "evaluate_rate": "2.0 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "LISEN Cell Phone Stand, Adjustable Phone Stand for Desk, Thick Case Friendly Phone Holder Stand, Taller iPhone Stand Compatible with All Mobile Phone, iPhone 14, iPad, Tablet 4-10'' Desk Accessories",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/713b-p-0K3L._AC_UL320_.jpg",
-      "app_sale_price": "12.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B07Z82895W",
-      "product_id": "B07Z82895W",
-      "evaluate_rate": "4.5 out of 5 stars",
-      "original_price": "$17.99"
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Simple Mobile Keep Your Own Phone 3-in-1 Prepaid SIM Kit",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/81czCdlgH2L._AC_UL320_.jpg",
-      "app_sale_price": "3.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0716J1814",
-      "product_id": "B0716J1814",
-      "evaluate_rate": "4.2 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Samsung Galaxy A22 (128GB, 4GB) 6.4\", Quad Camera, Dual SIM GSM 4G Volte Unlocked (NOT 5G) (T-Mobile, Metro, Mint, Global) (NOT Verizon Boost At&t Cricket) A225M/DSN (Fast Car Charger Bundle, White)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/81czCdlgH2L._AC_UL320_.jpg",
-      "app_sale_price": "170.00",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09YMKWC9H",
-      "product_id": "B09YMKWC9H",
-      "evaluate_rate": "4.1 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Phone Mount for Car (3 in 1) Dashboard Windshield Air Vent [Multi-Angle Adjustment Arm] Dash Phone Holder Mount, Car Cell Phone Holder, Hands Free iPhone Stand for Car Fit for All Mobile Phones.",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/81lJjvotRAL._AC_UL320_.jpg",
-      "app_sale_price": "19.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09X4K3ZD7",
-      "product_id": "B09X4K3ZD7",
-      "evaluate_rate": "4.4 out of 5 stars",
-      "original_price": "$32.99"
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "SAMSUNG Galaxy S21 Ultra G998U 5G | Fully Unlocked Android Smartphone | US Version 5G Smartphone | Pro-Grade Camera, 8K Video, 108MP High Resolution | 128GB - Phantom Navy Blue (Renewed)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/81lJjvotRAL._AC_UL320_.jpg",
-      "app_sale_price": "589.00",
-      "app_sale_price_currency": "$",
-      "isPrime": false,
-      "product_detail_url": "https://www.amazon.com/dp/B096T6279W",
-      "product_id": "B096T6279W",
-      "evaluate_rate": "4.4 out of 5 stars",
-      "original_price": "$622.31"
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "VICSEED Universal Phone Mount for Car [Solid & Durable] Car Phone Holder Mount Dashboard Windshield Air Vent Long Arm Strong Suction Cell Phone Holder Car for iPhone 14 13 12 Pro Max All Mobile Phones",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/71U5uA5XWYL._AC_UL320_.jpg",
-      "app_sale_price": "28.97",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B07R1QZ8V1",
-      "product_id": "B07R1QZ8V1",
-      "evaluate_rate": "4.5 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "2Pack Cell Phone Stand for Angle Height Adjustable Desk Sturdy Aluminum Metal Phone Holder for iPhone,Ipad, Mobile Phone, All Android Smartphone,Desktop",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/7136ZXPxfYL._AC_UL320_.jpg",
-      "app_sale_price": "9.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B087LNGM9R",
-      "product_id": "B087LNGM9R",
-      "evaluate_rate": "4.4 out of 5 stars",
-      "original_price": "$14.99"
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "2 Pack Foldable Mini Cell Phone Stand, ESSAGER Adjustable Mobile Phone Holder for Desk Compatible with iPhone/Kindles/Smartphones (Pink)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/7136ZXPxfYL._AC_UL320_.jpg",
-      "app_sale_price": "9.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09V29Y9L6",
-      "product_id": "B09V29Y9L6",
-      "evaluate_rate": "4.9 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Verizon Cell Phone Signal Booster 4G LTE Subroad Cell Signal Booster Verizon Cell Phone Signal Amplifier/ Mobile Phone Signal Booster 700Mhz Band13 Repeater FDD with Whip+Yagi Antenna kit for Home",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/41ff3zYSDoL._AC_US40_.jpg",
-      "app_sale_price": "127.59",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B07P41TD86",
-      "product_id": "B07P41TD86",
-      "evaluate_rate": "3.3 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "$30/Month Mint Mobile Phone Plan | Unlimited Talk, Text & Data for 3-Months (3-in-1 SIM Card)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/51d1OFTh+LL._AC_UL320_.jpg",
-      "app_sale_price": "90.00",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B08FXRTYPH",
-      "product_id": "B08FXRTYPH",
-      "evaluate_rate": "4.2 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "GAXLAKO 2022 Rotatable and Retractable Car Phone Holder -【New Version】 Multifunctional Car Rearview Mirror Phone Holder,360 Degree Rotatable Rear View Mirror Phone Mount,for All Mobile Phones",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/717YTDK5NkL._AC_UL320_.jpg",
-      "app_sale_price": "15.93",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09XM6PZP2",
-      "product_id": "B09XM6PZP2",
-      "evaluate_rate": "3.7 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "3unshine 3 in 1 Cell Phone Stand, Apple Watch Stand, Foldable Aluminum Phone Holder for Desk, Compatible for All Mobile Phones, Watch, Airpods",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61qarXExNEL._AC_UL320_.jpg",
-      "app_sale_price": "14.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B4K92FYR",
-      "product_id": "B0B4K92FYR",
-      "evaluate_rate": "3.0 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Kriaye Phone Mount for Car with Super Stable & Easy Install,360 Degree rotatable and Retractable car Phone Holder for All Mobile Phones",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/71JKOdsDciL._AC_UL320_.jpg",
-      "app_sale_price": "13.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09WDR85F7",
-      "product_id": "B09WDR85F7",
-      "evaluate_rate": "3.5 out of 5 stars",
-      "original_price": "$17.99"
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "3D -16‘’Screen Magnifier for Smartphone – Curved HD Mobile Phone Amplifier Screen – Foldable Phone Screen Amplifier – Compatible with Android, iPhone and Gaming Devices",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/71FyU1SyqGL._AC_UL320_.jpg",
-      "app_sale_price": "19.95",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B7BFBTSG",
-      "product_id": "B0B7BFBTSG",
-      "evaluate_rate": "3.9 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Nokia XR20 5G | Android 11 | Unlocked Smartphone | Dual SIM | US Version | 6/128GB | 6.67-Inch Screen | 48MP Dual Camera | Polar Night",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/61lAogDUMiL._AC_UL320_.jpg",
-      "app_sale_price": "542.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B09DHSPDRQ",
-      "product_id": "B09DHSPDRQ",
-      "evaluate_rate": "4.1 out of 5 stars",
-      "original_price": null
-    },
-    {
-      "isBestSeller": true,
-      "product_title": "Phone Umbrella Suction Cup Stand,Cute Pig Phone Holder with Sun Umbrella ,Universal Phone Holder with Suction Cup,Mobile Phone Mini Umbrella,Outdoor Mobile Phone Anti-Glare Umbrella (Black)",
-      "product_main_image_url": "https://m.media-amazon.com/images/I/317pEdOr2BL._AC_UL320_.jpg",
-      "app_sale_price": "10.99",
-      "app_sale_price_currency": "$",
-      "isPrime": true,
-      "product_detail_url": "https://www.amazon.com/dp/B0B968NB6F",
-      "product_id": "B0B968NB6F",
-      "evaluate_rate": null,
-      "original_price": null
-    }
-  ],
-  "total_record_count": "",
-  "nexPage": 2,
-  "prvPage": null,
-  "hasNextPage": true,
-  "hasPrevPage": false,
-  "page": 1,
-  "totalPages": "400",
-  "noResults": false,
-  "refinements": {
-    "featuredCategories": [
-      {
-        "name": "Cell Phones & Accessories",
-        "id": "2335752011"
-      },
-      {
-        "name": "Cell Phones",
-        "id": "7072561011"
-      },
-      {
-        "name": "Alexa Built-in Phones",
-        "id": "14613304011"
-      },
-      {
-        "name": "Accessories",
-        "id": "2407755011"
-      },
-      {
-        "name": "Cases",
-        "id": "2407760011"
-      },
-      {
-        "name": "Wearable Technology",
-        "id": "9013937011"
-      },
-      {
-        "name": "Deals",
-        "id": "2447856011"
-      },
-      {
-        "name": "Trade-In",
-        "id": "2226766011"
-      },
-      {
-        "name": "All Electronics",
-        "id": "172282"
-      }
-    ],
-    "filters": {
-      "Eligible_for_Free_Shipping": [
-        {
-          "_Free_Shipping_by_Amazon__________________All_customers_get_FREE_Shipping_on_orders_over_$25_shipped_by_Amazon": {
-            "name": "Free_Shipping_by_Amazon__________________All_customers_get_FREE_Shipping_on_orders_over_$25_shipped_by_Amazon",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_76%3A2491146011&dc&qid=1663159897&rnid=2491144011&ref=sr_nr_p_76_1&ds=v1%3AwCoXdjoZFqvmnM5B0csoDHMx%2BqC35pp4Tf2LTEVrAJc",
-            "refinementID": "n:2335752011,p_76:2491146011"
-          }
-        }
-      ],
-      "Delivery_Day": [
-        {
-          "_Get_It_by_Tomorrow": {
-            "name": "Get_It_by_Tomorrow",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_90%3A8308921011&dc&qid=1663159897&rnid=8308919011&ref=sr_nr_p_90_1&ds=v1%3AWKKaxHysM2o256mhwCOPJOr8541hGDMCbUjaFvDc9lw",
-            "refinementID": "p_90:8308921011"
-          }
-        }
-      ],
-      "Climate_Pledge_Friendly": [
-        {
-          "_Climate_Pledge_Friendly": {
-            "name": "Climate_Pledge_Friendly",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_n_cpf_eligible%3A21512497011&dc&qid=1663159897&rnid=21512496011&ref=sr_nr_p_n_cpf_eligible_1&ds=v1%3AcLShNOcu18bKwlW7OFJ9m371ZRiyPUgHcQMiEQ8n%2Ffo",
-            "refinementID": "p_n_cpf_eligible:21512497011"
-          }
-        }
-      ],
-      "Department": [
-        {
-          "_Any_Department": {
-            "name": "Any_Department",
-            "id": "https://www.amazon.com/s?k=mobile&dc&qid=1663159897&ref=sr_ex_n_0&ds=v1%3AnBhSYuODLU08E2YrUkJ%2B5xd71SLvq%2FS3P%2FWI3SawM9c",
-            "refinementID": ""
-          }
-        },
-        {
-          "_Cell_Phone_Accessories": {
-            "name": "Cell_Phone_Accessories",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cn%3A2407755011&dc&qid=1663159897&rnid=2335752011&ref=sr_nr_n_1&ds=v1%3AM8swKgFRLSdu1hIWyAYx%2FwN3E0exVLIEVPi8e%2FJ5Edk",
-            "refinementID": "n:2335752011,n:2407755011"
-          }
-        },
-        {
-          "_Cell_Phone_Cases_&_Covers": {
-            "name": "Cell_Phone_Cases_&_Covers",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cn%3A2407760011&dc&qid=1663159897&rnid=2335752011&ref=sr_nr_n_2&ds=v1%3AYqbjyBHfImkrZxWERQv0Up%2B6kuw9vyimFC5F0vcAuzw",
-            "refinementID": "n:2335752011,n:2407760011"
-          }
-        },
-        {
-          "_Cell_Phones": {
-            "name": "Cell_Phones",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cn%3A7072561011&dc&qid=1663159897&rnid=2335752011&ref=sr_nr_n_3&ds=v1%3AJEA%2BMxfyGU8boFlDQuNF45JAdAPPy6SfREYfPI3MF4c",
-            "refinementID": "n:2335752011,n:7072561011"
-          }
-        },
-        {
-          "_Cell_Phone_SIM_Cards_&_Prepaid_Minutes": {
-            "name": "Cell_Phone_SIM_Cards_&_Prepaid_Minutes",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cn%3A3345523011&dc&qid=1663159897&rnid=2335752011&ref=sr_nr_n_4&ds=v1%3AP3PB9ei5ki4I8fCAbc3KUyOXjrv6kXY3yfeSFaojBgY",
-            "refinementID": "n:2335752011,n:3345523011"
-          }
-        }
-      ],
-      "Customer_Review": [
-        {
-          "_4_Stars_&_Up______&_Up": {
-            "name": "4_Stars_&_Up______&_Up",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_72%3A2491149011&dc&qid=1663159897&rnid=2491147011&ref=sr_nr_p_72_1&ds=v1%3ATX2kS5puwAOVsGX0ZuxcnhNzSyPkrGR0CbJJNNtCDYU",
-            "refinementID": "n:2335752011,p_72:2491149011"
-          }
-        },
-        {
-          "_3_Stars_&_Up______&_Up": {
-            "name": "3_Stars_&_Up______&_Up",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_72%3A2491150011&dc&qid=1663159897&rnid=2491147011&ref=sr_nr_p_72_2&ds=v1%3AmQatlEvvbzRIBqt%2FYB4M1XB8Qwx3T0A8yeziTpW%2BOeU",
-            "refinementID": "n:2335752011,p_72:2491150011"
-          }
-        },
-        {
-          "_2_Stars_&_Up______&_Up": {
-            "name": "2_Stars_&_Up______&_Up",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_72%3A2491151011&dc&qid=1663159897&rnid=2491147011&ref=sr_nr_p_72_3&ds=v1%3A1m3HaLJ54TGVgtDnjDEhC6bLu03XFH15hh1Y5Mr%2BXAc",
-            "refinementID": "n:2335752011,p_72:2491151011"
-          }
-        },
-        {
-          "_1_Star_&_Up______&_Up": {
-            "name": "1_Star_&_Up______&_Up",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_72%3A2491152011&dc&qid=1663159897&rnid=2491147011&ref=sr_nr_p_72_4&ds=v1%3A5RgW0Z1cNUstYxbongzioaGsqjF0P6WdEILil2mc5gs",
-            "refinementID": "n:2335752011,p_72:2491152011"
-          }
-        }
-      ],
-      "Featured_Brands": [
-        {
-          "_SAMSUNG": {
-            "name": "SAMSUNG",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_89%3ASAMSUNG&dc&qid=1663159897&rnid=2528832011&ref=sr_nr_p_89_1&ds=v1%3A2n2Gdl4f2jYCvTGghEOmpCU3zXpmzY%2BE01eJcLPME2o",
-            "refinementID": "n:2335752011,p_89:SAMSUNG"
-          }
-        },
-        {
-          "_Nokia": {
-            "name": "Nokia",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_89%3ANokia&dc&qid=1663159897&rnid=2528832011&ref=sr_nr_p_89_2&ds=v1%3AseOPQkyqouN0kA1PnqNoho1HGXnB0Xa1339QN7PhRvA",
-            "refinementID": "n:2335752011,p_89:Nokia"
-          }
-        },
-        {
-          "_TCL": {
-            "name": "TCL",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_89%3ATCL&dc&qid=1663159897&rnid=2528832011&ref=sr_nr_p_89_3&ds=v1%3ARb5onuw3lmMoG%2FJHe1oyy%2B4esNBjafT5dnfBc2SvxXQ",
-            "refinementID": "n:2335752011,p_89:TCL"
-          }
-        },
-        {
-          "_Google": {
-            "name": "Google",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_89%3AGoogle&dc&qid=1663159897&rnid=2528832011&ref=sr_nr_p_89_4&ds=v1%3A5bEDAbovcVg%2BPr2L0iArUJkCyGhEh%2BC0lqqy1KQpew8",
-            "refinementID": "n:2335752011,p_89:Google"
-          }
-        }
-      ],
-      "Price": [
-        {
-          "_Today's_Deals": {
-            "name": "Today's_Deals",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_n_specials_match%3A21213697011&dc&qid=1663159897&rnid=21213696011&ref=sr_nr_p_n_specials_match_1&ds=v1%3AAzNK81LcK2W%2F8Pjoa5dHm9adNqcQw3vzLl7lXJeLuV0",
-            "refinementID": "p_n_specials_match:21213697011"
-          }
-        }
-      ],
-      "From_Our_Brands": [
-        {
-          "_Our_Brands": {
-            "name": "Our_Brands",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_n_feature_forty-seven_browse-bin%3A21180942011&dc&qid=1663159897&rnid=21180941011&ref=sr_nr_p_n_feature_forty-seven_browse-bin_1&ds=v1%3AAdOcHjDkwF5xEKxtZkQbNZpG8q1F787c3bBVbK0O0jg",
-            "refinementID": "p_n_feature_forty-seven_browse-bin:21180942011"
-          }
-        }
-      ],
-      "Packaging_Option": [
-        {
-          "_Frustration-Free_Packaging": {
-            "name": "Frustration-Free_Packaging",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_n_is_ffp%3A7252855011&dc&qid=1663159897&rnid=7252854011&ref=sr_nr_p_n_is_ffp_1&ds=v1%3AYfHn%2BHTP1KhayU8iyLotCcv%2F4%2BtUygvme1k8pZVcpcI",
-            "refinementID": "n:2335752011,p_n_is_ffp:7252855011"
-          }
-        }
-      ],
-      "International_Shipping": [
-        {
-          "_International_Shipping_Eligible": {
-            "name": "International_Shipping_Eligible",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_n_shipping_option-bin%3A3242350011&dc&qid=1663159897&rnid=2944662011&ref=sr_nr_p_n_shipping_option-bin_1&ds=v1%3AhAg%2B%2BCC%2FwMBtrvegHA4zTS97NhvPSrl9O9VyMKO%2F%2FAk",
-            "refinementID": "p_n_shipping_option-bin:3242350011"
-          }
-        }
-      ],
-      "Condition": [
-        {
-          "_New": {
-            "name": "New",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_n_condition-type%3A6503240011&dc&qid=1663159897&rnid=6503239011&ref=sr_nr_p_n_condition-type_1&ds=v1%3AwFRyXyg875rxoyhTAiYLfpOaJDYNx1VO4fdWt97ZQqY",
-            "refinementID": "n:2335752011,p_n_condition-type:6503240011"
-          }
-        },
-        {
-          "_Renewed": {
-            "name": "Renewed",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_n_condition-type%3A16907722011&dc&qid=1663159897&rnid=6503239011&ref=sr_nr_p_n_condition-type_2&ds=v1%3AhC5wWLwNqtDo7thKgxSckLn0noV9PmQaTtjsFf8vjHU",
-            "refinementID": "n:2335752011,p_n_condition-type:16907722011"
-          }
-        },
-        {
-          "_Used": {
-            "name": "Used",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=n%3A2335752011%2Cp_n_condition-type%3A6503242011&dc&qid=1663159897&rnid=6503239011&ref=sr_nr_p_n_condition-type_3&ds=v1%3ASFp%2BSUAjyi5xoLngOqO3Ccyo%2FDb3ZmcI7f2Lv4YKUcU",
-            "refinementID": "n:2335752011,p_n_condition-type:6503242011"
-          }
-        }
-      ],
-      "Seller": [
-        {
-          "_Amazon_Warehouse": {
-            "name": "Amazon_Warehouse",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA2L77EE7U53NWQ&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_1&ds=v1%3A%2BmMHRkoWg%2BjfOGlRZixv4Hca%2BVQ%2Bw2JsogmzO8mKnTI",
-            "refinementID": "p_6:A2L77EE7U53NWQ"
-          }
-        },
-        {
-          "_Amazon.com": {
-            "name": "Amazon.com",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AATVPDKIKX0DER&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_2&ds=v1%3AQYO8d1z8DkkPYyz0YvEEXJcRirla6WJJO%2BHfXIqPDMI",
-            "refinementID": "p_6:ATVPDKIKX0DER"
-          }
-        },
-        {
-          "_AnkerDirect": {
-            "name": "AnkerDirect",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA294P4X9EWVXLJ&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_3&ds=v1%3AWgEJdHjTMdY%2Fdhop0ntt2M%2FAXJM%2Bxo7%2FetLh2h8c9as",
-            "refinementID": "p_6:A294P4X9EWVXLJ"
-          }
-        },
-        {
-          "_JM_PRIME": {
-            "name": "JM_PRIME",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA2Y7LLQC87RDQ&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_4&ds=v1%3AfE0LnIHm%2F8hOSvMB%2BFRkR%2BkoIjdMSg6zdjK9t8JHQ4Q",
-            "refinementID": "p_6:A2Y7LLQC87RDQ"
-          }
-        },
-        {
-          "_Networkstore": {
-            "name": "Networkstore",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AAR1FTLUUZC24W&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_5&ds=v1%3AXnjVWK4JxyQnpg6ayhZGKYcmruae79wAJmVQ9acp%2B6g",
-            "refinementID": "p_6:AR1FTLUUZC24W"
-          }
-        },
-        {
-          "_Adorama": {
-            "name": "Adorama",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA17MC6HOH9AVE6&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_6&ds=v1%3A%2F3LdfqqbPuY3B47adV8zqRjtfkSMQyAS0bTUhqG1sY4",
-            "refinementID": "p_6:A17MC6HOH9AVE6"
-          }
-        },
-        {
-          "_Mac_N'_Cheese": {
-            "name": "Mac_N'_Cheese",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA2HKJDSYFUXLQL&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_7&ds=v1%3AHQ5eDfoMjIXqRb4EeDYXKi6ZCWutD7%2BJA%2FyE9wEiEDU",
-            "refinementID": "p_6:A2HKJDSYFUXLQL"
-          }
-        },
-        {
-          "_Triplenet_Pricing_INC": {
-            "name": "Triplenet_Pricing_INC",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AAAZRLVTNON75Z&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_8&ds=v1%3An4vaz966wbji5bQ%2Bm1EoMHv3FypYjikEZEW2HdGFGMA",
-            "refinementID": "p_6:AAZRLVTNON75Z"
-          }
-        },
-        {
-          "_alwayz-on-sale": {
-            "name": "alwayz-on-sale",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA3PUKTJIAB9Y0H&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_9&ds=v1%3AZc884be8ExyOmP2IrUD19fHyDlgcovlKTGFdtrKN8zE",
-            "refinementID": "p_6:A3PUKTJIAB9Y0H"
-          }
-        },
-        {
-          "_Woot": {
-            "name": "Woot",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_6%3AA1KWJVS57NX03I&dc&qid=1663159897&rnid=2491153011&ref=sr_nr_p_6_10&ds=v1%3AHbPzNzeomMuVe%2FktxNcv0tSbWTs%2BRHVY2XzK%2FHCA91k",
-            "refinementID": "p_6:A1KWJVS57NX03I"
-          }
-        }
-      ],
-      "Availability": [
-        {
-          "_Include_Out_of_Stock": {
-            "name": "Include_Out_of_Stock",
-            "id": "https://www.amazon.com/s?k=mobile&i=mobile&rh=p_n_availability%3A2661601011&dc&qid=1663159897&rnid=2661599011&ref=sr_nr_p_n_availability_2&ds=v1%3ACQXELUQ%2B4AyDeZGExhgp730ZPFnm9%2FVJrYl9N%2F5goCk",
-            "refinementID": "p_n_availability:2661601011"
-          }
-        }
-      ]
-    }
+[
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy A13 5G Cell Phone, Factory Unlocked Android Smartphone, 64GB, Triple Lens Camera, Infinity Display Screen, Long Battery Life, Expandable Storage, US Version, Green",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/614Bt9UXztL._AC_UL320_.jpg",
+    "app_sale_price": "249.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09MZCWH4J",
+    "product_id": "B09MZCWH4J",
+    "evaluate_rate": "4.2 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy S22 Ultra Cell Phone, Factory Unlocked Android Smartphone, 128GB, 8K Camera & Video, Brightest Display Screen, S Pen, Long Battery Life, Fast 4nm Processor, US Version, Phantom Black",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/614Bt9UXztL._AC_UL320_.jpg",
+    "app_sale_price": "999.99",
+    "app_sale_price_currency": "$",
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B09MVZSW5V",
+    "product_id": "B09MVZSW5V",
+    "evaluate_rate": "4.6 out of 5 stars",
+    "original_price": "$1,199.99"
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy A02s SM-A025V 32GB Android Smartphone Verizon Locked - Black - (Renewed)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/41BFdYiwdnL._AC_UL320_.jpg",
+    "app_sale_price": "78.14",
+    "app_sale_price_currency": "$",
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B09HY6N45T",
+    "product_id": "B09HY6N45T",
+    "evaluate_rate": "3.7 out of 5 stars",
+    "original_price": "$84.03"
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "Nokia 225 | GSM Unlocked Mobile Phone | 4G | Blue",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/41ItGSqmliL._AC_US40_.jpg",
+    "app_sale_price": "49.97",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B08Q1RN311",
+    "product_id": "B08Q1RN311",
+    "evaluate_rate": "3.6 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy A13 5G Cell Phone, Factory Unlocked Android Smartphone, 64GB, Triple Lens Camera, Infinity Display Screen, Long Battery Life, Expandable Storage, US Version, Green",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/417fYctf6rL._AC_US40_.jpg",
+    "app_sale_price": "249.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09MZCWH4J",
+    "product_id": "B09MZCWH4J",
+    "evaluate_rate": "4.2 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy S20 FE 5G Cell Phone, Factory Unlocked Android Smartphone, 128GB, Pro Grade Camera, 30X Space Zoom, Night Mode, US Version, Cloud Mint Green",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/417fYctf6rL._AC_US40_.jpg",
+    "app_sale_price": "499.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B08FYVMRM5",
+    "product_id": "B08FYVMRM5",
+    "evaluate_rate": "4.6 out of 5 stars",
+    "original_price": "$599.99"
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy A03s Cell Phone, Factory Unlocked Android Smartphone, 32GB, 3 Camera Lenses, Infinity Display Screen, Long Battery Life, Expandable Storage, US Version, Black",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/31-knlOilOL._AC_US40_.jpg",
+    "app_sale_price": "172.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09MZBTMQQ",
+    "product_id": "B09MZBTMQQ",
+    "evaluate_rate": "4.2 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "I13 Pro Max Smart Phones 1+8GB Smartphones 6.3 Inch HD Cellphones Mobile Phones Face ID Adnroid 6.0",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61cTi9MBqOL._AC_UL320_.jpg",
+    "app_sale_price": "798.90",
+    "app_sale_price_currency": "$",
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B0BDDL1T5G",
+    "product_id": "B0BDDL1T5G",
+    "evaluate_rate": null,
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "SAMSUNG Galaxy S21 Ultra 5G Factory Unlocked Android Cell Phone 128GB US Version Smartphone Pro-Grade Camera 8K Video 108MP High Res, Phantom Black",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/41hvvC7QnJL._AC_US40_.jpg",
+    "app_sale_price": null,
+    "app_sale_price_currency": null,
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B08N2MSSZY",
+    "product_id": "B08N2MSSZY",
+    "evaluate_rate": "4.6 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "2022 Unlocked Phones,i13 Pro Max Smart Phones 1+8gb Smartphones 6.3 Inch Hd Cellphones Mobile Phones Face Id Adnroid 6.0 Unlocked Android Smartphone Long Lasting Battery 123",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61uq5hw1V9L._AC_UL320_.jpg",
+    "app_sale_price": "99.48",
+    "app_sale_price_currency": "$",
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B0B35WT92P",
+    "product_id": "B0B35WT92P",
+    "evaluate_rate": null,
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "TCL 30XL |2022| Unlocked Cell Phone, 6.82 inch Vast Display, 5000mAh Battery, Android 12 Smartphone, 50MP AI Quad-Camera, 6GB RAM + 64GB ROM, US Version Mobile Phone, Dual Speaker Phone, Night Mist",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/71uG3rCr0kL._AC_UL320_.jpg",
+    "app_sale_price": "151.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B11L6YNN",
+    "product_id": "B0B11L6YNN",
+    "evaluate_rate": "4.1 out of 5 stars",
+    "original_price": "$199.99"
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "Moto G Power | 2021 | 3-Day battery | Unlocked | Made for US by Motorola | 4/64GB | 48MP Camera | Blue",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/71uG3rCr0kL._AC_UL320_.jpg",
+    "app_sale_price": "149.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09L2SC7V1",
+    "product_id": "B09L2SC7V1",
+    "evaluate_rate": "4.4 out of 5 stars",
+    "original_price": "$249.99"
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "$30/Month Mint Mobile Phone Plan | Unlimited Talk, Text & Data for 3-Months (3-in-1 SIM Card)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/51d1OFTh+LL._AC_UL320_.jpg",
+    "app_sale_price": "90.00",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B08FXRTYPH",
+    "product_id": "B08FXRTYPH",
+    "evaluate_rate": "4.2 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "Google Pixel 6a - 5G Android Phone - Unlocked Smartphone with 12 Megapixel Camera and 24-Hour Battery - Charcoal",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61ePWSuIfwL._AC_UL320_.jpg",
+    "app_sale_price": "390.42",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B3PSRHHN",
+    "product_id": "B0B3PSRHHN",
+    "evaluate_rate": "4.1 out of 5 stars",
+    "original_price": "$449.00"
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "Phone Cooler,Cell Phone Cooler For Gaming,Magnetic Phone Cooling Fan, Mobile Phone Radiator Compatible With All Mobile Gaming,Live Streaming, Outdoor Vlog (Black, 2A)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61O3QG3XKIL._AC_UL320_.jpg",
+    "app_sale_price": "29.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B58MKN3H",
+    "product_id": "B0B58MKN3H",
+    "evaluate_rate": "2.0 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "I13 Pro Max Cell Phones, 6.3 Inch HD Smart Phones, Mobile Phones Face ID, HD Camera & Video, Dual Standby Card Slot, Brightest Display Screen, Long Battery Life",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61cTi9MBqOL._AC_UL320_.jpg",
+    "app_sale_price": "1,099.99",
+    "app_sale_price_currency": "$",
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B0BDLZTXMG",
+    "product_id": "B0BDLZTXMG",
+    "evaluate_rate": null,
+    "original_price": null
+  },
+  {
+    "isBestSeller": false,
+    "product_title": "Multifunctional Mobile Phone Bracket - 2022 New Self Adhesive Dashboard Mount Car Phone Holder, Self Adhesive Cell Phone Wall Mount, Suction Cup Phone Holder for Car, for Mobile Phones Width<0.5in",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/713b-p-0K3L._AC_UL320_.jpg",
+    "app_sale_price": "9.98",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B8B5WYXD",
+    "product_id": "B0B8B5WYXD",
+    "evaluate_rate": "2.0 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "LISEN Cell Phone Stand, Adjustable Phone Stand for Desk, Thick Case Friendly Phone Holder Stand, Taller iPhone Stand Compatible with All Mobile Phone, iPhone 14, iPad, Tablet 4-10'' Desk Accessories",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/713b-p-0K3L._AC_UL320_.jpg",
+    "app_sale_price": "12.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B07Z82895W",
+    "product_id": "B07Z82895W",
+    "evaluate_rate": "4.5 out of 5 stars",
+    "original_price": "$17.99"
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Simple Mobile Keep Your Own Phone 3-in-1 Prepaid SIM Kit",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/81czCdlgH2L._AC_UL320_.jpg",
+    "app_sale_price": "3.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0716J1814",
+    "product_id": "B0716J1814",
+    "evaluate_rate": "4.2 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Samsung Galaxy A22 (128GB, 4GB) 6.4\", Quad Camera, Dual SIM GSM 4G Volte Unlocked (NOT 5G) (T-Mobile, Metro, Mint, Global) (NOT Verizon Boost At&t Cricket) A225M/DSN (Fast Car Charger Bundle, White)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/81czCdlgH2L._AC_UL320_.jpg",
+    "app_sale_price": "170.00",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09YMKWC9H",
+    "product_id": "B09YMKWC9H",
+    "evaluate_rate": "4.1 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Phone Mount for Car (3 in 1) Dashboard Windshield Air Vent [Multi-Angle Adjustment Arm] Dash Phone Holder Mount, Car Cell Phone Holder, Hands Free iPhone Stand for Car Fit for All Mobile Phones.",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/81lJjvotRAL._AC_UL320_.jpg",
+    "app_sale_price": "19.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09X4K3ZD7",
+    "product_id": "B09X4K3ZD7",
+    "evaluate_rate": "4.4 out of 5 stars",
+    "original_price": "$32.99"
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "SAMSUNG Galaxy S21 Ultra G998U 5G | Fully Unlocked Android Smartphone | US Version 5G Smartphone | Pro-Grade Camera, 8K Video, 108MP High Resolution | 128GB - Phantom Navy Blue (Renewed)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/81lJjvotRAL._AC_UL320_.jpg",
+    "app_sale_price": "589.00",
+    "app_sale_price_currency": "$",
+    "isPrime": false,
+    "product_detail_url": "https://www.amazon.com/dp/B096T6279W",
+    "product_id": "B096T6279W",
+    "evaluate_rate": "4.4 out of 5 stars",
+    "original_price": "$622.31"
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "VICSEED Universal Phone Mount for Car [Solid & Durable] Car Phone Holder Mount Dashboard Windshield Air Vent Long Arm Strong Suction Cell Phone Holder Car for iPhone 14 13 12 Pro Max All Mobile Phones",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/71U5uA5XWYL._AC_UL320_.jpg",
+    "app_sale_price": "28.97",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B07R1QZ8V1",
+    "product_id": "B07R1QZ8V1",
+    "evaluate_rate": "4.5 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "2Pack Cell Phone Stand for Angle Height Adjustable Desk Sturdy Aluminum Metal Phone Holder for iPhone,Ipad, Mobile Phone, All Android Smartphone,Desktop",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/7136ZXPxfYL._AC_UL320_.jpg",
+    "app_sale_price": "9.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B087LNGM9R",
+    "product_id": "B087LNGM9R",
+    "evaluate_rate": "4.4 out of 5 stars",
+    "original_price": "$14.99"
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "2 Pack Foldable Mini Cell Phone Stand, ESSAGER Adjustable Mobile Phone Holder for Desk Compatible with iPhone/Kindles/Smartphones (Pink)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/7136ZXPxfYL._AC_UL320_.jpg",
+    "app_sale_price": "9.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09V29Y9L6",
+    "product_id": "B09V29Y9L6",
+    "evaluate_rate": "4.9 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Verizon Cell Phone Signal Booster 4G LTE Subroad Cell Signal Booster Verizon Cell Phone Signal Amplifier/ Mobile Phone Signal Booster 700Mhz Band13 Repeater FDD with Whip+Yagi Antenna kit for Home",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/41ff3zYSDoL._AC_US40_.jpg",
+    "app_sale_price": "127.59",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B07P41TD86",
+    "product_id": "B07P41TD86",
+    "evaluate_rate": "3.3 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "$30/Month Mint Mobile Phone Plan | Unlimited Talk, Text & Data for 3-Months (3-in-1 SIM Card)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/51d1OFTh+LL._AC_UL320_.jpg",
+    "app_sale_price": "90.00",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B08FXRTYPH",
+    "product_id": "B08FXRTYPH",
+    "evaluate_rate": "4.2 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "GAXLAKO 2022 Rotatable and Retractable Car Phone Holder -【New Version】 Multifunctional Car Rearview Mirror Phone Holder,360 Degree Rotatable Rear View Mirror Phone Mount,for All Mobile Phones",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/717YTDK5NkL._AC_UL320_.jpg",
+    "app_sale_price": "15.93",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09XM6PZP2",
+    "product_id": "B09XM6PZP2",
+    "evaluate_rate": "3.7 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "3unshine 3 in 1 Cell Phone Stand, Apple Watch Stand, Foldable Aluminum Phone Holder for Desk, Compatible for All Mobile Phones, Watch, Airpods",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61qarXExNEL._AC_UL320_.jpg",
+    "app_sale_price": "14.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B4K92FYR",
+    "product_id": "B0B4K92FYR",
+    "evaluate_rate": "3.0 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Kriaye Phone Mount for Car with Super Stable & Easy Install,360 Degree rotatable and Retractable car Phone Holder for All Mobile Phones",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/71JKOdsDciL._AC_UL320_.jpg",
+    "app_sale_price": "13.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09WDR85F7",
+    "product_id": "B09WDR85F7",
+    "evaluate_rate": "3.5 out of 5 stars",
+    "original_price": "$17.99"
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "3D -16‘’Screen Magnifier for Smartphone – Curved HD Mobile Phone Amplifier Screen – Foldable Phone Screen Amplifier – Compatible with Android, iPhone and Gaming Devices",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/71FyU1SyqGL._AC_UL320_.jpg",
+    "app_sale_price": "19.95",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B7BFBTSG",
+    "product_id": "B0B7BFBTSG",
+    "evaluate_rate": "3.9 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Nokia XR20 5G | Android 11 | Unlocked Smartphone | Dual SIM | US Version | 6/128GB | 6.67-Inch Screen | 48MP Dual Camera | Polar Night",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/61lAogDUMiL._AC_UL320_.jpg",
+    "app_sale_price": "542.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B09DHSPDRQ",
+    "product_id": "B09DHSPDRQ",
+    "evaluate_rate": "4.1 out of 5 stars",
+    "original_price": null
+  },
+  {
+    "isBestSeller": true,
+    "product_title": "Phone Umbrella Suction Cup Stand,Cute Pig Phone Holder with Sun Umbrella ,Universal Phone Holder with Suction Cup,Mobile Phone Mini Umbrella,Outdoor Mobile Phone Anti-Glare Umbrella (Black)",
+    "product_main_image_url": "https://m.media-amazon.com/images/I/317pEdOr2BL._AC_UL320_.jpg",
+    "app_sale_price": "10.99",
+    "app_sale_price_currency": "$",
+    "isPrime": true,
+    "product_detail_url": "https://www.amazon.com/dp/B0B968NB6F",
+    "product_id": "B0B968NB6F",
+    "evaluate_rate": null,
+    "original_price": null
   }
-}
+]

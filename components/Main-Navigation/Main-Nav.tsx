@@ -7,6 +7,7 @@ import MainSearchBar from "./Main-Search-Bar";
 import SignUpModal from "../modal/SignUpModal";
 import UserLocation from "../location/User-Location";
 import { LoginContext } from "../../context/login-context";
+import Link from "next/link";
 
 interface NavProps {
   userCountry: string | null;
@@ -35,7 +36,14 @@ const MainNavigation: React.FC<NavProps> = React.memo((props) => {
   return (
     <nav className={styles["main-nav"]}>
       <div className={styles["main-nav__logo-container"]}>
-        <Image width={100} height={100} src={AmazonLogo} />
+        <Link href="/">
+          <Image
+            width={100}
+            height={100}
+            src={AmazonLogo}
+            className={styles["main-nav__amazon-logo"]}
+          />
+        </Link>
       </div>
       {props.userCountry && <UserLocation userCountry={props.userCountry} />}
       <MainSearchBar />

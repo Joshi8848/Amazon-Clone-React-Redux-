@@ -1,4 +1,3 @@
-import ProductItems from "../../components/Body/Products/ProductItems";
 import { useRouter } from "next/router";
 // import Appliances from "../../JSON/Appliances.json";
 import AudioBooks from "../../JSON/AudioBooks.json";
@@ -9,59 +8,81 @@ import Kitchen from "../../JSON/Kitchen.json";
 import Luxury from "../../JSON/Luxury.json";
 import MensFashion from "../../JSON/MensFashion.json";
 import Mobile from "../../JSON/Mobile.json";
-import Music from "../../JSON/MusicalInstruments.json";
+import Sports from "../../JSON/Sports.json";
 import Pets from "../../JSON/Pets.json";
 import VideoGames from "../../JSON/VideoGames.json";
 import WomensFashion from "../../JSON/WomensFashion.json";
-import { useMemo } from "react";
+import ProductPage from "../../components/Body/Products/ProductPage";
+import { useState, useEffect, Fragment } from "react";
+import Backdrop from "../../components/modal/Backdrop";
 
-// const productIds = [
-//   "computers",
-//   "luxury",
-//   "baby-products",
-//   "electronic-products",
-//   "audio-books",
-//   "video-games",
-//   "pet-products",
-//   "mens-fashion",
-//   "womens-fashion",
-//   "kitchen-appliances",
-//   "mobile-phones",
-//   "musical-instruments",
-// ];
+export const productObj = {
+  computers: Computers,
+  luxury: Luxury,
+  "baby-products": BabyProducts,
+  "electronic-products": Electronics,
+  "audio-books": AudioBooks,
+  "video-games": VideoGames,
+  "pet-products": Pets,
+  "mens-fashion": MensFashion,
+  "womens-fashion": WomensFashion,
+  "kitchen-appliances": Kitchen,
+  "mobile-phones": Mobile,
+  "sports-items": Sports,
+};
+
+export type ProductsInfoObj = {
+  isBestSeller: boolean | null;
+  product_title: string | null;
+  product_main_image_url: string;
+  app_sale_price: null | string;
+  app_sale_price_currency: null | string;
+  isPrime: boolean | null;
+  product_detail_url: string | null;
+  product_id: string;
+  evaluate_rate: string | null;
+  original_price: null | string;
+};
+
+let currentPageItems: ProductsInfoObj[];
 
 const Products = () => {
+  const [productsFound, setProductsFound] = useState<boolean>(false);
   const router = useRouter();
   const { products } = router.query;
-  const curPage = useMemo(() => {
-    return products === "computers"
-      ? Computers
-      : products === "luxury"
-      ? Luxury
-      : products === "baby-products"
-      ? BabyProducts
-      : products === "electronic-products"
-      ? Electronics
-      : products === "audio-books"
-      ? AudioBooks
-      : products === "video-games"
-      ? VideoGames
-      : products === "pet-products"
-      ? Pets
-      : products === "mens-fashion"
-      ? MensFashion
-      : products === "womens-fashion"
-      ? WomensFashion
-      : products === "kitchen-appliances"
-      ? Kitchen
-      : products === "mobile-phones"
-      ? Mobile
-      : products === "musical-instruments"
-      ? Music
-      : "";
+
+  useEffect(() => {
+    if (productObj[products] !== undefined) {
+      currentPageItems = productObj[products];
+      setProductsFound(true);
+    }
   }, [products]);
 
-  return <ProductItems />;
+  return (
+    <Fragment>
+      {!productsFound && (
+        <>
+          <Backdrop />
+          <h2
+            style={{
+              fontSize: "4rem",
+              letterSpacing: "1px",
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              color: "white",
+              fontWeight: "600",
+              zIndex: "99999",
+              transform: "translate(-50%, -100%)",
+            }}
+          >
+            Page not found! Please make sure you entered the correct url
+          </h2>
+        </>
+      )}
+      {productsFound && <ProductPage productsArr={currentPageItems} />}
+    </Fragment>
+  );
 };
 
 export default Products;

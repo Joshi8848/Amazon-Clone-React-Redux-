@@ -10,7 +10,7 @@ const ProductCard: React.FC<{
   picture: string;
 }> = (props) => {
   return (
-    <div key={props.id} className={styles["product-item"]}>
+    <div className={styles["product-item"]}>
       <h2>{props.name}</h2>
       <div className={styles["product-item__picture--box"]}>
         <img

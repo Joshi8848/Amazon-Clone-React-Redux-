@@ -5,7 +5,7 @@ import styles from "./SignUpModal.module.scss";
 import classes from "../../styles/index.module.scss";
 import Link from "next/link";
 import { LoginContext } from "../../context/login-context";
-import { time } from "console";
+
 
 let open: boolean = false;
 

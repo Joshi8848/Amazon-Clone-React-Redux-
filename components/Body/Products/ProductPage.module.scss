@@ -1,0 +1,13 @@
+.products-item {
+  &__page {
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}

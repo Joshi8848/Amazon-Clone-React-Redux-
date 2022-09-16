@@ -1,4 +1,4 @@
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 
 import { Fragment, useEffect, useState } from "react";
 
@@ -9,7 +9,7 @@ const Header = () => {
   const [country, setCountry] = useState(null);
 
   useEffect(() => {
-    // return;
+    return;
     const currentUserCountry = async () => {
       const location = await getLocation();
       setCountry(location);

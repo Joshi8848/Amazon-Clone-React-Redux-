@@ -1,0 +1,84 @@
+@use "../../../../styles/scss";
+
+.product {
+  &-detail {
+    background-color: #ddd;
+    max-width: 100%;
+    height: 100vh;
+
+    &__info {
+      width: 140rem;
+      margin: 0 auto;
+      min-height: 40rem;
+      background-color: white;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 0.4fr 1fr;
+    }
+  }
+
+  &-picture {
+    background-size: contain;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 25rem;
+    width: 100%;
+    padding: 1rem;
+    &__box {
+      height: max-content;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-description {
+    position: relative;
+    margin-top: -3rem;
+    padding: 0 2rem 0 5rem;
+    &__header {
+      & span {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__text {
+      font-size: 2rem;
+
+      & span {
+        display: block;
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 2.5rem;
+  }
+
+  &-bestseller {
+    font-size: 2rem;
+  }
+
+  &-share {
+    position: absolute;
+    right: 0;
+    font-size: 1.3rem;
+    display: inline-block;
+  }
+
+  &-price {
+    margin: 1rem 0;
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(243, 198, 0);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+  }
+}
+
+.add-to-cart {
+  @include scss.yellowBtn;
+}
