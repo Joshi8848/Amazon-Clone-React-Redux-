@@ -1,5 +1,5 @@
 import React from "react";
-import LoginLayout from "./LoginLayout";
+import LoginLogic from "./LoginLogic";
 import { useRouter } from "next/router";
 import styles from "./UsernameLogin.module.scss";
 
@@ -33,7 +33,7 @@ const UsernameLoginPage = () => {
 
   return (
     <div className={styles["username-page"]}>
-      <LoginLayout />
+      <LoginLogic />
       <div className={styles["sign-up__footer"]}>
         <span>New to Amazon?</span>
         <button onClick={handleAccountCreation}>

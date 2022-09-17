@@ -1,9 +1,10 @@
+@use "../../styles/scss";
+
 .main-nav {
   height: 7rem;
   min-width: 100rem;
   background-color: #131921;
-  display: flex;
-  align-items: center;
+  @include scss.displayFlex(row, center, initial, 0);
 
   &__amazon-logo {
     cursor: pointer;
@@ -15,11 +16,10 @@
   }
 
   &__sign-in {
-    display: flex;
-    align-items: center;
+    @include scss.displayFlex(row, center, initial, 0);
     white-space: nowrap;
     margin-left: 4rem;
-    color: white;
+    color: scss.$default-white;
     margin-right: 0.5rem;
 
     & h3 {
@@ -29,13 +29,13 @@
     }
 
     & h3 span:first-child {
-      font-size: 1.5rem;
-      font-weight: 500;
+      font-size: scss.$font-size-default;
+      font-weight: scss.$font-weight-light;
       letter-spacing: 0.3px;
     }
 
     & h3 span:last-child {
-      font-weight: 600;
+      font-weight: scss.$font-weight-medium;
     }
   }
 
@@ -50,8 +50,8 @@
 .number-ofItems {
   position: absolute;
   top: 2px;
-  left: 22px;
-  font-weight: 700;
+  left: 2.2rem;
+  font-weight: scss.$font-weight-bold;
   color: orange;
-  font-size: 2rem;
+  font-size: scss.$font-size-2rem;
 }

@@ -1,34 +1,24 @@
-.amazon-logo__box {
-  margin: 5rem 0 0rem 0rem;
-  align-self: center;
-}
-
-.amazon-logo {
-  fill: black;
-}
+@use "../../styles/scss";
 
 .sign-in__box {
-  padding: 0;
   margin: 0;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  padding: 2.5rem;
-  align-items: flex-start;
+  font-size: scss.$font-size-2rem;
+  @include scss.displayFlex(column, flex-start, initial, 0);
   align-self: center;
+  padding: 2.5rem;
   width: 37rem;
   min-height: 30rem;
-  background-color: white;
+  background-color: scss.$default-white;
   box-shadow: 0 0 2px 1px rgb(158, 153, 153);
 
   & h1 {
-    font-weight: 600;
+    font-weight: scss.$font-weight-medium;
     margin: 0;
   }
 
   & p {
     margin-top: 2.5rem;
-    font-size: 1.5rem;
+    font-size: scss.$font-size-default;
   }
 
   & p a {
@@ -41,8 +31,8 @@
   }
 
   &-email {
-    font-size: 2rem;
-    color: black;
+    font-size: scss.$font-size-2rem;
+    color: scss.$default-black;
     margin-bottom: -0.5rem;
   }
 
@@ -53,20 +43,18 @@
 
 .username-info {
   flex-basis: 90%;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
+  @include scss.displayFlex(column, initial, initial, 1rem);
 
   & label {
     margin: 2rem 0 0 0;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: scss.$font-size-default;
+    font-weight: scss.$font-weight-bold;
   }
 
   & input {
     font-family: inherit;
-    border-radius: 3px;
-    font-size: 1.7rem;
+    border-radius: scss.$border-radius-common;
+    font-size: scss.$font-size-default;
     padding: 0.5rem 1rem;
     height: 2.8rem;
     margin-bottom: 0.6rem;
@@ -81,26 +69,7 @@
   }
 
   & button {
-    color: black;
-    border-radius: 3px;
-    font-family: inherit;
-    font-size: 1.8rem;
-    border: none;
-    padding: 1rem 15rem;
-    cursor: pointer;
-    background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
-    border-color: #adb1b8 #a2a6ac #8d9096;
-    border-style: solid;
-    border-width: 1px;
-    transition: all 0.3s;
-
-    &:hover {
-      background: linear-gradient(to bottom, #f0c14b, #f7dfa5);
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
+    @include scss.yellowBtn;
   }
 }
 

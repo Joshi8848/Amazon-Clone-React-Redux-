@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ProductsInfoObj } from "./index";
 import { productObj } from "./index";
+import Header from "../../components/Header/Header";
 
 console.log(productObj["computers"]);
 let currentProduct: ProductsInfoObj;
@@ -27,6 +28,7 @@ const ProductItemPage = () => {
 
   return (
     <>
+      <Header />
       {gotCurrentProductObj && <ProductDetails curProduct={currentProduct} />}
     </>
   );

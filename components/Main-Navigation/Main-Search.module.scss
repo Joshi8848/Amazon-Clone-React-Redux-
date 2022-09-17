@@ -1,3 +1,5 @@
+@use "../../styles/scss";
+
 .main-search__container {
   width: fit-content;
   width: 100%;
@@ -8,8 +10,8 @@
   align-items: center;
 
   &--search-bar {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
     width: inherit;
     height: 2.4rem;
     border: none;
@@ -17,8 +19,8 @@
     font-family: inherit;
     font-size: 1.8rem;
     color: #111;
-    padding: 10px 10px 10px 10px;
-    line-height: 10px;
+    padding: 1rem;
+    line-height: 1rem;
     z-index: 99;
   }
 }
@@ -26,8 +28,8 @@
 .search-icon__container {
   cursor: pointer;
   display: flex;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   padding: 0 1rem 0 1rem;
   transition: all 0.3s;
   background-color: rgb(221, 156, 35);

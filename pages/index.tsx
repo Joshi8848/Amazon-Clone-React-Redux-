@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Provider } from "react-redux";
+import store from "../components/store";
 import Header from "../components/Header/Header";
 import MainSlider from "../components/Body/slider/Main-Slider";
 import ProductBody from "../components/Body/Products/ProductsBody";
@@ -22,13 +23,13 @@ import styles from "../styles/index.module.scss";
 
 const HomePage = () => {
   return (
-    <Fragment>
+    <Provider store={store}>
       <Header />
       <main className={styles["main-body__container"]}>
         <MainSlider />
         <ProductBody />
       </main>
-    </Fragment>
+    </Provider>
   );
 };
 

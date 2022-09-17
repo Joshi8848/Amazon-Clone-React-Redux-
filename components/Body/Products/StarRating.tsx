@@ -1,9 +1,10 @@
 import styles from "./StarRating.module.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import { IoIosStarOutline } from "react-icons/io";
 
-const StarRating = () => {
+const StarRating: React.FC<{ readonlyStatus: boolean }> = (props) => {
+  const { readonlyStatus } = props;
   const [rating, setRating] = useState<number>(0);
 
   const tooltipArray = [
@@ -44,12 +45,12 @@ const StarRating = () => {
     <div className={styles["star__rating"]}>
       <Rating
         style={{ margin: "1rem 0" }}
-        emptyColor="white"
-        // showTooltip
+        emptyColor={`${readonlyStatus ? "white" : "gray"}`}
+        showTooltip
         onClick={handleRating}
         ratingValue={0}
-        initialValue={currRating}
-        readonly={true}
+        initialValue={readonlyStatus ? currRating : rating}
+        readonly={readonlyStatus ? true : false}
         allowHover
         transition
         size={20}

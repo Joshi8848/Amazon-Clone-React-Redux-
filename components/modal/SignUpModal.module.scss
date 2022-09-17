@@ -1,55 +1,60 @@
-.arrow {
-  position: relative;
-  cursor: pointer;
-  border-style: solid;
-  top: 2px;
-  left: 15px;
-  z-index: 999;
-  border-width: 5px;
+@use "../../styles/scss";
 
-  border-color: transparent;
-  border-bottom-width: 0;
-  border-top: 7px solid #ccc;
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
+.arrow {
+  @include scss.arrow(
+    relative,
+    pointer,
+    solid,
+    2px,
+    15px,
+    999,
+    5px,
+    transparent,
+    0,
+    0,
+    0,
+    0
+  ) {
+    border-bottom-width: 0;
+    border-top: 7px solid #ccc;
+  }
 }
 
 .arrow2 {
-  position: absolute;
-  border-style: solid;
-  border-width: 9px;
-  left: 111px;
-  top: -10px;
-  border-color: transparent;
-  border-top-width: 0;
-  border-bottom: 10px solid white;
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
+  @include scss.arrow(
+    absolute,
+    auto,
+    solid,
+    -10px,
+    111px,
+    auto,
+    9px,
+    transparent,
+    0,
+    0,
+    0,
+    0
+  ) {
+    border-top-width: 0;
+    border-bottom: 10px solid scss.$default-white;
+  }
 }
 
 .signin-modal {
   z-index: 9999;
   border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 13px;
-  left: -120px;
-  width: 25rem;
-  height: 20rem;
-  background-color: white;
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+  @include scss.displayFlex(column, center, center, 0);
+  @include scss.positionEl(absolute, 1.3rem, -12rem, initial) {
+    width: 25rem;
+    height: 20rem;
+  }
+  background-color: scss.$default-white;
+  box-shadow: 0 0 3px 2px rgba(scss.$default-black, 0.3);
 
   & h4 {
     margin-top: 3rem;
-    font-size: 1.5rem;
-    color: black;
+    font-size: scss.$font-size-default;
+    color: scss.$default-black;
   }
 
   & h4 span {
@@ -65,13 +70,13 @@
 .sign-in__btn {
   display: inline-block;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: scss.$font-weight-medium;
   background: -webkit-linear-gradient(top, #f8e3ad, #eeba37);
   border: 1px solid;
-  border-radius: 3px;
+  border-radius: scss.$border-radius-common;
   border-color: #c89411 #b0820f #99710d;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: scss.$font-size-default;
   margin-top: -3rem;
   padding: 0.7rem 5rem;
   transition: all 0.3s;

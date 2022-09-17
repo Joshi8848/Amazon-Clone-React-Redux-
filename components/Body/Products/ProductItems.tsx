@@ -45,7 +45,7 @@ const ProductItems: React.FC<{ items: ProductsInfoObj }> = (props) => {
             {items.product_title}
           </h4>
           <div className={styles["product-rating"]}>
-            <StarRating />
+            <StarRating readonlyStatus={true} />
             <span>
               {items.isBestSeller
                 ? commaAddedNumber

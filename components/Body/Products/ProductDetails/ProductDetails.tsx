@@ -7,31 +7,39 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
   const randomPrice =
     Math.trunc(Math.random() * (500 - 300) + 300).toString() + ".00";
   const { curProduct } = props;
+  let titleIndex = curProduct.product_title!.indexOf(",");
+  if (titleIndex === -1) {
+    titleIndex = curProduct.product_title!.length;
+  }
+  let smallTitle = curProduct.product_title!.slice(0, titleIndex);
+  if (smallTitle.length < 10) {
+    smallTitle = curProduct.product_title!;
+  }
   return (
     <section className={styles["product-detail"]}>
       <div className={styles["product-detail__info"]}>
-        <div className={styles["product-picture__box"]}>
-          <div
-            className={styles["product-picture"]}
-            style={{
-              backgroundImage: `url(${curProduct.product_main_image_url})`,
-            }}
-          ></div>
+        <div className={styles["product-picture__leftbox"]}>
+          <div className={styles["product-picture__box"]}>
+            <div
+              className={styles["product-picture"]}
+              style={{
+                backgroundImage: `url(${curProduct.product_main_image_url})`,
+              }}
+            ></div>
+          </div>
           <div className={styles["product-picture__rating"]}>
-            <span>Rate this product</span>
-            <StarRating />
+            <span>Rate this product:</span>
+            <StarRating readonlyStatus={false} />
           </div>
         </div>
         <div className={styles["product-description"]}>
           <div className={styles["product-description__header"]}>
-            <h2 className={styles["product-title"]}>
-              {curProduct.product_title}
-            </h2>
+            <h2 className={styles["product-title"]}>{smallTitle}</h2>
             <p className={styles["product-bestseller"]}>
-              Bestseller: {curProduct.isBestSeller ? "Yes" : "No"}
+              <span>Bestseller:</span> {curProduct.isBestSeller ? "Yes" : "No"}
             </p>
             <span>Sales:</span>
-            <StarRating />
+            <StarRating readonlyStatus={false} />
           </div>
           <span className={styles["product-share"]}>Share</span>
 

@@ -20,3 +20,73 @@
     transform: scale(0.95);
   }
 }
+
+@mixin positionEl($position, $top, $left, $right) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  @content;
+}
+
+@mixin displayFlex($direction, $align, $justify, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin displayGrid($justify-items, $align-items, $gap) {
+  display: grid;
+  justify-items: $justify-items;
+  align-items: $align-items;
+  gap: $gap;
+  @content;
+}
+
+@mixin arrow(
+  $position,
+  $cursor,
+  $border-style,
+  $top,
+  $left,
+  $z-index,
+  $border-width,
+  $border-color,
+  $width,
+  $height,
+  $font-size,
+  $line-height
+) {
+  position: $position;
+  cursor: $cursor;
+  border-style: $border-style;
+  top: $top;
+  left: $left;
+  z-index: $z-index;
+  border-width: $border-width;
+  border-color: $border-color;
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  line-height: $line-height;
+  @content;
+}
+
+@mixin backgroundImage(
+  $back-size,
+  $back-color,
+  $back-repeat,
+  $back-position,
+  $width,
+  $height
+) {
+  background-size: $back-size;
+  background-color: $back-color;
+  background-repeat: $back-repeat;
+  background-position: $back-position;
+  height: $width;
+  width: $height;
+  @content;
+}

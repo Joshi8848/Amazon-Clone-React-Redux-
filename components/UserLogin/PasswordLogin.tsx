@@ -1,10 +1,10 @@
-import LoginLayout from "./LoginLayout";
+import LoginLogic from "./LoginLogic";
 import styles from "./PasswordLogin.module.scss";
 
 const PasswordLoginPage = () => {
   return (
     <div className={styles["password-page"]}>
-      <LoginLayout />
+      <LoginLogic />
     </div>
   );
 };

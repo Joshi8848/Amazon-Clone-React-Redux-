@@ -10,7 +10,7 @@
       width: 140rem;
       margin: 0 auto;
       min-height: 40rem;
-      background-color: white;
+      background-color: scss.$default-white;
       padding: 2rem;
       display: grid;
       grid-template-columns: 0.4fr 1fr;
@@ -18,18 +18,37 @@
   }
 
   &-picture {
-    background-size: contain;
-    background-color: transparent;
+    @include scss.backgroundImage(
+      contain,
+      transparent,
+      no-repeat,
+      center,
+      initial,
+      100%
+    ) {
+      min-height: 25rem;
+    }
     display: inline-block;
     text-align: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 25rem;
-    width: 100%;
-    padding: 1rem;
-    &__box {
+
+    &__leftbox {
+      border-radius: scss.$border-radius-common;
       height: max-content;
-      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 2px 1px rgba(scss.$default-black, 0.3);
+    }
+
+    &__box {
+      padding: 1rem;
+    }
+
+    &__rating {
+      font-size: 1.5rem;
+      text-decoration: underline;
+      margin-top: 1rem;
+      padding: 1rem;
+      text-align: center;
+      background-clip: border-box;
+      background-color: #ccc;
     }
   }
 
@@ -39,17 +58,19 @@
     padding: 0 2rem 0 5rem;
     &__header {
       & span {
+        font-weight: scss.$font-weight-medium;
         font-size: 1.7rem;
       }
     }
 
     &__text {
-      font-size: 2rem;
+      line-height: 1.3;
+      font-size: 1.7rem;
 
       & span {
         display: block;
-        font-size: 2.3rem;
-        font-weight: 600;
+        font-size: scss.$font-size-2rem;
+        font-weight: scss.$font-weight-medium;
       }
     }
   }
@@ -59,20 +80,20 @@
   }
 
   &-bestseller {
-    font-size: 2rem;
+    font-size: scss.$font-size-2rem;
   }
 
   &-share {
     position: absolute;
     right: 0;
-    font-size: 1.3rem;
+    font-size: scss.$font-size-default;
     display: inline-block;
   }
 
   &-price {
     margin: 1rem 0;
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: scss.$font-weight-light;
     color: rgb(243, 198, 0);
     padding-bottom: 1rem;
     border-bottom: 1px solid rgba(128, 128, 128, 0.281);
@@ -81,4 +102,6 @@
 
 .add-to-cart {
   @include scss.yellowBtn;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }

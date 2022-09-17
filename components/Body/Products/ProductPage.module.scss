@@ -1,3 +1,5 @@
+@use "../../../styles/scss";
+
 .products-item {
   &__page {
     max-width: 160rem;
@@ -6,8 +8,8 @@
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    @include scss.displayGrid(initial, initial, 2rem) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
