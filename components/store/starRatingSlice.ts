@@ -19,6 +19,14 @@ const starRatingSlice = createSlice({
       state.ratingValue = action.payload;
     },
   },
+  // extraReducers: {
+  //   [HYDRATE]: (state, action) => {
+  //     return {
+  //       ...state,
+  //       ...action.payload,
+  //     };
+  //   },
+  // },
 });
 
 export const starRatingAction = starRatingSlice.actions;

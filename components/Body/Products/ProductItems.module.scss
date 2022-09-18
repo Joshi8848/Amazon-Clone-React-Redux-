@@ -20,7 +20,7 @@
     }
 
     &--box {
-      padding: 1rem 0;
+      padding: scss.$padding-very-small;
       height: 25rem;
       width: 100%;
       cursor: pointer;
@@ -45,7 +45,7 @@
   display: inline-block;
   color: scss.$default-white;
   padding: 0.7rem 2rem 0.7rem 1rem;
-  background-color: #e67a00;
+  background-color: scss.$color-bestSeller;
   font-size: scss.$font-size-default;
   position: absolute;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
@@ -57,6 +57,6 @@
   & span {
     font-weight: scss.$font-weight-light;
     font-size: 1.7rem;
-    color: #007185;
+    color: scss.$color-links;
   }
 }

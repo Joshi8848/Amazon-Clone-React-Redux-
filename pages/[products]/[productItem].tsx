@@ -23,7 +23,6 @@ const ProductItemPage = () => {
         return;
       }
     });
-    console.log(router.query, products);
   }, [productItem, products]);
 
   return (

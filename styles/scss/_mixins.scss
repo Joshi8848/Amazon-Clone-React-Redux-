@@ -1,16 +1,14 @@
 @mixin yellowBtn {
   color: black;
   border-radius: 3px;
-  font-family: inherit;
   font-size: 1.8rem;
-  border: none;
-  padding: 1rem 15rem;
-  cursor: pointer;
+  padding: 1rem 14.5rem;
   background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
   border-color: #adb1b8 #a2a6ac #8d9096;
   border-style: solid;
   border-width: 1px;
   transition: all 0.3s;
+  @content;
 
   &:hover {
     background: linear-gradient(to bottom, #f0c14b, #f7dfa5);
@@ -19,6 +17,11 @@
   &:active {
     transform: scale(0.95);
   }
+}
+
+@mixin buttons {
+  font-family: inherit;
+  cursor: pointer;
 }
 
 @mixin positionEl($position, $top, $left, $right) {

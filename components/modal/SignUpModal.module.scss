@@ -59,7 +59,7 @@
 
   & h4 span {
     cursor: pointer;
-    color: blue;
+    color: scss.$color-links;
 
     &:hover {
       text-decoration: underline;
@@ -68,14 +68,13 @@
 }
 
 .sign-in__btn {
+  @include scss.buttons;
   display: inline-block;
-  cursor: pointer;
   font-weight: scss.$font-weight-medium;
   background: -webkit-linear-gradient(top, #f8e3ad, #eeba37);
   border: 1px solid;
   border-radius: scss.$border-radius-common;
   border-color: #c89411 #b0820f #99710d;
-  font-family: inherit;
   font-size: scss.$font-size-default;
   margin-top: -3rem;
   padding: 0.7rem 5rem;

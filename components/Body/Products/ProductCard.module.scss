@@ -1,12 +1,12 @@
 @use "../../../styles/scss";
 
 .product-item {
-  padding: 2rem;
+  @include scss.displayFlex(column, initial, initial, 2rem);
+  padding: scss.$padding-small;
   z-index: 10;
   width: 30rem;
   height: 40rem;
   background-color: scss.$default-white;
-  // box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.6);
 
   & h2 {
     font-size: 2.6rem;
@@ -27,7 +27,7 @@
 
 .product-page__link {
   font-size: scss.$font-size-default;
-  color: #4a9aa8;
+  color: scss.$color-links;
   cursor: pointer;
   transition: all 0.2s;
   &:hover {

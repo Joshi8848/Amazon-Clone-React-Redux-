@@ -4,7 +4,7 @@
   &__page {
     max-width: 160rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: scss.$padding-small;
   }
 
   &__container {

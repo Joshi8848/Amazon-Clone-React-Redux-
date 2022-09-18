@@ -5,7 +5,9 @@ import styles from "./LoginLogic.module.scss";
 import AmazonLogo from "../../images/amazon1.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { LoginContext, LoginParams } from "../../context/login-context";
+import { LoginContext } from "../../context/login-context";
+import { useDispatch } from "react-redux";
+import { starRatingAction } from "../store/starRatingSlice";
 import { useRouter } from "next/router";
 
 let emailPage: boolean = true;
@@ -15,6 +17,7 @@ const emailAddress: { email: string | null } = {
 };
 
 const LoginLogic = () => {
+  const dispatch = useDispatch();
   const loginCtx = useContext(LoginContext);
   const { pathname, push } = useRouter();
 
@@ -68,8 +71,8 @@ const LoginLogic = () => {
       formik.values.password.trim().length > 0
     ) {
       const userEmail = { email: emailAddress.email };
-      console.log(userEmail);
       loginCtx.shareLoginCredentials(userEmail);
+      dispatch(starRatingAction.toggleLoggedInStatus());
       push("/");
     }
   };

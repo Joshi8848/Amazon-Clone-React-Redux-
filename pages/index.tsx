@@ -1,9 +1,8 @@
-import { Provider } from "react-redux";
-import store from "../components/store";
 import Header from "../components/Header/Header";
 import MainSlider from "../components/Body/slider/Main-Slider";
 import ProductBody from "../components/Body/Products/ProductsBody";
 import styles from "../styles/index.module.scss";
+import { Fragment } from "react";
 
 // const options = {
 //   method: "GET",
@@ -23,13 +22,13 @@ import styles from "../styles/index.module.scss";
 
 const HomePage = () => {
   return (
-    <Provider store={store}>
+    <Fragment>
       <Header />
       <main className={styles["main-body__container"]}>
         <MainSlider />
         <ProductBody />
       </main>
-    </Provider>
+    </Fragment>
   );
 };
 

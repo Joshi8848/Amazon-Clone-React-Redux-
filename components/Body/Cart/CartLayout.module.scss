@@ -1,0 +1,45 @@
+@use "../../../styles/scss";
+
+.cart {
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: scss.$color-background-primary;
+
+  &-container {
+    padding: 2rem 1rem;
+    background-clip: content-box;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    background-color: scss.$default-white;
+  }
+
+  &-item {
+    &__container {
+      position: relative;
+      padding: 2rem 1rem;
+    }
+
+    &__title {
+      font-size: 3.4rem;
+      margin-bottom: 0.6rem;
+      font-weight: scss.$font-weight-light;
+    }
+
+    &__deselect {
+      font-size: 1.6rem;
+      font-weight: scss.$font-weight-medium;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.356);
+      color: scss.$color-links;
+      display: block;
+    }
+
+    &__price--title {
+      font-size: scss.$font-size-default;
+      position: absolute;
+      right: 2rem;
+      color: #565959;
+      top: 8rem;
+    }
+  }
+}

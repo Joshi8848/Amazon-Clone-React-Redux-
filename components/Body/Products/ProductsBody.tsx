@@ -78,8 +78,6 @@ const Thumbnails = [
   },
 ];
 
-console.log(Thumbnails);
-
 const ProductBody = () => {
   return (
     <section className={styles["main-body"]}>

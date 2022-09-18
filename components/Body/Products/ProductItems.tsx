@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import styles from "./ProductItems.module.scss";
 import StarRating from "./StarRating";
 import { useRouter } from "next/router";

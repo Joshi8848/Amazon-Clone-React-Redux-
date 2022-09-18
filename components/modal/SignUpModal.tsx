@@ -6,10 +6,13 @@ import classes from "../../styles/index.module.scss";
 import Link from "next/link";
 import { LoginContext } from "../../context/login-context";
 
+import { starRatingAction } from "../store/starRatingSlice";
+import { useDispatch } from "react-redux";
 
 let open: boolean = false;
 
 const SignUpModal = React.memo(() => {
+  const dispatch = useDispatch();
   const { loggedInStatus, logoutFunc } = useContext(LoginContext);
   const router = useRouter();
 
@@ -50,6 +53,7 @@ const SignUpModal = React.memo(() => {
 
   const logoutHandler = () => {
     if (!loggedInStatus) return;
+    dispatch(starRatingAction.toggleLoggedInStatus());
     logoutFunc();
   };
 

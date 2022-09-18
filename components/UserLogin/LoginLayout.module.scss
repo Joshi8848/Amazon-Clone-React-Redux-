@@ -5,8 +5,8 @@
   font-size: scss.$font-size-2rem;
   @include scss.displayFlex(column, flex-start, initial, 0);
   align-self: center;
-  padding: 2.5rem;
-  width: 37rem;
+  padding: scss.$padding-small;
+  width: 40rem;
   min-height: 30rem;
   background-color: scss.$default-white;
   box-shadow: 0 0 2px 1px rgb(158, 153, 153);
@@ -22,7 +22,7 @@
   }
 
   & p a {
-    color: blue;
+    color: scss.$color-links;
 
     &:hover {
       text-decoration: underline;
@@ -56,7 +56,7 @@
     border-radius: scss.$border-radius-common;
     font-size: scss.$font-size-default;
     padding: 0.5rem 1rem;
-    height: 2.8rem;
+    height: 4rem;
     margin-bottom: 0.6rem;
     outline: none;
     transition: all 0.3s;
@@ -69,7 +69,9 @@
   }
 
   & button {
-    @include scss.yellowBtn;
+    @include scss.yellowBtn {
+      @include scss.buttons;
+    }
   }
 }
 

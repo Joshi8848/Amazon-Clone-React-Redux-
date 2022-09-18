@@ -13,13 +13,13 @@
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     width: inherit;
-    height: 2.4rem;
+    height: 4.4rem;
     border: none;
     outline: none;
     font-family: inherit;
     font-size: 1.8rem;
     color: #111;
-    padding: 1rem;
+    padding: scss.$padding-very-small;
     line-height: 1rem;
     z-index: 99;
   }
@@ -30,7 +30,7 @@
   display: flex;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  padding: 0 1rem 0 1rem;
+  padding: scss.$padding-very-small;
   transition: all 0.3s;
   background-color: rgb(221, 156, 35);
   height: 4.4rem;
