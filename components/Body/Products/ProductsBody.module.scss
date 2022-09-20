@@ -1,9 +1,0 @@
-@use "../../../styles/scss";
-
-.main-body {
-  @include scss.displayGrid(center, initial, 3rem) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  padding: scss.$padding-small;
-  background-color: scss.$color-background-primary;
-}

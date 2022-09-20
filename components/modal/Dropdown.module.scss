@@ -1,9 +1,11 @@
+@use "../../styles/scss";
+
 .dropdown {
   position: absolute;
   display: block;
-  top: 0;
-  left: 0;
-  width: 7rem;
+  top: -0.2rem;
+  left: -0.2rem;
+  width: 9rem;
   height: 23.5rem;
   overflow: scroll;
   gap: 1rem;
@@ -11,9 +13,12 @@
   flex-direction: column;
   border: 1px solid #d5d9d9;
   border-radius: 0.7rem;
-  padding: 0.5rem 0.1rem;
+  padding: 0.5rem 0rem;
   white-space: nowrap;
   background-color: #fff;
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
   transition: all 0.2s;
 
   &__number {
@@ -25,5 +30,17 @@
       outline: 1px solid #c7cccc;
       background-color: #e3e6e6;
     }
+  }
+
+  &-active {
+    border: 1px solid scss.$color-links;
+    background-color: #e3e6e6;
+  }
+
+  &-toggle {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }

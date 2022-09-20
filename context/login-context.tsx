@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { boolean } from "yup/lib/locale";
+
+import { useDispatch } from "react-redux";
+import { cartItemsAction } from "../components/store/cartLogicSlice";
 
 interface Props {
   children: React.ReactNode;
@@ -24,17 +26,21 @@ export const LoginContext = React.createContext<LoginObj>({
 });
 
 const LoginContextProvider: React.FC<Props> = (props) => {
+  const dispatch = useDispatch();
+
   const [loginCredentials, setLoginCredentials] = useState<LoginParams>(
     {} as LoginParams
   );
   const [isLoggedIn, setLoginStatus] = useState(false);
 
   const loginCredentialsHandler = (creds: LoginParams) => {
+    dispatch(cartItemsAction.toggleLoggedInStatus());
     setLoginCredentials(creds);
     setLoginStatus(true);
   };
 
   const manageLogoutHandler = () => {
+    dispatch(cartItemsAction.toggleLoggedInStatus());
     setLoginStatus(false);
   };
 

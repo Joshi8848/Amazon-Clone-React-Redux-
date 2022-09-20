@@ -1,7 +1,7 @@
 import ProductItems from "./ProductItems";
-import Header from "../../Header/Header";
+import Header from "../../../Header/Header";
 import React, { Fragment } from "react";
-import { ProductsInfoObj } from "../../../pages/[products]";
+import { ProductsInfoObj } from "../../../../pages/[products]";
 import styles from "./ProductPage.module.scss";
 
 const ProductPage: React.FC<{ productsArr: ProductsInfoObj[] }> = (props) => {

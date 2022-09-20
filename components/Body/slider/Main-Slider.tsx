@@ -56,28 +56,20 @@ const MainSlider = () => {
   return (
     <div className={styles["slider-box"]}>
       <div className={`${styles["slider-box__inside"]} ${classes.noselect}`}>
-        <svg
-          className={`${styles["slider-icon"]} ${styles["slider-icon__left"]}`}
-          tabIndex={0}
-        >
-          <use xlinkHref="../../../images/sprite.svg#icon-chevron-thin-left"></use>
-        </svg>
-        <svg
-          className={`${styles["slider-icon"]} ${styles["slider-icon__right"]}`}
-          tabIndex={0}
-        >
-          <use xlinkHref="../../../images/sprite.svg#icon-chevron-thin-right"></use>
-        </svg>
-        {/* <AiOutlineLeft
+        <div
+          className={` ${styles["slider-icon"]} ${styles["slider-icon__left--box"]}`}
           tabIndex={0}
           onClick={changeToPrevSlideHandler}
-          className={`${styles["slider-icon"]} ${styles["slider-icon__left"]}`}
-        />
-        <AiOutlineRight
+        >
+          <AiOutlineLeft className={` ${styles["slider-icon__left"]}`} />
+        </div>
+        <div
+          className={` ${styles["slider-icon"]} ${styles["slider-icon__right--box"]}`}
           tabIndex={0}
           onClick={changeToNextSlideHandler}
-          className={`${styles["slider-icon"]} ${styles["slider-icon__right"]}`}
-        /> */}
+        >
+          <AiOutlineRight className={`${styles["slider-icon__right"]}`} />
+        </div>
         <div className={styles["slider-pictures-box"]}>
           <div ref={pic1}>
             <Image

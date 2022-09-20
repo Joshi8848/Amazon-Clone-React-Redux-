@@ -1,12 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cartItemsSlice from "./cartItemsSlice";
-import starRatingSlice from "./starRatingSlice";
+import cartLogicSlice from "./cartLogicSlice";
 
 const store = configureStore({
   reducer: {
-    starRating: starRatingSlice.reducer,
-    cartItems: cartItemsSlice.reducer,
+    cartLogic: cartLogicSlice.reducer,
   },
 });
 
 export default store;
+export type AppRootState = ReturnType<typeof store.getState>;

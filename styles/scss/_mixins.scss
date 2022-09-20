@@ -1,3 +1,8 @@
+@mixin buttons {
+  font-family: inherit;
+  cursor: pointer;
+}
+
 @mixin yellowBtn {
   color: black;
   border-radius: 3px;
@@ -19,9 +24,21 @@
   }
 }
 
-@mixin buttons {
-  font-family: inherit;
+@mixin quantityBtn {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+  padding: 0 1rem 0 1rem;
+  border-radius: 0.7rem;
+  background-color: #f0f2f2;
+  border: 1px solid #d5d9d9;
+  color: #0f1111;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgb(15 17 17 / 15%);
 }
 
 @mixin positionEl($position, $top, $left, $right) {
@@ -92,4 +109,15 @@
   height: $width;
   width: $height;
   @content;
+}
+
+@mixin shippingInfo($margin-left) {
+  font-size: 1.4rem;
+  color: #434545;
+
+  & span {
+    color: black;
+    font-weight: 600;
+    margin-left: $margin-left;
+  }
 }

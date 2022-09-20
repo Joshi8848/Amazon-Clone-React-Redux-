@@ -12,7 +12,7 @@ import Sports from "../../JSON/Sports.json";
 import Pets from "../../JSON/Pets.json";
 import VideoGames from "../../JSON/VideoGames.json";
 import WomensFashion from "../../JSON/WomensFashion.json";
-import ProductPage from "../../components/Body/Products/ProductPage";
+import ProductPage from "../../components/Body/Products/ProductCategory/ProductPage";
 import { useState, useEffect, Fragment } from "react";
 import Backdrop from "../../components/modal/Backdrop";
 

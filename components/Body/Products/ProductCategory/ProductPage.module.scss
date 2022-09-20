@@ -1,13 +1,14 @@
-@use "../../../styles/scss";
+@use "../../../../styles/scss";
 
 .products-item {
   &__page {
-    max-width: 160rem;
-    margin: 0 auto;
-    padding: scss.$padding-small;
+    background-color: scss.$color-background-primary;
   }
 
   &__container {
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: scss.$padding-small;
     @include scss.displayGrid(initial, initial, 2rem) {
       grid-template-columns: repeat(4, 1fr);
     }

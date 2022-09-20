@@ -1,0 +1,105 @@
+@use "../../../../styles/scss";
+
+.product-buy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 15px;
+  padding: scss.$padding-very-small scss.$padding-small;
+  border: 1px solid rgba(128, 128, 128, 0.349);
+  min-height: 100%;
+
+  &__box {
+    border-radius: 5px;
+    outline: 5px solid rgba(128, 128, 128, 0.349);
+  }
+
+  &__title {
+    font-size: scss.$font-size-default;
+    display: flex;
+
+    & span {
+      margin-left: auto;
+      font-weight: scss.$font-weight-light;
+      color: scss.$color-price;
+    }
+  }
+
+  &__delivery {
+    &--date {
+      font-size: scss.$font-size-default;
+      margin-top: 0.3rem;
+      margin-bottom: 0.5rem;
+      & span {
+        font-weight: scss.$font-weight-bold;
+        margin-left: 0.3rem;
+      }
+    }
+
+    &--location {
+      font-size: 1.3rem;
+      color: scss.$color-links;
+    }
+  }
+
+  &__available {
+    font-size: 2rem;
+    font-weight: scss.$font-weight-light;
+    color: #007600;
+    margin-top: 1rem;
+  }
+
+  &__shipping {
+    @include scss.shippingInfo(4.6rem);
+  }
+  &__seller {
+    @include scss.shippingInfo(6.6rem);
+  }
+  &__service {
+    @include scss.shippingInfo(1rem);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: scss.$padding-very-small;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+  }
+  &__policy {
+    font-size: scss.$font-size-default;
+    cursor: pointer;
+
+    & span {
+      color: scss.$color-links;
+
+      &:hover {
+        color: scss.$color-price;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.add-to-cart {
+  @include scss.buttons;
+  width: 100%;
+  padding: 0.8rem 0;
+  background-color: #ffd814;
+  color: black;
+  border-radius: 5rem;
+  font-size: scss.$font-size-default;
+  box-shadow: 0 0 0.7rem 0 rgba(scss.$default-black, 0.2);
+  border: none;
+  margin: 0.5rem 0 2rem 0;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #e6c10c;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.product-quantity {
+  @include scss.quantityBtn;
+}

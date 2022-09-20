@@ -1,18 +1,19 @@
 import styles from "./ProductsBody.module.scss";
 import ProductCard from "./ProductCard";
+import MainSlider from "../../slider/Main-Slider";
 // import Thumbnails from "../../../JSON/Thumbnails.json";
-import Audio from "../../../images/audiobook.jpg";
-import Baby from "../../../images/baby.jpg";
-import Computers from "../../../images/computer.avif";
-import Electronics from "../../../images/electronic.jpg";
-import Kitchen from "../../../images/kitchen.jpg";
-import Luxury from "../../../images/Luxury.jpg";
-import Mensclothes from "../../../images/mensclothes.jpg";
-import Phones from "../../../images/mobiles.webp";
-import Pet from "../../../images/pets.png";
-import Sports from "../../../images/sports.jpg";
-import Videogames from "../../../images/videogame.webp";
-import Womenclothes from "../../../images/womenclothes.jpg";
+import Audio from "../../../../images/audiobook.jpg";
+import Baby from "../../../../images/baby.jpg";
+import Computers from "../../../../images/computer.avif";
+import Electronics from "../../../../images/electronic.jpg";
+import Kitchen from "../../../../images/kitchen.jpg";
+import Luxury from "../../../../images/Luxury.jpg";
+import Mensclothes from "../../../../images/mensclothes.jpg";
+import Phones from "../../../../images/mobiles.webp";
+import Pet from "../../../../images/pets.png";
+import Sports from "../../../../images/sports.jpg";
+import Videogames from "../../../../images/videogame.webp";
+import Womenclothes from "../../../../images/womenclothes.jpg";
 
 const Thumbnails = [
   {
@@ -80,17 +81,23 @@ const Thumbnails = [
 
 const ProductBody = () => {
   return (
-    <section className={styles["main-body"]}>
-      {Thumbnails.map((item) => {
-        return (
-          <ProductCard
-            key={item.id}
-            id={item.id}
-            picture={item.picture.src}
-            name={item.name}
-          />
-        );
-      })}
+    <section className={styles["main-page"]}>
+      <div className={styles["main-page__container"]}>
+        {" "}
+        <MainSlider />
+        <div className={styles["main-page__items"]}>
+          {Thumbnails.map((item) => {
+            return (
+              <ProductCard
+                key={item.id}
+                id={item.id}
+                picture={item.picture.src}
+                name={item.name}
+              />
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };
