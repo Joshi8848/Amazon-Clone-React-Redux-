@@ -1,4 +1,4 @@
-import CreateNewAccount from "../components/UserLogin/CreateNewAccount";
+import CreateNewAccountLogic from "../components/UserLogin/CreateNewAccountLogic";
 import { useContext } from "react";
 import { LoginContext } from "../context/login-context";
 import { LoginParams } from "../context/login-context";
@@ -9,7 +9,7 @@ const CreateAccountPage = () => {
     shareLoginCredentials(loginObj);
   };
 
-  return <CreateNewAccount onCreateAccount={newAccountHandler} />;
+  return <CreateNewAccountLogic onCreateAccount={newAccountHandler} />;
 };
 
 export default CreateAccountPage;

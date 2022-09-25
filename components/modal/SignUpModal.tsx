@@ -5,8 +5,7 @@ import styles from "./SignUpModal.module.scss";
 import classes from "../../styles/index.module.scss";
 import Link from "next/link";
 import { LoginContext } from "../../context/login-context";
-
-import { starRatingAction } from "../store/starRatingSlice";
+import { cartItemsAction } from "../store/cartLogicSlice";
 import { useDispatch } from "react-redux";
 
 let open: boolean = false;
@@ -53,7 +52,7 @@ const SignUpModal = React.memo(() => {
 
   const logoutHandler = () => {
     if (!loggedInStatus) return;
-    dispatch(starRatingAction.toggleLoggedInStatus());
+    dispatch(cartItemsAction.toggleLoggedInStatus());
     logoutFunc();
   };
 

@@ -2,12 +2,12 @@
 
 .product-item {
   position: relative;
-  width: 34rem;
   min-height: 30rem;
   background-color: scss.$default-white;
   overflow: hidden;
   border-radius: 0.4rem;
-  box-shadow: 0 0 2px 1px rgba(scss.$default-black, 0.3);
+  box-shadow: 0 0 2rem 0.5rem rgba(scss.$default-black, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.288);
   &__picture {
     @include scss.backgroundImage(
       contain,
@@ -30,13 +30,14 @@
   &__text--box {
     height: 100%;
     padding: 1rem 2rem 1rem 2rem;
-    background-color: rgba(226, 201, 201, 0.469);
+    background-color: rgba(211, 211, 211, 0.541);
   }
 
   &__title {
-    font-size: scss.$font-size-2rem;
+    font-size: 1.6rem;
     font-weight: scss.$font-weight-light;
     margin: 0;
+    padding-bottom: 1rem;
     cursor: pointer;
   }
 }

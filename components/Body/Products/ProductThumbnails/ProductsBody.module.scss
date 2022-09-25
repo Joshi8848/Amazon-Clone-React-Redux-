@@ -1,16 +1,27 @@
 @use "../../../../styles/scss";
 
 .main-page {
-  background-color: scss.$color-background-primary;
+  width: min-content;
+
   &__container {
+    background-color: scss.$color-background-primary;
     max-width: 155rem;
     margin: 0 auto;
+
+    @media only screen and (max-width: 60em) {
+      width: min-content;
+    }
   }
 
   &__items {
-    @include scss.displayGrid(center, initial, 3rem) {
-      grid-template-columns: repeat(4, 1fr);
+    @include scss.displayGrid(initial, initial, 5rem) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
     padding: scss.$padding-small;
+
+    @media only screen and (max-width: 65em) {
+      grid-template-columns: repeat(3, 30rem);
+      gap: 3rem;
+    }
   }
 }

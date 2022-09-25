@@ -1,7 +1,13 @@
 @use "../../../styles/scss";
 
+%backgroundClip {
+  background-image: linear-gradient(to bottom, white 0%, white 100%),
+    linear-gradient(to bottom, #eee 0%, #eee 100%);
+  background-clip: content-box, padding-box;
+}
+
 .cart {
-  max-width: 100%;
+  width: min-content;
   min-height: 100vh;
   background-color: scss.$color-background-primary;
 
@@ -9,7 +15,7 @@
     padding: 2rem 1rem;
     background-clip: content-box;
     display: grid;
-    grid-template-columns: 3.5fr 1fr;
+    grid-template-columns: minmax(60rem, 1fr) 35rem;
     background-color: scss.$default-white;
   }
 
@@ -41,5 +47,39 @@
       color: #565959;
       top: 8rem;
     }
+  }
+
+  &-checkout {
+    &__container {
+      padding: 4rem 1rem 2rem 2rem;
+      @extend %backgroundClip;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__price {
+      padding: 2rem 1.5rem;
+
+      & h5 {
+        font-size: 2rem;
+        font-weight: scss.$font-weight-light;
+
+        & span {
+          font-weight: scss.$font-weight-medium;
+        }
+      }
+    }
+
+    &__btn {
+      @include scss.cartBtn(0.7rem 5rem, 1rem, 1.4rem, 2rem 0 1rem 0) {
+        @include scss.buttons;
+      }
+    }
+  }
+
+  &-recently__viewed {
+    height: 100%;
+    padding: 2rem 0;
+    @extend %backgroundClip;
   }
 }

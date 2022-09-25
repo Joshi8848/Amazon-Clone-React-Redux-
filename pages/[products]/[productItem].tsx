@@ -1,18 +1,16 @@
 import ProductDetails from "../../components/Body/Products/ProductDetails/ProductDetails";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { ProductsInfoObj } from "./index";
 import { productObj } from "./index";
-import Header from "../../components/Header/Header";
 
-console.log(productObj["computers"]);
 let currentProduct: ProductsInfoObj;
 
 const ProductItemPage = () => {
   const [gotCurrentProductObj, setCurrentProductObj] = useState(false);
   const router = useRouter();
   const { products, productItem } = router.query;
-  const currentProductObj = productObj[products];
+  const currentProductObj: ProductsInfoObj[] = productObj[products];
 
   useEffect(() => {
     if (!currentProductObj) return;
@@ -23,11 +21,10 @@ const ProductItemPage = () => {
         return;
       }
     });
-  }, [productItem, products]);
+  }, [currentProductObj]);
 
   return (
     <>
-      <Header />
       {gotCurrentProductObj && <ProductDetails curProduct={currentProduct} />}
     </>
   );

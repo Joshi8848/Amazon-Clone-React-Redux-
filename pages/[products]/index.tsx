@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
-// import Appliances from "../../JSON/Appliances.json";
+import Appliances from "../../JSON/Appliances.json";
 import AudioBooks from "../../JSON/AudioBooks.json";
 import BabyProducts from "../../JSON/BabyProducts.json";
 import Computers from "../../JSON/Computers.json";
 import Electronics from "../../JSON/Electronics.json";
 import Kitchen from "../../JSON/Kitchen.json";
 import Luxury from "../../JSON/Luxury.json";
+import Beauty from "../../JSON/Beauty.json";
 import MensFashion from "../../JSON/MensFashion.json";
 import Mobile from "../../JSON/Mobile.json";
 import Sports from "../../JSON/Sports.json";
@@ -13,12 +14,12 @@ import Pets from "../../JSON/Pets.json";
 import VideoGames from "../../JSON/VideoGames.json";
 import WomensFashion from "../../JSON/WomensFashion.json";
 import ProductPage from "../../components/Body/Products/ProductCategory/ProductPage";
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useMemo } from "react";
 import Backdrop from "../../components/modal/Backdrop";
 
 export const productObj = {
   computers: Computers,
-  luxury: Luxury,
+  beauty: Beauty,
   "baby-products": BabyProducts,
   "electronic-products": Electronics,
   "audio-books": AudioBooks,
@@ -33,15 +34,15 @@ export const productObj = {
 
 export type ProductsInfoObj = {
   isBestSeller: boolean | null;
-  product_title: string | null;
+  product_title: string;
   product_main_image_url: string;
   app_sale_price: null | string;
   app_sale_price_currency: null | string;
   isPrime: boolean | null;
   product_detail_url: string | null;
   product_id: string;
-  evaluate_rate: string | null;
-  original_price: null | string;
+  evaluate_rate: string;
+  original_price: string;
 };
 
 let currentPageItems: ProductsInfoObj[];

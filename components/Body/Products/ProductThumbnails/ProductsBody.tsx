@@ -2,12 +2,15 @@ import styles from "./ProductsBody.module.scss";
 import ProductCard from "./ProductCard";
 import MainSlider from "../../slider/Main-Slider";
 // import Thumbnails from "../../../JSON/Thumbnails.json";
+import Appliances from "../../../../images/appliances.jpg";
+import Header from "../../../Header/Header";
 import Audio from "../../../../images/audiobook.jpg";
 import Baby from "../../../../images/baby.jpg";
 import Computers from "../../../../images/computer.avif";
 import Electronics from "../../../../images/electronic.jpg";
 import Kitchen from "../../../../images/kitchen.jpg";
 import Luxury from "../../../../images/Luxury.jpg";
+import Beauty from "../../../../images/beauty.jpg";
 import Mensclothes from "../../../../images/mensclothes.jpg";
 import Phones from "../../../../images/mobiles.webp";
 import Pet from "../../../../images/pets.png";
@@ -22,9 +25,9 @@ const Thumbnails = [
     picture: Computers,
   },
   {
-    id: "luxury",
-    name: "Luxury",
-    picture: Luxury,
+    id: "beauty",
+    name: "Beauty",
+    picture: Beauty,
   },
   {
     id: "baby-products",
@@ -82,8 +85,8 @@ const Thumbnails = [
 const ProductBody = () => {
   return (
     <section className={styles["main-page"]}>
+      <Header />
       <div className={styles["main-page__container"]}>
-        {" "}
         <MainSlider />
         <div className={styles["main-page__items"]}>
           {Thumbnails.map((item) => {

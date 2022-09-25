@@ -27,7 +27,17 @@ const cartLogicSlice = createSlice({
         totalPrice: number;
       }>
     ) {
-      state.cartItems = [...state.cartItems, action.payload];
+      const alreadyExistingItem = state.cartItems.find(
+        (item) => item.item.product_id === action.payload.item.product_id
+      );
+      if (alreadyExistingItem) {
+        alreadyExistingItem.quantity += action.payload.quantity;
+        alreadyExistingItem.totalPrice += action.payload.totalPrice;
+      } else {
+        action.payload.totalPrice = action.payload.totalPrice;
+        state.cartItems = [...state.cartItems, action.payload];
+      }
+      console.log(state.cartItems);
     },
     toggleLoggedInStatus(state) {
       state.isLoggedIn = !state.isLoggedIn;

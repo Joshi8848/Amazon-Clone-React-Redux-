@@ -2,15 +2,26 @@
 
 .products-item {
   &__page {
-    background-color: scss.$color-background-primary;
+    width: min-content;
   }
 
   &__container {
-    max-width: 160rem;
+    background-color: white;
+    max-width: 150rem;
     margin: 0 auto;
     padding: scss.$padding-small;
-    @include scss.displayGrid(initial, initial, 2rem) {
-      grid-template-columns: repeat(4, 1fr);
+    @include scss.displayGrid(initial, initial, 3rem) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    @media only screen and (max-width: 65em) {
+      grid-template-columns: repeat(3, 30rem);
+      gap: 3rem;
     }
   }
 }
+
+// @include scss.displayGrid(initial, initial, 5rem) {
+//   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+// }
+// padding: scss.$padding-small;

@@ -9,7 +9,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B08Y8LHGC3",
     "product_id": "B08Y8LHGC3",
     "evaluate_rate": "4.7 out of 5 stars",
-    "original_price": null
+    "original_price": "$29.99"
   },
   {
     "isBestSeller": false,
@@ -33,7 +33,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B0775N5NR7",
     "product_id": "B0775N5NR7",
     "evaluate_rate": "4.5 out of 5 stars",
-    "original_price": null
+    "original_price": "$18.99"
   },
   {
     "isBestSeller": true,
@@ -45,7 +45,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B00OTVU5UQ",
     "product_id": "B00OTVU5UQ",
     "evaluate_rate": "4.6 out of 5 stars",
-    "original_price": null
+    "original_price": "$38.00"
   },
   {
     "isBestSeller": true,
@@ -57,7 +57,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B081TYB29F",
     "product_id": "B081TYB29F",
     "evaluate_rate": "4.5 out of 5 stars",
-    "original_price": null
+    "original_price": "$76.99"
   },
   {
     "isBestSeller": true,
@@ -69,7 +69,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B01C8BR0CO",
     "product_id": "B01C8BR0CO",
     "evaluate_rate": "4.8 out of 5 stars",
-    "original_price": null
+    "original_price": "$32.99"
   },
   {
     "isBestSeller": true,
@@ -81,7 +81,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B000LZI2UE",
     "product_id": "B000LZI2UE",
     "evaluate_rate": "4.5 out of 5 stars",
-    "original_price": null
+    "original_price": "$54.00"
   },
   {
     "isBestSeller": true,
@@ -105,7 +105,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B08CLNYK2B",
     "product_id": "B08CLNYK2B",
     "evaluate_rate": "4.7 out of 5 stars",
-    "original_price": null
+    "original_price": "$62.99"
   },
   {
     "isBestSeller": true,
@@ -117,7 +117,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B01I5MPR1G",
     "product_id": "B01I5MPR1G",
     "evaluate_rate": "4.7 out of 5 stars",
-    "original_price": "$29.89"
+    "original_price": "$29.99"
   },
   {
     "isBestSeller": true,
@@ -141,7 +141,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B006YTX0HQ",
     "product_id": "B006YTX0HQ",
     "evaluate_rate": "4.7 out of 5 stars",
-    "original_price": null
+    "original_price": "$24.00"
   },
   {
     "isBestSeller": true,
@@ -153,7 +153,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B0021HR94K",
     "product_id": "B0021HR94K",
     "evaluate_rate": "4.8 out of 5 stars",
-    "original_price": null
+    "original_price": "$29.99"
   },
   {
     "isBestSeller": true,
@@ -201,7 +201,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B00M0DWQYI",
     "product_id": "B00M0DWQYI",
     "evaluate_rate": "4.6 out of 5 stars",
-    "original_price": null
+    "original_price": "$72.99"
   },
   {
     "isBestSeller": true,
@@ -225,7 +225,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B08696F67M",
     "product_id": "B08696F67M",
     "evaluate_rate": "4.8 out of 5 stars",
-    "original_price": null
+    "original_price": "$132.00"
   },
   {
     "isBestSeller": true,
@@ -237,7 +237,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B004XFUSRI",
     "product_id": "B004XFUSRI",
     "evaluate_rate": "4.8 out of 5 stars",
-    "original_price": null
+    "original_price": "$47.99"
   },
   {
     "isBestSeller": true,
@@ -249,7 +249,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B07S89SL7D",
     "product_id": "B07S89SL7D",
     "evaluate_rate": "4.7 out of 5 stars",
-    "original_price": null
+    "original_price": "$52.00"
   },
   {
     "isBestSeller": true,
@@ -261,7 +261,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B0714Q4YJ9",
     "product_id": "B0714Q4YJ9",
     "evaluate_rate": "4.8 out of 5 stars",
-    "original_price": null
+    "original_price": "$149.99"
   },
   {
     "isBestSeller": true,
@@ -273,7 +273,7 @@
     "product_detail_url": "https://www.amazon.com/dp/B005UEB96K",
     "product_id": "B005UEB96K",
     "evaluate_rate": "4.9 out of 5 stars",
-    "original_price": null
+    "original_price": "$83.99"
   },
   {
     "isBestSeller": true,
@@ -285,6 +285,6 @@
     "product_detail_url": "https://www.amazon.com/dp/B07D2JMJPS",
     "product_id": "B07D2JMJPS",
     "evaluate_rate": "4.8 out of 5 stars",
-    "original_price": null
+    "original_price": "$25.99"
   }
 ]

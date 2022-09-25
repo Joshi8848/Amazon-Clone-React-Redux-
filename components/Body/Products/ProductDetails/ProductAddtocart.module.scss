@@ -1,5 +1,16 @@
 @use "../../../../styles/scss";
 
+@mixin shippingInfo($margin-left) {
+  font-size: 1.4rem;
+  color: #434545;
+
+  & span {
+    color: black;
+    font-weight: 600;
+    margin-left: $margin-left;
+  }
+}
+
 .product-buy {
   display: flex;
   flex-direction: column;
@@ -14,12 +25,13 @@
     outline: 5px solid rgba(128, 128, 128, 0.349);
   }
 
-  &__title {
-    font-size: scss.$font-size-default;
+  &__price {
+    font-size: 1.6rem;
     display: flex;
 
     & span {
       margin-left: auto;
+      font-size: 1.7rem;
       font-weight: scss.$font-weight-light;
       color: scss.$color-price;
     }
@@ -50,13 +62,13 @@
   }
 
   &__shipping {
-    @include scss.shippingInfo(4.6rem);
+    @include shippingInfo(4.6rem);
   }
   &__seller {
-    @include scss.shippingInfo(6.6rem);
+    @include shippingInfo(6.6rem);
   }
   &__service {
-    @include scss.shippingInfo(1rem);
+    @include shippingInfo(1rem);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -79,27 +91,17 @@
 }
 
 .add-to-cart {
-  @include scss.buttons;
-  width: 100%;
-  padding: 0.8rem 0;
-  background-color: #ffd814;
-  color: black;
-  border-radius: 5rem;
-  font-size: scss.$font-size-default;
-  box-shadow: 0 0 0.7rem 0 rgba(scss.$default-black, 0.2);
-  border: none;
-  margin: 0.5rem 0 2rem 0;
-  transition: all 0.3s;
-
-  &:hover {
-    background-color: #e6c10c;
-  }
-
-  &:active {
-    transform: scale(0.95);
+  @include scss.cartBtn(
+    0.8rem 0,
+    5rem,
+    scss.$font-size-default,
+    0.5rem 0 2rem 0
+  ) {
+    @include scss.buttons;
   }
 }
 
 .product-quantity {
-  @include scss.quantityBtn;
+  @include scss.quantityBtn(0 1rem 0 1rem, 3.2rem);
+  margin: 1rem 0 0.5rem 0;
 }

@@ -11,7 +11,7 @@ import { Fragment } from "react";
 // };
 
 // fetch(
-//   "https://amazon24.p.rapidapi.com/api/product?categoryID=sporting&keyword=sporting&country=US&page=1",
+//   "https://amazon24.p.rapidapi.com/api/product?categoryID=edu-alt-content&keyword=edu-alt-content&country=US&page=1",
 //   options
 // )
 //   .then((response) => response.json())
@@ -21,7 +21,6 @@ import { Fragment } from "react";
 const HomePage = () => {
   return (
     <Fragment>
-      <Header />
       <ProductBody />
     </Fragment>
   );

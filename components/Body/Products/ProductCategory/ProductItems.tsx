@@ -1,40 +1,28 @@
-import React, { Fragment, useEffect, useRef } from "react";
-import styles from "./ProductItems.module.scss";
+import React, { Fragment } from "react";
 import StarRating from "../StarRating";
-import { useRouter } from "next/router";
+import styles from "./ProductItems.module.scss";
 import { ProductsInfoObj } from "../../../../pages/[products]";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { starUserRatingAction } from "../../../store/shareUserRatingSlice";
 
-// let commaAddedRandomNumber: string;
-// let randomNumberNotBestSeller: string;
-const randomNumbers: string[] = [];
-
-const ProductItems: React.FC<{ items: ProductsInfoObj }> = (props) => {
+const ProductItems: React.FC<{
+  items: ProductsInfoObj;
+  randomNo: string;
+}> = (props) => {
+  const dispatch = useDispatch();
+  const { items, randomNo } = props;
   const router = useRouter();
-  const { items } = props;
+  const { query } = router;
 
-  function calcRandomNumber() {
-    if (items.isBestSeller) {
-      const randomNumberBestSeller: string = Math.trunc(
-        Math.random() * (30000 - 10000 + 1) + 10000
-      ).toString();
-      const commaSeparated = randomNumberBestSeller.split("");
-      commaSeparated.splice(2, 0, ",");
-      const commaSeparatedNumber = commaSeparated.join("");
-      return commaSeparatedNumber;
-    } else {
-      const randomNumberNotBestSeller = Math.trunc(
-        Math.random() * (9000 - 2000) + 2000
-      ).toString();
-      return randomNumberNotBestSeller;
-    }
+  function randomNumber(): string {
+    const randomNum = randomNo;
+    return randomNum;
   }
 
-  const randomNo = calcRandomNumber();
-  randomNumbers.push(randomNo);
-  console.log(randomNumbers);
-
   const gotoProductItemPageHandler = () => {
-    router.push(`/${router.query.products}/${items.product_id}`);
+    router.push(`/${query.products}/${items.product_id}`);
+    dispatch(starUserRatingAction.getNumberofRating(randomNumber()));
   };
 
   return (
@@ -60,7 +48,10 @@ const ProductItems: React.FC<{ items: ProductsInfoObj }> = (props) => {
             {items.product_title}
           </h4>
           <div className={styles["product-rating"]}>
-            <StarRating readonlyStatus={true} />
+            <StarRating
+              readonlyStatus={true}
+              starRatingVal={items.evaluate_rate}
+            />
             <span>{randomNo}</span>
           </div>
         </div>

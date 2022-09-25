@@ -18,7 +18,6 @@ const MainNavigation: React.FC<NavProps> = React.memo((props) => {
   const { loginInfo, loggedInStatus } = useContext(LoginContext);
   const { email } = loginInfo;
 
-  console.log(email);
   const ifLoggedIn = (
     <h3>
       <span>Hello, {email}</span> <br />
@@ -51,10 +50,12 @@ const MainNavigation: React.FC<NavProps> = React.memo((props) => {
         {!loggedInStatus ? ifNotLoggedIn : ifLoggedIn}
       </div>
       <SignUpModal />
-      <div className={styles["main-nav__cart-container"]}>
-        <Image src={ShoppingCartLogo} className={styles.cart} />
-        <span className={styles["number-ofItems"]}>{numberOfCartItems}</span>
-      </div>
+      <Link href="/cart">
+        <div className={styles["main-nav__cart-container"]}>
+          <Image src={ShoppingCartLogo} className={styles.cart} />
+          <span className={styles["number-ofItems"]}>{numberOfCartItems}</span>
+        </div>
+      </Link>
     </nav>
   );
 });

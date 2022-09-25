@@ -1,0 +1,73 @@
+@use "../../../styles/scss";
+
+.cart-item {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: scss.$padding-small;
+    @include scss.borderLine(border-bottom);
+  }
+
+  &__checkbox {
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+
+  &__image {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+
+    &--box {
+      width: 15rem;
+      height: 12rem;
+    }
+  }
+
+  &__description {
+    margin-left: 1rem;
+    align-self: stretch;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: scss.$font-weight-light;
+  }
+
+  &__bestseller {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.4rem 2rem 0.4rem 0.7rem;
+    background-color: scss.$color-bestSeller;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    margin-top: 1rem;
+  }
+
+  &__stock {
+    display: block;
+    font-size: scss.$font-size-default;
+    color: #007600;
+    margin-top: 0.5rem;
+  }
+
+  &__delete {
+    font-size: 1.5rem;
+    @include scss.borderLine(border-left);
+    @include scss.borderLine(border-right);
+    padding: 0 1rem;
+    color: scss.$color-links;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__dropdown {
+    @include scss.quantityBtn(0 0.5rem 0 0.5rem, 2rem);
+    line-height: 1.6;
+    margin: 1rem 0 1.5rem 0;
+  }
+}

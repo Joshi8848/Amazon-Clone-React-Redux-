@@ -4,8 +4,6 @@
   @include scss.displayFlex(column, initial, initial, 2rem);
   padding: scss.$padding-small;
   z-index: 10;
-  width: 35rem;
-  height: 45rem;
   background-color: scss.$default-white;
 
   & h2 {

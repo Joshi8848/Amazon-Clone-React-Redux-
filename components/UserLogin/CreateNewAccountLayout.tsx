@@ -1,70 +1,24 @@
 import React, { useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+
 import Image from "next/image";
 import AmazonLogo from "../../images/amazon1.svg";
-import styles from "./LoginLayout.module.scss";
 import { AmazonPolicy } from "./UsernameLogin";
+import styles from "./LoginLayout.module.scss";
+import classes from "./CreateNewAccountLayout.module.scss";
 import { LoginParams } from "../../context/login-context";
-import { useRouter } from "next/router";
-import classes from "./CreateNewAccount.module.scss";
-
-interface SignInCreds {
-  name: string;
-  email: string;
-  password: string;
-}
+import { formikObj } from "./LoginLayout";
 
 let confirmPassword: string;
 
-const CreateNewAccount: React.FC<{
+const CreateNewAccountLayout: React.FC<{
+  formik: formikObj;
   onCreateAccount: (loginObj: LoginParams) => void;
-}> = React.memo((props) => {
+  checkPasswordError: (error: boolean) => void;
+}> = (props) => {
   const [pwError, setPwError] = useState(false);
-  const Router = useRouter();
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        name: "",
-        email: "",
-        password: "",
-      },
-      validationSchema: Yup.object({
-        name: Yup.string()
-          .max(20, "Name cannot be more than 20 characters!")
-          .required("Required!")
-          .min(5, "Name must be at least 5 characters")
-          .matches(/^[a-z]+$/i, "Name must contain only letters"),
-        email: Yup.string()
-          .max(30, "Email must be 30 characters or less")
-          .required("Required!")
-          .email("Invalid Email"),
-        password: Yup.string()
-          .min(7, "Password must be at least 7 characters")
-          .max(20, "Your password cannot be more than 20 characters long.")
-          .required("Required!")
-          .matches(
-            /^(?=.*[a-z])/,
-            "Must contain at least one lowercase character"
-          )
-          .matches(
-            /^(?=.*[A-Z])/,
-            "Must contain at least one uppercase character"
-          )
-          .matches(/^(?=.*[0-9])/, "Must contain at least one number")
-          .matches(
-            /^(?=.*[!@#%&])/,
-            "Must contain at least one special character (i.e: !@#%&)"
-          ),
-      }),
-      onSubmit: (values: SignInCreds) => {
-        if (pwError) return;
-        const loginObj = { name: values.name, email: values.email };
-        props.onCreateAccount(loginObj);
-        Router.push("/");
-      },
-    });
+    props.formik;
 
   const handlePasswordMatch = (event: React.ChangeEvent<HTMLInputElement>) => {
     confirmPassword = event.target.value;
@@ -73,10 +27,13 @@ const CreateNewAccount: React.FC<{
       confirmPassword !== values.password
     ) {
       setPwError(true);
+      props.checkPasswordError(true);
     } else if (confirmPassword.length > values.password.length) {
       setPwError(true);
+      props.checkPasswordError(true);
     } else {
       setPwError(false);
+      props.checkPasswordError(false);
     }
   };
 
@@ -148,6 +105,6 @@ const CreateNewAccount: React.FC<{
       </div>
     </div>
   );
-});
+};
 
-export default CreateNewAccount;
+export default CreateNewAccountLayout;

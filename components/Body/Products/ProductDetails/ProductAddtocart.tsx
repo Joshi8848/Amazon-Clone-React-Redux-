@@ -3,12 +3,16 @@ import { MdArrowDropDown } from "react-icons/md";
 import Dropdown from "../../../modal/Dropdown";
 import { ProductsInfoObj } from "../../../../pages/[products]";
 import styles from "./ProductAddtocart.module.scss";
+import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { cartItemsAction } from "../../../store/cartLogicSlice";
 
 const ProductAddToCart: React.FC<{
   dropdownOpenHandler: () => void;
   openDropdown: boolean;
   curProduct: ProductsInfoObj;
 }> = (props) => {
+  const dispatch = useDispatch();
   const { dropdownOpenHandler, openDropdown, curProduct } = props;
   const [currentQuantity, setCurrentQuantity] = useState("1");
 
@@ -16,11 +20,27 @@ const ProductAddToCart: React.FC<{
     setCurrentQuantity(itemQuantity);
   };
 
+  const handleAddtoCart = () => {
+    const currentProductPrice = curProduct.original_price;
+    const priceRemoveDollarSign = currentProductPrice.slice(
+      1,
+      currentProductPrice.length
+    );
+    const totalPrice =
+      parseFloat(currentQuantity) * parseFloat(priceRemoveDollarSign);
+    const itemQuantityObj = {
+      item: curProduct,
+      quantity: parseInt(currentQuantity),
+      totalPrice,
+    };
+    dispatch(cartItemsAction.addItemsToCart(itemQuantityObj));
+  };
+
   return (
     <div className={styles["product-buy__box"]}>
       <div className={styles["product-buy"]}>
-        <h5 className={styles["product-buy__title"]}>
-          Buy new: <span>Price</span>
+        <h5 className={styles["product-buy__price"]}>
+          Buy new: <span>{curProduct.original_price}</span>
         </h5>
         <p className={styles["product-buy__delivery--date"]}>
           Delivery <span>Sep 23 - 27</span>
@@ -40,7 +60,11 @@ const ProductAddToCart: React.FC<{
           />
           <MdArrowDropDown fontSize="2rem" />
         </div>
-        <button className={styles["add-to-cart"]}>Add to Cart</button>
+        <Link href="/cart">
+          <button onClick={handleAddtoCart} className={styles["add-to-cart"]}>
+            Add to Cart
+          </button>
+        </Link>
         <p className={styles["product-buy__shipping"]}>
           Ships from <span>FakeAmazon.com</span>
         </p>

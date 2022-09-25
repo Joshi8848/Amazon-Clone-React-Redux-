@@ -2,50 +2,58 @@
 
 .product {
   &-detail {
-    background-color: scss.$color-background-primary;
-    max-width: 100%;
+    width: min-content;
 
     &__info {
       min-height: 40rem;
+      max-width: 160rem;
+      margin: 0 auto;
       background-color: scss.$default-white;
-      padding: 2rem 4rem;
-      gap: 2rem;
-      display: grid;
-      grid-template-columns: 300px minmax(400px, 55%) 320px;
+      padding: 3rem 4rem;
+      @include scss.displayGrid(initial, initial, 2rem) {
+        grid-template-columns: minmax(30rem, 35rem) minmax(60rem, 55%) 320px;
+      }
+
+      @media only screen and (max-width: 60em) {
+        width: min-content;
+      }
     }
   }
 
   &-picture {
-    @include scss.backgroundImage(
-      contain,
-      transparent,
-      no-repeat,
-      center,
-      initial,
-      100%
-    ) {
-      min-height: 25rem;
-    }
-    display: inline-block;
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99999;
+    margin: 0 auto;
 
     &__leftbox {
       border-radius: scss.$border-radius-common;
       height: max-content;
-      box-shadow: 0 0 2px 1px rgba(scss.$default-black, 0.3);
+      border: 1px solid rgba(128, 128, 128, 0.308);
     }
 
     &__box {
       padding: scss.$padding-very-small;
+      display: flex;
+      min-height: 25rem;
     }
 
     &__rating {
-      font-size: scss.$font-size-default;
-      text-decoration: underline;
       margin-top: 1rem;
       padding: scss.$padding-very-small;
-      text-align: center;
-      background-color: #ccc;
+      width: 100%;
+      background-color: rgba(204, 204, 204, 0.466);
+      font-size: scss.$font-size-default;
+
+      & p {
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+      }
     }
   }
+}
+
+.star-rating {
+  padding-left: 3.3rem;
 }

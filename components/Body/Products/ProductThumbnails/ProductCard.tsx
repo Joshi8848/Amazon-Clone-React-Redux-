@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./ProductCard.module.scss";
-import { useRouter } from "next/router";
 
 const ProductCard: React.FC<{
   id: string;

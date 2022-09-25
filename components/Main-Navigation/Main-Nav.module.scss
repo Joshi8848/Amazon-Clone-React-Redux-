@@ -2,9 +2,12 @@
 
 .main-nav {
   height: 7rem;
-  min-width: 100rem;
+  min-width: 100vw;
   background-color: #131921;
-  @include scss.displayFlex(row, center, initial, 0);
+  display: grid;
+  grid-template-columns: 15rem minmax(40rem, 100rem) max-content max-content max-content;
+  align-content: center;
+  align-items: center;
 
   &__amazon-logo {
     cursor: pointer;
@@ -40,10 +43,11 @@
   }
 
   &__cart-container {
-    margin-left: 8rem;
-    max-width: 5rem;
-    margin-right: 1rem;
     position: relative;
+    margin-left: 6rem;
+    max-width: 5rem;
+    margin-right: 3rem;
+    cursor: pointer;
   }
 }
 

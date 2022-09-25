@@ -6,7 +6,7 @@ import styles from "./UsernameLogin.module.scss";
 export const AmazonPolicy: React.FC<{ str: string }> = (props) => {
   return (
     <p>
-      By {props.str}, you agree to Amazon's{" "}
+      By {props.str}, you agree to Fake Amazon's{" "}
       <a
         href="https://www.amazon.sg/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=201909000"
         target="_blank"

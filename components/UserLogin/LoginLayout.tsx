@@ -2,20 +2,24 @@ import React from "react";
 import { AmazonPolicy } from "./UsernameLogin";
 import styles from "./LoginLayout.module.scss";
 
-type formikObj = {
+export type formikObj = {
   values: {
     email: string;
     password: string;
+    name: string;
   };
   handleBlur: () => {};
   handleChange: () => {};
+  handleSubmit: () => {};
   touched: {
     email: boolean;
     password: boolean;
+    name: string;
   };
   errors: {
     email: string;
     password: string;
+    name: string;
   };
 };
 
