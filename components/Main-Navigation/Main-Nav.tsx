@@ -8,15 +8,20 @@ import SignUpModal from "../modal/SignUpModal";
 import UserLocation from "../location/User-Location";
 import { LoginContext } from "../../context/login-context";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { AppRootState } from "../store";
 
 interface NavProps {
   userCountry: string | null;
 }
 
 const MainNavigation: React.FC<NavProps> = React.memo((props) => {
-  const [numberOfCartItems, setNumberOfCartItems] = useState(0);
   const { loginInfo, loggedInStatus } = useContext(LoginContext);
   const { email } = loginInfo;
+  const cartItems = useSelector(
+    (state: AppRootState) => state.cartLogic.cartItems
+  );
+  const numberOfCartItems = cartItems.length;
 
   const ifLoggedIn = (
     <h3>

@@ -26,6 +26,7 @@
 
   &__description {
     margin-left: 1rem;
+    margin-right: auto;
     align-self: stretch;
   }
 
@@ -69,5 +70,11 @@
     @include scss.quantityBtn(0 0.5rem 0 0.5rem, 2rem);
     line-height: 1.6;
     margin: 1rem 0 1.5rem 0;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: scss.$font-weight-medium;
+    align-self: flex-start;
   }
 }

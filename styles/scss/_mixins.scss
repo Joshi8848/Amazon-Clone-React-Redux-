@@ -8,7 +8,7 @@
   border-radius: 3px;
   font-size: 1.8rem;
   padding: 1rem 14.5rem;
-  background: linear-gradient(top, #f7dfa5, #f0c14b);
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
   border-color: #adb1b8 #a2a6ac #8d9096;
   border-style: solid;
   border-width: 1px;
@@ -16,7 +16,7 @@
   @content;
 
   &:hover {
-    background: linear-gradient(to bottom, #f0c14b, #f7dfa5);
+    background: linear-gradient(to top, #f0c14bc4, #f7dea5af);
   }
 
   &:active {

@@ -1,11 +1,13 @@
 import StarRating from "../StarRating";
 import { ProductsInfoObj } from "../../../../pages/[products]";
 import Header from "../../../Header/Header";
-import React, { useState } from "react";
 import styles from "./ProductDetails.module.scss";
 import ProductDescription from "./ProductDescription";
 import ProductAddToCart from "./ProductAddtocart";
 import ReactMagnify from "./ImageMagnify";
+import { useDispatch, useSelector } from "react-redux";
+import { cartItemsAction } from "../../../store/cartLogicSlice";
+import { AppRootState } from "../../../store";
 
 let smallTitle: string;
 
@@ -22,16 +24,15 @@ export const shortenTitleHandler = (currentProductTitle: string) => {
 };
 
 const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
+  const dispatch = useDispatch();
+  const dropdownStatus = useSelector(
+    (state: AppRootState) => state.cartLogic.dropdownOpenStatus
+  );
   const { curProduct } = props;
-  const [openDropdown, setOpenDropdown] = useState(false);
 
-  const dropdownOpenHandler = () => {
-    setOpenDropdown(true);
-  };
-
-  const dropdownCloseHandler = () => {
-    if (!openDropdown) return;
-    setOpenDropdown(false);
+  const dropdownCloseHandler = (event: React.MouseEvent) => {
+    if (!dropdownStatus) return;
+    dispatch(cartItemsAction.toggleDropdownStatus());
   };
 
   smallTitle = shortenTitleHandler(curProduct.product_title);
@@ -59,9 +60,7 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
           smallTitle={smallTitle}
           starRatingVal={curProduct.evaluate_rate}
         />
-        <ProductAddToCart
-          {...{ openDropdown, dropdownOpenHandler, curProduct }}
-        />
+        <ProductAddToCart {...{ curProduct }} />
       </div>
       <div className={styles["user-reviews"]}></div>
     </section>

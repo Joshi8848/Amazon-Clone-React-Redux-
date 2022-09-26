@@ -1,18 +1,32 @@
 import { ProductsInfoObj } from "../../pages/[products]";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+export type cartItems = {
+  item: ProductsInfoObj;
+  quantity: number;
+  totalPrice: number;
+};
+
 export type cartSliceInitialState = {
-  cartItems: { item: ProductsInfoObj; quantity: number; totalPrice: number }[];
+  cartItems: cartItems[];
+  subtotalPrice: number;
+  subtotalItems: number;
   isLoggedIn: boolean;
   canRate: boolean;
   ratingValue: number;
+  maxValueExceeded: boolean;
+  dropdownOpenStatus: boolean;
 };
 
 const initialCartState: cartSliceInitialState = {
   cartItems: [],
+  subtotalPrice: 0,
+  subtotalItems: 0,
   isLoggedIn: false,
   canRate: false,
   ratingValue: 0,
+  maxValueExceeded: false,
+  dropdownOpenStatus: false,
 };
 
 const cartLogicSlice = createSlice({
@@ -31,13 +45,39 @@ const cartLogicSlice = createSlice({
         (item) => item.item.product_id === action.payload.item.product_id
       );
       if (alreadyExistingItem) {
+        if (alreadyExistingItem!.quantity + action.payload.quantity > 20) {
+          state.maxValueExceeded = true;
+          return;
+        }
+        state.maxValueExceeded = false;
         alreadyExistingItem.quantity += action.payload.quantity;
         alreadyExistingItem.totalPrice += action.payload.totalPrice;
       } else {
-        action.payload.totalPrice = action.payload.totalPrice;
         state.cartItems = [...state.cartItems, action.payload];
       }
-      console.log(state.cartItems);
+      state.subtotalPrice += action.payload.totalPrice;
+      state.subtotalItems += action.payload.quantity;
+    },
+    updateQuantity(
+      state,
+      action: PayloadAction<{
+        id: string;
+        quantity: number;
+      }>
+    ) {
+      const currentItem = state.cartItems.find(
+        (item) => item.item.product_id === action.payload.id
+      );
+      const originalPriceWithDollar = currentItem!.item.original_price;
+      const originalPrice = originalPriceWithDollar.slice(
+        1,
+        originalPriceWithDollar.length
+      );
+      currentItem!.quantity = action.payload.quantity;
+      currentItem!.totalPrice =
+        action.payload.quantity * parseFloat(originalPrice);
+      state.subtotalPrice += currentItem!.totalPrice;
+      state.subtotalItems += currentItem!.quantity;
     },
     toggleLoggedInStatus(state) {
       state.isLoggedIn = !state.isLoggedIn;
@@ -45,6 +85,12 @@ const cartLogicSlice = createSlice({
     },
     starRatingStatus(state, action) {
       state.ratingValue = action.payload;
+    },
+    toggleMaxValueExceed(state) {
+      state.maxValueExceeded = false;
+    },
+    toggleDropdownStatus(state) {
+      state.dropdownOpenStatus = !state.dropdownOpenStatus;
     },
   },
 });

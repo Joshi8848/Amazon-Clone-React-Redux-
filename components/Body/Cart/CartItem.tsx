@@ -1,31 +1,54 @@
 import React, { useState, Fragment } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import styles from "./CartItem.module.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppRootState } from "../../store";
 import { shortenTitleHandler } from "../Products/ProductDetails/ProductDetails";
 import Dropdown from "../../modal/Dropdown";
+import { cartItemsAction } from "../../store/cartLogicSlice";
+
+interface ItemValue {
+  [key: string]: string;
+}
+
+let currentQuantityObj = {} as ItemValue;
+let currentQuantity: string | null = null;
 
 const CartItem: React.FC<{
   onOpenDropdown: (event: React.MouseEvent) => void;
   dropdownStatus: boolean;
   currentId: string;
 }> = (props) => {
-  const [currentQuantity, setCurrentQuantity] = useState<null | string>(null);
-
   const { onOpenDropdown, dropdownStatus, currentId } = props;
+  // const [newQuantity, hasNewQuantity] = useState<boolean>(false);
+  const dispatch = useDispatch();
   const cartItem = useSelector(
     (state: AppRootState) => state.cartLogic.cartItems
   );
 
-  const productQuantityChangeHandler = (itemQuantity: string) => {
-    setCurrentQuantity(itemQuantity);
+  const productQuantityChangeHandler = (
+    itemQuantity: string,
+    originalPrice: string
+  ) => {
+    const quantityNumber = parseInt(itemQuantity);
+    // const totalPrice =
+    //   quantityNumber * parseFloat(originalPrice.slice(1, originalPrice.length));
+    dispatch(
+      cartItemsAction.updateQuantity({
+        id: currentId,
+        quantity: quantityNumber,
+      })
+    );
   };
+
+  console.log(currentQuantityObj);
 
   return (
     <Fragment>
       {cartItem.map((item) => {
         const smallTitle = shortenTitleHandler(item.item.product_title);
+        currentQuantity = currentQuantityObj[item.item.product_id];
+
         return (
           <div
             key={item.item.product_id}
@@ -53,20 +76,24 @@ const CartItem: React.FC<{
                 className={styles["cart-item__dropdown"]}
                 onClick={onOpenDropdown}
               >
-                <span>
-                  Qty: &nbsp;{" "}
-                  {currentQuantity ? currentQuantity : item.quantity}
-                </span>
+                <span>Qty: &nbsp; {item.quantity}</span>
 
-                <Dropdown
-                  onSelectQuantity={productQuantityChangeHandler}
-                  dropdownStatus={dropdownStatus}
-                />
+                {currentId === item.item.product_id && (
+                  <Dropdown
+                    productId={currentId}
+                    currentCartItem={item}
+                    onSelectQuantity={productQuantityChangeHandler}
+                    dropdownStatus={dropdownStatus}
+                  />
+                )}
 
                 <MdArrowDropDown fontSize="2rem" />
               </div>
               <span className={styles["cart-item__delete"]}>Delete</span>
             </div>
+            <span className={styles["cart-item__price"]}>
+              {item.item.original_price}
+            </span>
           </div>
         );
       })}

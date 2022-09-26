@@ -3,6 +3,8 @@ import CartItem from "./CartItem";
 import styles from "./CartLayout.module.scss";
 import RecentlyViewed from "./RecentlyViewed";
 import Header from "../../Header/Header";
+import { useSelector } from "react-redux";
+import { AppRootState } from "../../store";
 // import { useSelector } from "react-redux";
 // import { AppRootState } from "../../store";
 
@@ -13,16 +15,21 @@ const CartLayout = () => {
   //   (state: AppRootState) => state.cartLogic.cartItems
   // );
   const [dropdownOpenStatus, setDropdownOpenStatus] = useState(false);
+  const totalPrice = useSelector(
+    (state: AppRootState) => state.cartLogic.subtotalPrice
+  );
+  const cartItems = useSelector(
+    (state: AppRootState) => state.cartLogic.cartItems
+  );
+  const totalItems = cartItems.length;
 
   const dropdownOpenHandler = (event: React.MouseEvent) => {
     currentElId = event.currentTarget.id;
     setDropdownOpenStatus(true);
-    console.log(currentElId);
   };
 
   const dropdownCloseHandler = (event: React.MouseEvent) => {
     if (!dropdownOpenStatus) return;
-
     setDropdownOpenStatus(false);
   };
 
@@ -43,18 +50,13 @@ const CartLayout = () => {
             onOpenDropdown={dropdownOpenHandler}
             dropdownStatus={dropdownOpenStatus}
           />
-          {/* {cartItem.map((item) => {
-            return (<CartItem
-              item={item.item}
-              quantity={item.quantity.toString()}
-              totalPrice={item.totalPrice.toString()}
-            />)
-          })} */}
         </div>
         <div className={styles["cart-checkout__container"]}>
           <div className={styles["cart-checkout__price"]}>
             <h5>
-              Subtotal (no items): <span>$Price</span>
+              Subtotal ({totalItems}
+              &nbsp;{totalItems === 1 ? "item" : "items"}):{" "}
+              <span>${totalPrice}</span>
             </h5>
             <button className={styles["cart-checkout__btn"]}>
               Proceed to checkout

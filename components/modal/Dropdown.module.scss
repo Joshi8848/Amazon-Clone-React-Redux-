@@ -4,7 +4,7 @@
   position: absolute;
   display: block;
   top: -0.2rem;
-  left: -0.2rem;
+  left: 0rem;
   width: 9rem;
   height: 23.5rem;
   overflow: scroll;
@@ -20,6 +20,7 @@
   pointer-events: all;
   visibility: visible;
   transition: all 0.2s;
+  z-index: 99;
 
   &__number {
     font-size: 1.8rem;

@@ -1,20 +1,29 @@
-import React, { useState } from "react";
-import { MdArrowDropDown } from "react-icons/md";
-import Dropdown from "../../../modal/Dropdown";
+import React, { useState, useEffect } from "react";
 import { ProductsInfoObj } from "../../../../pages/[products]";
-import styles from "./ProductAddtocart.module.scss";
-import Link from "next/link";
-import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
 import { cartItemsAction } from "../../../store/cartLogicSlice";
+import { cartItems } from "../../../store/cartLogicSlice";
+import { AppRootState } from "../../../store";
+import ProductaddtoCartLayout from "./ProductAddToCartLayout";
 
 const ProductAddToCart: React.FC<{
-  dropdownOpenHandler: () => void;
-  openDropdown: boolean;
   curProduct: ProductsInfoObj;
 }> = (props) => {
   const dispatch = useDispatch();
-  const { dropdownOpenHandler, openDropdown, curProduct } = props;
+  const router = useRouter();
+  const { pathname } = router;
+  const { curProduct } = props;
+  const maxValExceed = useSelector(
+    (state: AppRootState) => state.cartLogic.maxValueExceeded
+  );
   const [currentQuantity, setCurrentQuantity] = useState("1");
+
+  useEffect(() => {
+    if (maxValExceed) {
+      dispatch(cartItemsAction.toggleMaxValueExceed());
+    }
+  }, [pathname]);
 
   const productQuantityChangeHandler = (itemQuantity: string) => {
     setCurrentQuantity(itemQuantity);
@@ -37,52 +46,15 @@ const ProductAddToCart: React.FC<{
   };
 
   return (
-    <div className={styles["product-buy__box"]}>
-      <div className={styles["product-buy"]}>
-        <h5 className={styles["product-buy__price"]}>
-          Buy new: <span>{curProduct.original_price}</span>
-        </h5>
-        <p className={styles["product-buy__delivery--date"]}>
-          Delivery <span>Sep 23 - 27</span>
-        </p>
-        <p className={styles["product-buy__delivery--location"]}>
-          locationIcon Deliver to - Location Postal code
-        </p>
-        <h3 className={styles["product-buy__available"]}>In Stock.</h3>
-        <div
-          className={styles["product-quantity"]}
-          onClick={dropdownOpenHandler}
-        >
-          <span>Qty: &nbsp; {currentQuantity}</span>
-          <Dropdown
-            onSelectQuantity={productQuantityChangeHandler}
-            dropdownStatus={openDropdown}
-          />
-          <MdArrowDropDown fontSize="2rem" />
-        </div>
-        <Link href="/cart">
-          <button onClick={handleAddtoCart} className={styles["add-to-cart"]}>
-            Add to Cart
-          </button>
-        </Link>
-        <p className={styles["product-buy__shipping"]}>
-          Ships from <span>FakeAmazon.com</span>
-        </p>
-        <p className={styles["product-buy__seller"]}>
-          Sold by <span>FakeAmazon.com</span>
-        </p>
-        <p className={styles["product-buy__service"]}>
-          Customer service <span>FakeAmazon.com managing department</span>
-        </p>
-
-        <p className={styles["product-buy__policy"]}>
-          Return policy:{" "}
-          <span>
-            Eligible for Return, Refund or Replacement within 30 days of receipt{" "}
-          </span>
-        </p>
-      </div>
-    </div>
+    <ProductaddtoCartLayout
+      {...{
+        curProduct,
+        currentQuantity,
+        productQuantityChangeHandler,
+        maxValExceed,
+        handleAddtoCart,
+      }}
+    />
   );
 };
 
