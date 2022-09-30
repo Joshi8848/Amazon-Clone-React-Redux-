@@ -28,7 +28,7 @@ const ProductaddtoCartLayout: React.FC<LayoutProps> = (props) => {
   );
 
   const dropdownOpenHandler = () => {
-    dispatch(cartItemsAction.toggleDropdownStatus());
+    dispatch(cartItemsAction.toggleDropdownStatus({ isOpen: true }));
   };
 
   return (

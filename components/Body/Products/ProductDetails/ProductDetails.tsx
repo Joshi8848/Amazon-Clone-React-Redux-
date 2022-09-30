@@ -8,6 +8,7 @@ import ReactMagnify from "./ImageMagnify";
 import { useDispatch, useSelector } from "react-redux";
 import { cartItemsAction } from "../../../store/cartLogicSlice";
 import { AppRootState } from "../../../store";
+import { useEffect, useState } from "react";
 
 let smallTitle: string;
 
@@ -25,15 +26,31 @@ export const shortenTitleHandler = (currentProductTitle: string) => {
 
 const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
   const dispatch = useDispatch();
+  const [readonlyStatus, setReadonlyStatus] = useState(true);
   const dropdownStatus = useSelector(
     (state: AppRootState) => state.cartLogic.dropdownOpenStatus
   );
+  const cartItems = useSelector(
+    (state: AppRootState) => state.cartLogic.cartItems
+  );
   const { curProduct } = props;
+  const isLoggedIn = useSelector(
+    (state: AppRootState) => state.cartLogic.isLoggedIn
+  );
 
   const dropdownCloseHandler = (event: React.MouseEvent) => {
     if (!dropdownStatus) return;
-    dispatch(cartItemsAction.toggleDropdownStatus());
+    dispatch(cartItemsAction.toggleDropdownStatus({ isOpen: false }));
   };
+
+  useEffect(() => {
+    const isAddedToCart = cartItems.find((item) => {
+      return item.item.product_id === curProduct.product_id;
+    });
+    if (isAddedToCart && isLoggedIn) {
+      setReadonlyStatus(false);
+    }
+  }, [cartItems]);
 
   smallTitle = shortenTitleHandler(curProduct.product_title);
 
@@ -50,8 +67,14 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
           </div>
           <div className={styles["product-picture__rating"]}>
             <p>Rate this product:</p>
-            <div className={styles["star-rating"]}>
-              <StarRating readonlyStatus={false} starRatingVal={"0"} />
+            <div
+              className={`${
+                !readonlyStatus
+                  ? styles["star-rating"]
+                  : styles["star-rating__center"]
+              }`}
+            >
+              <StarRating readonlyStatus={readonlyStatus} starRatingVal={"0"} />
             </div>
           </div>
         </div>

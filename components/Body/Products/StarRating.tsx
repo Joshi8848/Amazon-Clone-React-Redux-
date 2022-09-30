@@ -35,19 +35,9 @@ const StarRating: React.FC<{
     "Awesome",
   ];
 
-  // const ratings = [3, 3.5, 4, 4.5, 5];
-  // const randomValue = Math.trunc(Math.random() * 5);
-  // const currRating = ratings[randomValue];
-  // const str = [
-  //   "hello world good to meet you!",
-  //   "nice to meet you",
-  //   "happy to meet you",
-  // ];
-  // let str2 = str[2];
-  // str2 = "nasty bro";
-  // console.log(str);
+  const isPresetValue = readonlyStatus && starRatingVal != "0";
 
-  if (starRatingVal && starRatingVal !== "0") {
+  if (isPresetValue) {
     const ratingLastStr = starRatingVal.slice(0, 3);
 
     let ratingValLastNo = parseInt(ratingLastStr[2]);
@@ -63,6 +53,8 @@ const StarRating: React.FC<{
     }
     itemRatingVal = parseInt(starRatingVal) + ratingValLastNo;
   }
+
+  // const initialValue = isPresetValue ? itemRatingVal : !readonlyStatus ? 0 :;
 
   // const fillColorArray = [
   //   "#f17a45",
@@ -89,7 +81,9 @@ const StarRating: React.FC<{
         showTooltip={readonlyStatus ? false : true}
         onClick={handleRating}
         ratingValue={0}
-        initialValue={readonlyStatus ? itemRatingVal : rating}
+        initialValue={
+          readonlyStatus && starRatingVal != "0" ? itemRatingVal : rating
+        }
         readonly={
           !readonlyStatus && loginStatus ? false : readonlyStatus ? true : false
         }

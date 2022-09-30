@@ -69,14 +69,14 @@ const cartLogicSlice = createSlice({
         (item) => item.item.product_id === action.payload.id
       );
       const originalPriceWithDollar = currentItem!.item.original_price;
-      const originalPrice = originalPriceWithDollar.slice(
-        1,
-        originalPriceWithDollar.length
+      const originalPrice = parseFloat(
+        originalPriceWithDollar.slice(1, originalPriceWithDollar.length)
       );
+      const updatedQuantityPrice =
+        (action.payload.quantity - currentItem!.quantity) * originalPrice;
       currentItem!.quantity = action.payload.quantity;
-      currentItem!.totalPrice =
-        action.payload.quantity * parseFloat(originalPrice);
-      state.subtotalPrice += currentItem!.totalPrice;
+      currentItem!.totalPrice = action.payload.quantity * originalPrice;
+      state.subtotalPrice = state.subtotalPrice + updatedQuantityPrice;
       state.subtotalItems += currentItem!.quantity;
     },
     toggleLoggedInStatus(state) {
@@ -89,12 +89,20 @@ const cartLogicSlice = createSlice({
     toggleMaxValueExceed(state) {
       state.maxValueExceeded = false;
     },
-    toggleDropdownStatus(state) {
-      state.dropdownOpenStatus = !state.dropdownOpenStatus;
+    toggleDropdownStatus(
+      state,
+      action: PayloadAction<{
+        isOpen: boolean;
+      }>
+    ) {
+      state.dropdownOpenStatus = action.payload.isOpen;
     },
+    canRateItem(state, action) {},
   },
 });
 
 export const cartItemsAction = cartLogicSlice.actions;
 
 export default cartLogicSlice;
+
+//Write a function to find the average of two numbers.

@@ -3,6 +3,7 @@
 .product {
   &-detail {
     width: min-content;
+    min-height: 100vh;
 
     &__info {
       min-height: 40rem;
@@ -56,4 +57,8 @@
 
 .star-rating {
   padding-left: 3.3rem;
+
+  &__center {
+    padding-left: 8.5rem;
+  }
 }

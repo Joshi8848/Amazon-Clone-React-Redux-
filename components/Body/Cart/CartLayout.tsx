@@ -56,7 +56,7 @@ const CartLayout = () => {
             <h5>
               Subtotal ({totalItems}
               &nbsp;{totalItems === 1 ? "item" : "items"}):{" "}
-              <span>${totalPrice}</span>
+              <span>${totalPrice.toFixed(2)}</span>
             </h5>
             <button className={styles["cart-checkout__btn"]}>
               Proceed to checkout
