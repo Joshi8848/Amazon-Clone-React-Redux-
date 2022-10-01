@@ -10,8 +10,8 @@ const ProductDescription: React.FC<{
   smallTitle: string;
   starRatingVal: string;
 }> = React.memo((props) => {
-  const numberofRating = useSelector(
-    (state: AppRootState) => state.userRating.numberofRating
+  const fixedRating = useSelector(
+    (state: AppRootState) => state.userRating.fixedRating
   );
   const { currentProduct, smallTitle, starRatingVal } = props;
 
@@ -26,7 +26,7 @@ const ProductDescription: React.FC<{
         )}
         <div className={styles["product-sales__rating"]}>
           <StarRating readonlyStatus={true} starRatingVal={starRatingVal} />
-          <span>{numberofRating} &nbsp;ratings</span>
+          <span>{fixedRating} &nbsp;ratings</span>
         </div>
       </div>
 

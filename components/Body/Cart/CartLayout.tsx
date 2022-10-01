@@ -21,7 +21,10 @@ const CartLayout = () => {
   const cartItems = useSelector(
     (state: AppRootState) => state.cartLogic.cartItems
   );
-  const totalItems = cartItems.length;
+
+  const subTotal = useSelector(
+    (state: AppRootState) => state.cartLogic.subtotalItems
+  );
 
   const dropdownOpenHandler = (event: React.MouseEvent) => {
     currentElId = event.currentTarget.id;
@@ -45,17 +48,23 @@ const CartLayout = () => {
             Deselect all items
           </span>
           <span className={styles["cart-item__price--title"]}>Price</span>
-          <CartItem
-            currentId={currentElId}
-            onOpenDropdown={dropdownOpenHandler}
-            dropdownStatus={dropdownOpenStatus}
-          />
+          {cartItems.map((item) => {
+            return (
+              <CartItem
+                key={item.item.product_id}
+                currentId={currentElId}
+                item={item}
+                onOpenDropdown={dropdownOpenHandler}
+                dropdownStatus={dropdownOpenStatus}
+              />
+            );
+          })}
         </div>
         <div className={styles["cart-checkout__container"]}>
           <div className={styles["cart-checkout__price"]}>
             <h5>
-              Subtotal ({totalItems}
-              &nbsp;{totalItems === 1 ? "item" : "items"}):{" "}
+              Subtotal ({subTotal}
+              &nbsp;{subTotal === 1 ? "item" : "items"}):{" "}
               <span>${totalPrice.toFixed(2)}</span>
             </h5>
             <button className={styles["cart-checkout__btn"]}>

@@ -1,25 +1,26 @@
 import styles from "./StarRating.module.scss";
 import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
-import { cartItemsAction } from "../../store/cartLogicSlice";
-import { cartSliceInitialState } from "../../store/cartLogicSlice";
 
 import { AppRootState } from "../../store";
 
 import { useDispatch, useSelector } from "react-redux";
+import { ProductsInfoObj } from "../../../pages/[products]";
+import { userRatingAction } from "../../store/shareUserRatingSlice";
 
 let itemRatingVal: number;
 
 const StarRating: React.FC<{
   readonlyStatus: boolean;
   starRatingVal: string;
+  curProduct?: ProductsInfoObj;
 }> = (props) => {
   const dispatch = useDispatch();
   const loginStatus = useSelector(
-    (state: AppRootState) => state.cartLogic.isLoggedIn
+    (state: AppRootState) => state.userRating.isLoggedIn
   );
 
-  const { readonlyStatus, starRatingVal } = props;
+  const { readonlyStatus, starRatingVal, curProduct } = props;
   const [rating, setRating] = useState<number>(0);
 
   const tooltipArray = [
@@ -39,9 +40,7 @@ const StarRating: React.FC<{
 
   if (isPresetValue) {
     const ratingLastStr = starRatingVal.slice(0, 3);
-
     let ratingValLastNo = parseInt(ratingLastStr[2]);
-
     if (ratingValLastNo >= 0 && ratingValLastNo < 3) {
       ratingValLastNo = 0;
     } else if (ratingValLastNo >= 3 && ratingValLastNo < 5) {
@@ -70,6 +69,8 @@ const StarRating: React.FC<{
   // ];
 
   const handleRating = (rate: number) => {
+    const ratedItem = { rating: rate, productId: curProduct!.product_id };
+    dispatch(userRatingAction.starRatedItems(ratedItem));
     setRating(rate);
   };
 
@@ -80,10 +81,8 @@ const StarRating: React.FC<{
         emptyColor={"gray"}
         showTooltip={readonlyStatus ? false : true}
         onClick={handleRating}
-        ratingValue={0}
-        initialValue={
-          readonlyStatus && starRatingVal != "0" ? itemRatingVal : rating
-        }
+        ratingValue={isPresetValue ? 0 : rating}
+        initialValue={isPresetValue ? itemRatingVal : 0}
         readonly={
           !readonlyStatus && loginStatus ? false : readonlyStatus ? true : false
         }

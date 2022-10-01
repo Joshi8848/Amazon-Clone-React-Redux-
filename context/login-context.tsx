@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
+import { userRatingAction } from "../components/store/shareUserRatingSlice";
 import { useDispatch } from "react-redux";
-import { cartItemsAction } from "../components/store/cartLogicSlice";
 
 interface Props {
   children: React.ReactNode;
@@ -34,13 +33,13 @@ const LoginContextProvider: React.FC<Props> = (props) => {
   const [isLoggedIn, setLoginStatus] = useState(false);
 
   const loginCredentialsHandler = (creds: LoginParams) => {
-    dispatch(cartItemsAction.toggleLoggedInStatus());
+    dispatch(userRatingAction.toggleLoggedInStatus());
     setLoginCredentials(creds);
     setLoginStatus(true);
   };
 
   const manageLogoutHandler = () => {
-    dispatch(cartItemsAction.toggleLoggedInStatus());
+    dispatch(userRatingAction.toggleLoggedInStatus());
     setLoginStatus(false);
   };
 

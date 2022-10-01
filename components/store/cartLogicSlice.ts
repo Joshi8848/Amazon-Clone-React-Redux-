@@ -1,19 +1,17 @@
 import { ProductsInfoObj } from "../../pages/[products]";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type cartItems = {
+export type SingleItemType = {
   item: ProductsInfoObj;
   quantity: number;
   totalPrice: number;
+  mainPath: string;
 };
 
 export type cartSliceInitialState = {
-  cartItems: cartItems[];
+  cartItems: SingleItemType[];
   subtotalPrice: number;
   subtotalItems: number;
-  isLoggedIn: boolean;
-  canRate: boolean;
-  ratingValue: number;
   maxValueExceeded: boolean;
   dropdownOpenStatus: boolean;
 };
@@ -22,9 +20,6 @@ const initialCartState: cartSliceInitialState = {
   cartItems: [],
   subtotalPrice: 0,
   subtotalItems: 0,
-  isLoggedIn: false,
-  canRate: false,
-  ratingValue: 0,
   maxValueExceeded: false,
   dropdownOpenStatus: false,
 };
@@ -39,6 +34,7 @@ const cartLogicSlice = createSlice({
         item: ProductsInfoObj;
         quantity: number;
         totalPrice: number;
+        mainPath: string;
       }>
     ) {
       const alreadyExistingItem = state.cartItems.find(
@@ -57,6 +53,7 @@ const cartLogicSlice = createSlice({
       }
       state.subtotalPrice += action.payload.totalPrice;
       state.subtotalItems += action.payload.quantity;
+      console.log(state.cartItems);
     },
     updateQuantity(
       state,
@@ -72,19 +69,22 @@ const cartLogicSlice = createSlice({
       const originalPrice = parseFloat(
         originalPriceWithDollar.slice(1, originalPriceWithDollar.length)
       );
-      const updatedQuantityPrice =
-        (action.payload.quantity - currentItem!.quantity) * originalPrice;
+      const updatedQuantity = action.payload.quantity - currentItem!.quantity;
       currentItem!.quantity = action.payload.quantity;
       currentItem!.totalPrice = action.payload.quantity * originalPrice;
-      state.subtotalPrice = state.subtotalPrice + updatedQuantityPrice;
-      state.subtotalItems += currentItem!.quantity;
+      state.subtotalPrice =
+        state.subtotalPrice + updatedQuantity * originalPrice;
+      state.subtotalItems += updatedQuantity;
     },
-    toggleLoggedInStatus(state) {
-      state.isLoggedIn = !state.isLoggedIn;
-      state.isLoggedIn ? (state.canRate = true) : (state.canRate = false);
-    },
-    starRatingStatus(state, action) {
-      state.ratingValue = action.payload;
+    deleteItemsFromCart(state, action: PayloadAction<string>) {
+      const currentItem = state.cartItems.find(
+        (item) => item.item.product_id === action.payload
+      );
+      state.cartItems = state.cartItems.filter(
+        (item) => item.item.product_id !== currentItem!.item.product_id
+      );
+      state.subtotalPrice -= currentItem!.totalPrice;
+      state.subtotalItems -= currentItem!.quantity;
     },
     toggleMaxValueExceed(state) {
       state.maxValueExceeded = false;
@@ -104,5 +104,3 @@ const cartLogicSlice = createSlice({
 export const cartItemsAction = cartLogicSlice.actions;
 
 export default cartLogicSlice;
-
-//Write a function to find the average of two numbers.

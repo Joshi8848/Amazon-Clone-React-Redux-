@@ -33,6 +33,11 @@
   &__name {
     font-size: 1.8rem;
     font-weight: scss.$font-weight-light;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__bestseller {

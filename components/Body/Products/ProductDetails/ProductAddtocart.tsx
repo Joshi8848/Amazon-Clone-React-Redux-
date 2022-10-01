@@ -3,7 +3,6 @@ import { ProductsInfoObj } from "../../../../pages/[products]";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { cartItemsAction } from "../../../store/cartLogicSlice";
-import { cartItems } from "../../../store/cartLogicSlice";
 import { AppRootState } from "../../../store";
 import ProductaddtoCartLayout from "./ProductAddToCartLayout";
 
@@ -24,12 +23,12 @@ const ProductAddToCart: React.FC<{
       dispatch(cartItemsAction.toggleMaxValueExceed());
     }
   }, [pathname]);
-
   const productQuantityChangeHandler = (itemQuantity: string) => {
     setCurrentQuantity(itemQuantity);
   };
 
   const handleAddtoCart = () => {
+    console.log(router.query.products);
     const currentProductPrice = curProduct.original_price;
     const priceRemoveDollarSign = currentProductPrice.slice(
       1,
@@ -41,6 +40,7 @@ const ProductAddToCart: React.FC<{
       item: curProduct,
       quantity: parseInt(currentQuantity),
       totalPrice,
+      mainPath: router.query.products as string,
     };
     dispatch(cartItemsAction.addItemsToCart(itemQuantityObj));
   };

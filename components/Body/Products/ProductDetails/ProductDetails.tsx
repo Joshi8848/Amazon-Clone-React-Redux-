@@ -34,9 +34,13 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
     (state: AppRootState) => state.cartLogic.cartItems
   );
   const { curProduct } = props;
+
   const isLoggedIn = useSelector(
-    (state: AppRootState) => state.cartLogic.isLoggedIn
+    (state: AppRootState) => state.userRating.isLoggedIn
   );
+  const isAddedToCart = cartItems.find((item) => {
+    return item.item.product_id === curProduct.product_id;
+  });
 
   const dropdownCloseHandler = (event: React.MouseEvent) => {
     if (!dropdownStatus) return;
@@ -44,12 +48,12 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
   };
 
   useEffect(() => {
-    const isAddedToCart = cartItems.find((item) => {
-      return item.item.product_id === curProduct.product_id;
-    });
     if (isAddedToCart && isLoggedIn) {
       setReadonlyStatus(false);
     }
+    // if (isAddedToCart && !isLoggedIn && ) {
+
+    // }
   }, [cartItems]);
 
   smallTitle = shortenTitleHandler(curProduct.product_title);
@@ -74,7 +78,11 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
                   : styles["star-rating__center"]
               }`}
             >
-              <StarRating readonlyStatus={readonlyStatus} starRatingVal={"0"} />
+              <StarRating
+                readonlyStatus={readonlyStatus}
+                starRatingVal={"0"}
+                curProduct={curProduct}
+              />
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import styles from "./ProductItems.module.scss";
 import { ProductsInfoObj } from "../../../../pages/[products]";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
-import { starUserRatingAction } from "../../../store/shareUserRatingSlice";
+import { userRatingAction } from "../../../store/shareUserRatingSlice";
 
 const ProductItems: React.FC<{
   items: ProductsInfoObj;
@@ -22,7 +22,7 @@ const ProductItems: React.FC<{
 
   const gotoProductItemPageHandler = () => {
     router.push(`/${query.products}/${items.product_id}`);
-    dispatch(starUserRatingAction.getNumberofRating(randomNumber()));
+    dispatch(userRatingAction.getNumberofRating(randomNumber()));
   };
 
   return (
