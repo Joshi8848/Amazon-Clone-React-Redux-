@@ -15,6 +15,7 @@ type LayoutProps = {
 };
 
 const ProductaddtoCartLayout: React.FC<LayoutProps> = (props) => {
+  const dispatch = useDispatch();
   const {
     curProduct,
     currentQuantity,
@@ -22,7 +23,7 @@ const ProductaddtoCartLayout: React.FC<LayoutProps> = (props) => {
     maxValExceed,
     handleAddtoCart,
   } = props;
-  const dispatch = useDispatch();
+
   const dropdownOpenStatus = useSelector(
     (state: AppRootState) => state.cartLogic.dropdownOpenStatus
   );

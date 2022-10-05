@@ -1,11 +1,9 @@
 import { useRouter } from "next/router";
-import Appliances from "../../JSON/Appliances.json";
 import AudioBooks from "../../JSON/AudioBooks.json";
 import BabyProducts from "../../JSON/BabyProducts.json";
 import Computers from "../../JSON/Computers.json";
 import Electronics from "../../JSON/Electronics.json";
 import Kitchen from "../../JSON/Kitchen.json";
-import Luxury from "../../JSON/Luxury.json";
 import Beauty from "../../JSON/Beauty.json";
 import MensFashion from "../../JSON/MensFashion.json";
 import Mobile from "../../JSON/Mobile.json";
@@ -14,8 +12,40 @@ import Pets from "../../JSON/Pets.json";
 import VideoGames from "../../JSON/VideoGames.json";
 import WomensFashion from "../../JSON/WomensFashion.json";
 import ProductPage from "../../components/Body/Products/ProductCategory/ProductPage";
-import { useState, useEffect, Fragment, useMemo } from "react";
+import { Fragment, useEffect } from "react";
 import Backdrop from "../../components/modal/Backdrop";
+import { useDispatch, useSelector } from "react-redux";
+import { AppRootState } from "../../components/store";
+import { suggestionsAction } from "../../components/store/suggestions";
+
+export interface productKey {
+  title:
+    | "computers"
+    | "beauty"
+    | "baby-products"
+    | "electronic-products"
+    | "audio-books"
+    | "video-games"
+    | "pet-products"
+    | "mens-fashion"
+    | "womens-fashion"
+    | "kitchen-appliances"
+    | "mobile-phones"
+    | "sports-items";
+}
+
+export type ProductsInfoObj = {
+  isBestSeller: boolean | null;
+  product_title: string;
+  product_main_image_url: string;
+  app_sale_price: null | string;
+  app_sale_price_currency: null | string;
+  isPrime: boolean | null;
+  product_detail_url: string | null;
+  product_id: string;
+  evaluate_rate: string;
+  original_price: string;
+};
 
 export const productObj = {
   computers: Computers,
@@ -32,36 +62,24 @@ export const productObj = {
   "sports-items": Sports,
 };
 
-export type ProductsInfoObj = {
-  isBestSeller: boolean | null;
-  product_title: string;
-  product_main_image_url: string;
-  app_sale_price: null | string;
-  app_sale_price_currency: null | string;
-  isPrime: boolean | null;
-  product_detail_url: string | null;
-  product_id: string;
-  evaluate_rate: string;
-  original_price: string;
-};
-
+let productFound: boolean;
 let currentPageItems: ProductsInfoObj[];
 
 const Products = () => {
-  const [productsFound, setProductsFound] = useState<boolean>(false);
   const router = useRouter();
-  const { products } = router.query;
 
-  useEffect(() => {
-    if (productObj[products] !== undefined) {
-      currentPageItems = productObj[products];
-      setProductsFound(true);
-    }
-  }, [products]);
+  const product = router.query.products as productKey["title"];
+
+  if (productObj[product] !== undefined) {
+    currentPageItems = productObj[product] as ProductsInfoObj[];
+    productFound = true;
+  } else {
+    productFound = false;
+  }
 
   return (
     <Fragment>
-      {!productsFound && (
+      {!productFound && (
         <>
           <Backdrop />
           <h2
@@ -81,7 +99,7 @@ const Products = () => {
           </h2>
         </>
       )}
-      {productsFound && <ProductPage productsArr={currentPageItems} />}
+      {productFound && <ProductPage productsArr={currentPageItems} />}
     </Fragment>
   );
 };

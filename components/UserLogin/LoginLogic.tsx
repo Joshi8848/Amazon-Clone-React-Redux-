@@ -57,7 +57,12 @@ const LoginLogic = () => {
 
   const handleFormSubmission = (event: React.FormEvent) => {
     event.preventDefault();
-    if (pathname === "/login" && formik.values.email.trim().length > 0) {
+
+    if (
+      pathname === "/login" &&
+      formik.values.email.trim().length > 0 &&
+      !formik.errors.email
+    ) {
       emailPage = false;
       push("/login/password");
       emailAddress.email = formik.values.email;
@@ -65,7 +70,8 @@ const LoginLogic = () => {
     }
     if (
       pathname === "/login/password" &&
-      formik.values.password.trim().length > 0
+      formik.values.password.trim().length > 0 &&
+      !formik.errors.password
     ) {
       const userEmail = { email: emailAddress.email };
       loginCtx.shareLoginCredentials(userEmail);

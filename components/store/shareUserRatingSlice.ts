@@ -27,7 +27,14 @@ const shareUserRatingSlice = createSlice({
       state,
       action: PayloadAction<{ rating: number; productId: string }>
     ) {
-      state.ratedItems.push(action.payload);
+      const alreadyRatedItem = state.ratedItems.find((item) => {
+        return item.productId === action.payload.productId;
+      });
+      if (alreadyRatedItem) {
+        alreadyRatedItem.rating = action.payload.rating;
+      } else {
+        state.ratedItems.push(action.payload);
+      }
     },
   },
   // extraReducers: {

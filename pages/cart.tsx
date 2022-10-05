@@ -1,9 +1,9 @@
-import CartLayout from "../components/Body/Cart/CartLayout";
+import CartLogic from "../components/Body/Cart/CartLogic";
 
 const CartPage = () => {
   return (
     <>
-      <CartLayout />
+      <CartLogic />
     </>
   );
 };

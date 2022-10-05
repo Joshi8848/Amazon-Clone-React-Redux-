@@ -56,9 +56,10 @@
 }
 
 .star-rating {
-  padding-left: 3.3rem;
+  padding-left: 5rem;
 
   &__center {
-    padding-left: 8.5rem;
+    display: flex;
+    justify-content: center;
   }
 }

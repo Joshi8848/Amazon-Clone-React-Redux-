@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartItemsAction } from "../../../store/cartLogicSlice";
 import { AppRootState } from "../../../store";
 import ProductaddtoCartLayout from "./ProductAddToCartLayout";
+import { productObj } from "../../../../pages/[products]";
+import { suggestionsAction } from "../../../store/suggestions";
+import { productKey } from "../../../../pages/[products]";
 
 const ProductAddToCart: React.FC<{
   curProduct: ProductsInfoObj;
@@ -16,6 +19,14 @@ const ProductAddToCart: React.FC<{
   const maxValExceed = useSelector(
     (state: AppRootState) => state.cartLogic.maxValueExceeded
   );
+  const isLoggedIn = useSelector(
+    (state: AppRootState) => state.userRating.isLoggedIn
+  );
+
+  const cartItems = useSelector(
+    (state: AppRootState) => state.cartLogic.cartItems
+  );
+
   const [currentQuantity, setCurrentQuantity] = useState("1");
 
   useEffect(() => {
@@ -28,7 +39,10 @@ const ProductAddToCart: React.FC<{
   };
 
   const handleAddtoCart = () => {
-    console.log(router.query.products);
+    if (!isLoggedIn) {
+      router.push("/login");
+      return;
+    }
     const currentProductPrice = curProduct.original_price;
     const priceRemoveDollarSign = currentProductPrice.slice(
       1,
@@ -43,6 +57,16 @@ const ProductAddToCart: React.FC<{
       mainPath: router.query.products as string,
     };
     dispatch(cartItemsAction.addItemsToCart(itemQuantityObj));
+    if (cartItems.length === 0) {
+      const productPath = router.query.products as productKey["title"];
+      const productObject = productObj[productPath] as ProductsInfoObj[];
+      dispatch(suggestionsAction.addSuggestedItems(productObject));
+    } else {
+      const productPath = cartItems[0].mainPath as productKey["title"];
+      const suggestionObj = productObj[productPath] as ProductsInfoObj[];
+      console.log(suggestionObj);
+      dispatch(suggestionsAction.addSuggestedItems(suggestionObj));
+    }
   };
 
   return (

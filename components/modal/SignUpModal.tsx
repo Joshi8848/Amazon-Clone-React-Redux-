@@ -7,6 +7,7 @@ import Link from "next/link";
 import { LoginContext } from "../../context/login-context";
 import { cartItemsAction } from "../store/cartLogicSlice";
 import { useDispatch } from "react-redux";
+import shareUserRatingSlice from "../store/shareUserRatingSlice";
 
 let open: boolean = false;
 
@@ -52,7 +53,6 @@ const SignUpModal = React.memo(() => {
 
   const logoutHandler = () => {
     if (!loggedInStatus) return;
-    dispatch(cartItemsAction.toggleLoggedInStatus());
     logoutFunc();
   };
 

@@ -15,6 +15,7 @@ const StarRating: React.FC<{
   starRatingVal: string;
   curProduct?: ProductsInfoObj;
 }> = (props) => {
+  let userRating: number = 0;
   const dispatch = useDispatch();
   const loginStatus = useSelector(
     (state: AppRootState) => state.userRating.isLoggedIn
@@ -51,22 +52,16 @@ const StarRating: React.FC<{
       ratingValLastNo = 1;
     }
     itemRatingVal = parseInt(starRatingVal) + ratingValLastNo;
+  } else if (!isPresetValue) {
+    const starRatedItems = useSelector(
+      (state: AppRootState) => state.userRating.ratedItems
+    );
+    starRatedItems.forEach((item) => {
+      if (item.productId === curProduct!.product_id) {
+        userRating = item.rating;
+      }
+    });
   }
-
-  // const initialValue = isPresetValue ? itemRatingVal : !readonlyStatus ? 0 :;
-
-  // const fillColorArray = [
-  //   "#f17a45",
-  //   "#f17a45",
-  //   "#f19745",
-  //   "#f19745",
-  //   "#f1a545",
-  //   "#f1a545",
-  //   "#f1b345",
-  //   "#f1b345",
-  //   "#f1d045",
-  //   "#f1d045",
-  // ];
 
   const handleRating = (rate: number) => {
     const ratedItem = { rating: rate, productId: curProduct!.product_id };
@@ -81,7 +76,7 @@ const StarRating: React.FC<{
         emptyColor={"gray"}
         showTooltip={readonlyStatus ? false : true}
         onClick={handleRating}
-        ratingValue={isPresetValue ? 0 : rating}
+        ratingValue={isPresetValue ? 0 : rating ? rating : userRating}
         initialValue={isPresetValue ? itemRatingVal : 0}
         readonly={
           !readonlyStatus && loginStatus ? false : readonlyStatus ? true : false
@@ -102,3 +97,18 @@ const StarRating: React.FC<{
 };
 
 export default StarRating;
+
+// const initialValue = isPresetValue ? itemRatingVal : !readonlyStatus ? 0 :;
+
+// const fillColorArray = [
+//   "#f17a45",
+//   "#f17a45",
+//   "#f19745",
+//   "#f19745",
+//   "#f1a545",
+//   "#f1a545",
+//   "#f1b345",
+//   "#f1b345",
+//   "#f1d045",
+//   "#f1d045",
+// ];

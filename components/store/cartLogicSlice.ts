@@ -1,4 +1,5 @@
 import { ProductsInfoObj } from "../../pages/[products]";
+import Products from "../../pages/[products]";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type SingleItemType = {

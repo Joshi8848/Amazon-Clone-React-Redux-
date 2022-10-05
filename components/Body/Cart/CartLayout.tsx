@@ -1,20 +1,35 @@
-import { useState } from "react";
 import CartItem from "./CartItem";
 import styles from "./CartLayout.module.scss";
 import RecentlyViewed from "./RecentlyViewed";
 import Header from "../../Header/Header";
 import { useSelector } from "react-redux";
 import { AppRootState } from "../../store";
-// import { useSelector } from "react-redux";
-// import { AppRootState } from "../../store";
+import { ProductsInfoObj } from "../../../pages/[products]";
+import React from "react";
 
-let currentElId: string;
+interface CartLayoutProps {
+  dropdownOpenHandler: (event: React.MouseEvent) => void;
+  dropdownCloseHandler: (event: React.MouseEvent) => void;
+  currentElId: string;
+  dropdownOpenStatus: boolean;
+  suggestionProductsArr: ProductsInfoObj[];
+}
 
-const CartLayout = () => {
-  // const cartItem = useSelector(
-  //   (state: AppRootState) => state.cartLogic.cartItems
-  // );
-  const [dropdownOpenStatus, setDropdownOpenStatus] = useState(false);
+let hasSuggestions: boolean = false;
+
+const CartLayout: React.FC<CartLayoutProps> = (props) => {
+  const {
+    dropdownOpenHandler,
+    dropdownCloseHandler,
+    currentElId,
+    dropdownOpenStatus,
+    suggestionProductsArr,
+  } = props;
+
+  hasSuggestions = suggestionProductsArr.length > 0;
+  console.log(suggestionProductsArr);
+  console.log(hasSuggestions);
+
   const totalPrice = useSelector(
     (state: AppRootState) => state.cartLogic.subtotalPrice
   );
@@ -25,18 +40,6 @@ const CartLayout = () => {
   const subTotal = useSelector(
     (state: AppRootState) => state.cartLogic.subtotalItems
   );
-
-  const dropdownOpenHandler = (event: React.MouseEvent) => {
-    currentElId = event.currentTarget.id;
-    setDropdownOpenStatus(true);
-  };
-
-  const dropdownCloseHandler = (event: React.MouseEvent) => {
-    if (!dropdownOpenStatus) return;
-    setDropdownOpenStatus(false);
-  };
-
-  console.log(dropdownOpenStatus);
 
   return (
     <section className={styles["cart"]} onClick={dropdownCloseHandler}>
@@ -72,7 +75,12 @@ const CartLayout = () => {
             </button>
           </div>
           <div className={styles["cart-recently__viewed"]}>
-            <RecentlyViewed />
+            <div className={styles["cart-recently-viewed__item"]}>
+              {hasSuggestions &&
+                suggestionProductsArr.map((product) => {
+                  return <RecentlyViewed products={product} />;
+                })}
+            </div>
           </div>
         </div>
       </div>
