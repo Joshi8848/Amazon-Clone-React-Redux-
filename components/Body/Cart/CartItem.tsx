@@ -17,7 +17,6 @@ const CartItem: React.FC<{
   const { onOpenDropdown, dropdownStatus, currentId, item } = props;
   const router = useRouter();
   const dispatch = useDispatch();
-  const mainPath = useSelector((state: any) => state.cartLogic.mainPath);
 
   const productQuantityChangeHandler = (itemQuantity: string) => {
     const quantityNumber = parseInt(itemQuantity);

@@ -15,6 +15,7 @@
     padding: 2rem 1rem;
     background-clip: content-box;
     display: grid;
+
     grid-template-columns: minmax(60rem, 1fr) 35rem;
     background-color: scss.$default-white;
   }
@@ -78,11 +79,17 @@
   }
 
   &-recently__viewed {
-    width: 100%;
     padding: 2rem 0;
     @extend %backgroundClip;
 
-    &__item {
+    &--container {
+      padding: 2rem;
+    }
+
+    & h5 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: scss.$font-weight-light;
     }
   }
 }

@@ -1,5 +1,5 @@
 import CartLayout from "./CartLayout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AppRootState } from "../../store";
 import { ProductsInfoObj } from "../../../pages/[products]";
@@ -10,6 +10,7 @@ import { productKey } from "../../../pages/[products]";
 let currentElId: string;
 let randomNumbersArr: number[] = [];
 let suggestionProductsArr: ProductsInfoObj[] = [];
+let firstCartItemPath: String = "";
 
 const CartLogic = () => {
   const [dropdownOpenStatus, setDropdownOpenStatus] = useState(false);
@@ -22,18 +23,30 @@ const CartLogic = () => {
     (state: AppRootState) => state.cartLogic.cartItems
   );
 
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      firstCartItemPath = cartItems[0].mainPath;
+    }
+  }, []);
+
   const getRandomSuggestions = () => {
-    if (recentlyViewedObj.length === 0) return;
+    if (recentlyViewedObj.length === 0 || cartItems.length === 0) return;
+    if (firstCartItemPath !== "" && firstCartItemPath === cartItems[0].mainPath)
+      return;
+    firstCartItemPath = cartItems[0].mainPath;
     randomNumbersArr = [];
     suggestionProductsArr = [];
-    for (let i = 0; i < 4; i++) {
+    while (true) {
+      if (randomNumbersArr.length === 4) break;
       let randomNum = Math.floor(Math.random() * 15);
+      if (randomNumbersArr.includes(randomNum)) continue;
       randomNumbersArr.push(randomNum);
     }
     randomNumbersArr.forEach((num) => {
       suggestionProductsArr.push(recentlyViewedObj[num]);
     });
   };
+
   getRandomSuggestions();
 
   const dropdownOpenHandler = (event: React.MouseEvent) => {
@@ -49,7 +62,6 @@ const CartLogic = () => {
   if (cartItems[0]) {
     const productPath = cartItems[0].mainPath as productKey["title"];
     const suggestionObj = productObj[productPath] as ProductsInfoObj[];
-    console.log(suggestionObj);
     dispatch(suggestionsAction.addSuggestedItems(suggestionObj));
   }
 

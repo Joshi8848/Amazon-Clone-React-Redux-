@@ -4,6 +4,7 @@
   &__container {
     display: flex;
     align-items: center;
+
     padding: scss.$padding-small;
     @include scss.borderLine(border-bottom);
   }
@@ -79,6 +80,7 @@
 
   &__price {
     font-size: 2rem;
+    margin-left: 2rem;
     font-weight: scss.$font-weight-medium;
     align-self: flex-start;
   }

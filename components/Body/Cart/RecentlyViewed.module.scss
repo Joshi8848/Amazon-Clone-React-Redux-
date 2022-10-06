@@ -1,0 +1,58 @@
+@use "../../../styles/scss";
+
+.recently-viewed__item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    padding-bottom: 1.5rem;
+  }
+
+  &--img {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  &--info {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  &--title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: scss.$color-links;
+    font-size: 1.7rem !important;
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+      color: scss.$color-price;
+    }
+  }
+
+  &--price {
+    font-size: 2rem;
+    color: scss.$color-price;
+    font-weight: scss.$font-weight-medium;
+  }
+
+  &--rating {
+    margin-top: -1.5rem;
+  }
+
+  &--btn {
+    @include scss.cartBtn(0.5rem 2rem, 1rem, 1.4rem, 2rem 0 1rem 0) {
+      @include scss.buttons;
+    }
+
+    &-box {
+      max-width: max-content;
+      margin-bottom: 1rem;
+    }
+  }
+}

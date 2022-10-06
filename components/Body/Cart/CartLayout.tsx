@@ -75,7 +75,8 @@ const CartLayout: React.FC<CartLayoutProps> = (props) => {
             </button>
           </div>
           <div className={styles["cart-recently__viewed"]}>
-            <div className={styles["cart-recently-viewed__item"]}>
+            <div className={styles["cart-recently__viewed--container"]}>
+              <h5>You might like</h5>
               {hasSuggestions &&
                 suggestionProductsArr.map((product) => {
                   return <RecentlyViewed products={product} />;
