@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartItemsAction } from "../../../store/cartLogicSlice";
 import { AppRootState } from "../../../store";
 import { useEffect, useState } from "react";
+import ProductRating from "./ProductRating";
 
 let smallTitle: string;
 
@@ -25,15 +26,16 @@ export const shortenTitleHandler = (currentProductTitle: string) => {
 };
 
 const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
+  const { curProduct } = props;
   const dispatch = useDispatch();
   const [readonlyStatus, setReadonlyStatus] = useState(true);
+
   const dropdownStatus = useSelector(
     (state: AppRootState) => state.cartLogic.dropdownOpenStatus
   );
   const cartItems = useSelector(
     (state: AppRootState) => state.cartLogic.cartItems
   );
-  const { curProduct } = props;
 
   const isLoggedIn = useSelector(
     (state: AppRootState) => state.userRating.isLoggedIn
@@ -64,36 +66,40 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
       onClick={dropdownCloseHandler}
     >
       <Header />
-      <div className={styles["product-detail__info"]}>
-        <div className={styles["product-picture__leftbox"]}>
-          <div className={styles["product-picture__box"]}>
-            <ReactMagnify img={curProduct.product_main_image_url} />
-          </div>
-          <div className={styles["product-picture__rating"]}>
-            <p>Rate this product:</p>
-            <div
-              className={`${
-                !readonlyStatus
-                  ? styles["star-rating"]
-                  : styles["star-rating__center"]
-              }`}
-            >
-              <StarRating
-                readonlyStatus={readonlyStatus}
-                starRatingVal={"0"}
-                curProduct={curProduct}
-              />
+      <div className={styles["product-detail__container"]}>
+        <div className={styles["product-detail__info"]}>
+          <div className={styles["product-picture__leftbox"]}>
+            <div className={styles["product-picture__box"]}>
+              <ReactMagnify img={curProduct.product_main_image_url} />
+            </div>
+            <div className={styles["product-picture__rating"]}>
+              <p>Rate this product:</p>
+              <div
+                className={`${
+                  !readonlyStatus
+                    ? styles["star-rating"]
+                    : styles["star-rating__center"]
+                }`}
+              >
+                <StarRating
+                  readonlyStatus={readonlyStatus}
+                  starRatingVal={"0"}
+                  curProduct={curProduct}
+                />
+              </div>
             </div>
           </div>
+          <ProductDescription
+            currentProduct={curProduct}
+            smallTitle={smallTitle}
+            starRatingVal={curProduct.evaluate_rate}
+          />
+          <ProductAddToCart {...{ curProduct }} />
         </div>
-        <ProductDescription
-          currentProduct={curProduct}
-          smallTitle={smallTitle}
-          starRatingVal={curProduct.evaluate_rate}
-        />
-        <ProductAddToCart {...{ curProduct }} />
+        <div className={styles["user-reviews"]}>
+          <ProductRating curProduct={curProduct} />
+        </div>
       </div>
-      <div className={styles["user-reviews"]}></div>
     </section>
   );
 };

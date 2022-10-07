@@ -15,15 +15,14 @@
     padding: 2rem 1rem;
     background-clip: content-box;
     display: grid;
-
     grid-template-columns: minmax(60rem, 1fr) 35rem;
-    background-color: scss.$default-white;
   }
 
   &-item {
     &__container {
       position: relative;
       padding: 2rem 1rem;
+      background-color: scss.$default-white;
     }
 
     &__title {
@@ -56,6 +55,7 @@
       @extend %backgroundClip;
       display: flex;
       flex-direction: column;
+      height: max-content;
     }
 
     &__price {
@@ -80,6 +80,7 @@
 
   &-recently__viewed {
     padding: 2rem 0;
+
     @extend %backgroundClip;
 
     &--container {

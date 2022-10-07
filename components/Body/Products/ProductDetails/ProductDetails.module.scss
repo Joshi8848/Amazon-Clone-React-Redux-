@@ -5,12 +5,15 @@
     width: min-content;
     min-height: 100vh;
 
-    &__info {
-      min-height: 40rem;
+    &__container {
+      padding: 3rem 4rem;
       max-width: 160rem;
       margin: 0 auto;
+    }
+
+    &__info {
       background-color: scss.$default-white;
-      padding: 3rem 4rem;
+
       @include scss.displayGrid(initial, initial, 2rem) {
         grid-template-columns: minmax(30rem, 35rem) minmax(60rem, 55%) 320px;
       }

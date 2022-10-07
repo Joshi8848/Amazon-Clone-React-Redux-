@@ -10,7 +10,8 @@ import { productKey } from "../../../pages/[products]";
 let currentElId: string;
 let randomNumbersArr: number[] = [];
 let suggestionProductsArr: ProductsInfoObj[] = [];
-let firstCartItemPath: String = "";
+let firstCartItemPath: string = "";
+let currentMainPath: string = "";
 
 const CartLogic = () => {
   const [dropdownOpenStatus, setDropdownOpenStatus] = useState(false);
@@ -34,6 +35,7 @@ const CartLogic = () => {
     if (firstCartItemPath !== "" && firstCartItemPath === cartItems[0].mainPath)
       return;
     firstCartItemPath = cartItems[0].mainPath;
+    currentMainPath = firstCartItemPath;
     randomNumbersArr = [];
     suggestionProductsArr = [];
     while (true) {
@@ -73,6 +75,7 @@ const CartLogic = () => {
         currentElId,
         dropdownOpenStatus,
         suggestionProductsArr,
+        currentMainPath,
       }}
     />
   );

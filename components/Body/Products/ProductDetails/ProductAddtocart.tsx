@@ -1,13 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { ProductsInfoObj } from "../../../../pages/[products]";
-import { useRouter } from "next/router";
+import { NextRouter, Router, useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { cartItemsAction } from "../../../store/cartLogicSlice";
 import { AppRootState } from "../../../store";
 import ProductaddtoCartLayout from "./ProductAddToCartLayout";
-import { productObj } from "../../../../pages/[products]";
-import { suggestionsAction } from "../../../store/suggestions";
-import { productKey } from "../../../../pages/[products]";
+
+export function addToCartLogicHandler(
+  curProduct: ProductsInfoObj,
+  currentQuantity: string,
+  path: string
+) {
+  const currentProductPrice = curProduct.original_price;
+  const priceRemoveDollarSign = currentProductPrice.slice(
+    1,
+    currentProductPrice.length
+  );
+  const totalPrice =
+    parseFloat(currentQuantity) * parseFloat(priceRemoveDollarSign);
+  const itemQuantityObj = {
+    item: curProduct,
+    quantity: parseInt(currentQuantity),
+    totalPrice,
+    mainPath: path,
+  };
+  return itemQuantityObj;
+}
 
 const ProductAddToCart: React.FC<{
   curProduct: ProductsInfoObj;
@@ -23,10 +41,6 @@ const ProductAddToCart: React.FC<{
     (state: AppRootState) => state.userRating.isLoggedIn
   );
 
-  const cartItems = useSelector(
-    (state: AppRootState) => state.cartLogic.cartItems
-  );
-
   const [currentQuantity, setCurrentQuantity] = useState("1");
 
   useEffect(() => {
@@ -34,6 +48,7 @@ const ProductAddToCart: React.FC<{
       dispatch(cartItemsAction.toggleMaxValueExceed());
     }
   }, [pathname]);
+
   const productQuantityChangeHandler = (itemQuantity: string) => {
     setCurrentQuantity(itemQuantity);
   };
@@ -43,30 +58,12 @@ const ProductAddToCart: React.FC<{
       router.push("/login");
       return;
     }
-    const currentProductPrice = curProduct.original_price;
-    const priceRemoveDollarSign = currentProductPrice.slice(
-      1,
-      currentProductPrice.length
+    const itemQuantityObj = addToCartLogicHandler(
+      curProduct,
+      currentQuantity,
+      router.query.products as string
     );
-    const totalPrice =
-      parseFloat(currentQuantity) * parseFloat(priceRemoveDollarSign);
-    const itemQuantityObj = {
-      item: curProduct,
-      quantity: parseInt(currentQuantity),
-      totalPrice,
-      mainPath: router.query.products as string,
-    };
     dispatch(cartItemsAction.addItemsToCart(itemQuantityObj));
-    if (cartItems.length === 0) {
-      const productPath = router.query.products as productKey["title"];
-      const productObject = productObj[productPath] as ProductsInfoObj[];
-      dispatch(suggestionsAction.addSuggestedItems(productObject));
-    } else {
-      const productPath = cartItems[0].mainPath as productKey["title"];
-      const suggestionObj = productObj[productPath] as ProductsInfoObj[];
-      console.log(suggestionObj);
-      dispatch(suggestionsAction.addSuggestedItems(suggestionObj));
-    }
   };
 
   return (

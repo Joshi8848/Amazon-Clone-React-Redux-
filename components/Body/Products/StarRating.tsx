@@ -70,8 +70,9 @@ const StarRating: React.FC<{
   };
 
   return (
-    <div className={styles["star__rating"]}>
+    <div className={styles["stars__rating"]}>
       <Rating
+        className={styles["stars"]}
         style={{ margin: "1rem 0" }}
         emptyColor={"gray"}
         showTooltip={readonlyStatus ? false : true}

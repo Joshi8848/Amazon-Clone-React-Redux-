@@ -13,6 +13,7 @@ interface CartLayoutProps {
   currentElId: string;
   dropdownOpenStatus: boolean;
   suggestionProductsArr: ProductsInfoObj[];
+  currentMainPath: string;
 }
 
 let hasSuggestions: boolean = false;
@@ -24,6 +25,7 @@ const CartLayout: React.FC<CartLayoutProps> = (props) => {
     currentElId,
     dropdownOpenStatus,
     suggestionProductsArr,
+    currentMainPath,
   } = props;
 
   hasSuggestions = suggestionProductsArr.length > 0;
@@ -79,7 +81,12 @@ const CartLayout: React.FC<CartLayoutProps> = (props) => {
               <h5>You might like</h5>
               {hasSuggestions &&
                 suggestionProductsArr.map((product) => {
-                  return <RecentlyViewed products={product} />;
+                  return (
+                    <RecentlyViewed
+                      products={product}
+                      mainPath={currentMainPath}
+                    />
+                  );
                 })}
             </div>
           </div>
