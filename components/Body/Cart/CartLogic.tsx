@@ -34,6 +34,7 @@ const CartLogic = () => {
     if (recentlyViewedObj.length === 0 || cartItems.length === 0) return;
     if (firstCartItemPath !== "" && firstCartItemPath === cartItems[0].mainPath)
       return;
+    console.log(cartItems[0].mainPath);
     firstCartItemPath = cartItems[0].mainPath;
     currentMainPath = firstCartItemPath;
     randomNumbersArr = [];

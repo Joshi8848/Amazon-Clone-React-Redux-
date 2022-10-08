@@ -4,15 +4,17 @@
   &-detail {
     width: min-content;
     min-height: 100vh;
+    background-color: scss.$color-background-primary;
 
     &__container {
-      padding: 3rem 4rem;
       max-width: 160rem;
       margin: 0 auto;
+      background-color: scss.$default-white;
     }
 
     &__info {
       background-color: scss.$default-white;
+      padding: 3rem 4rem;
 
       @include scss.displayGrid(initial, initial, 2rem) {
         grid-template-columns: minmax(30rem, 35rem) minmax(60rem, 55%) 320px;
@@ -53,6 +55,7 @@
         display: flex;
         justify-content: center;
         text-decoration: underline;
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -64,5 +67,20 @@
   &__center {
     display: flex;
     justify-content: center;
+  }
+}
+
+.user-reviews {
+  margin-top: 3rem;
+  padding-top: 4rem;
+  background-image: linear-gradient(white 0%, white 100%),
+    linear-gradient(#eee 0%, #eee 100%);
+  background-clip: content-box, padding-box;
+
+  &__container {
+    padding: 3rem 4rem;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: max-content minmax(30rem, 1fr);
   }
 }

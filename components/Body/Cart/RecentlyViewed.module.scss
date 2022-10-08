@@ -2,19 +2,23 @@
 
 .recently-viewed__item {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 
   &:not(:last-child) {
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   &--img {
-    width: 12rem;
-    height: 9rem;
-
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
     &-box {
       cursor: pointer;
+      width: 13rem;
+      height: 11rem;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -45,7 +49,7 @@
   }
 
   &--rating {
-    margin-top: -1.5rem;
+    margin-top: -1rem;
   }
 
   &--btn {

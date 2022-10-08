@@ -1,1 +1,25 @@
+@use "../../../../styles/scss";
 
+.product-comment {
+  justify-self: center;
+  padding: 0.5rem 15rem 0 0rem;
+
+  & h4 {
+    font-size: 2.5rem;
+    font-weight: scss.$font-weight-medium;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__input {
+    resize: none;
+    padding: 1rem;
+    font-size: 2rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid orange;
+      box-shadow: 0 0 4px 2px rgba(192, 127, 53, 1);
+    }
+  }
+}

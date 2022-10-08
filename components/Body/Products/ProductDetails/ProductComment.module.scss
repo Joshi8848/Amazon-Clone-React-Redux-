@@ -1,0 +1,63 @@
+@use "../../../../styles/scss";
+
+.product-comment {
+  width: 60rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: scss.$font-size-default;
+    padding-bottom: 1rem;
+  }
+  &__icon {
+    font-size: 3rem;
+  }
+  &__location {
+    font-size: 1.6rem;
+    padding: 0.3rem 0 0.5rem 0;
+  }
+  &__verified {
+    color: #c45500;
+    font-weight: scss.$font-weight-medium;
+    font-size: 1.3rem;
+  }
+  &__comment {
+    padding-top: 1rem;
+    font-size: 1.8rem;
+  }
+  &__useful {
+    color: #565959;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+  }
+  &__review {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 2rem;
+
+    & button {
+      @include scss.buttons;
+      border: 1px solid rgb(185, 184, 184);
+      font-size: 1.5rem;
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgb(226, 225, 225);
+      }
+    }
+
+    & span {
+      padding-left: 2rem;
+      font-size: 1.6rem;
+      color: #565959;
+      cursor: pointer;
+      border-left: 1px solid gray;
+    }
+  }
+}

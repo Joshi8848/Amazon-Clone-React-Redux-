@@ -10,6 +10,8 @@ import { cartItemsAction } from "../../../store/cartLogicSlice";
 import { AppRootState } from "../../../store";
 import { useEffect, useState } from "react";
 import ProductRating from "./ProductRating";
+import ProductReview from "./ProductReview";
+import ProductComment from "./ProductComment";
 
 let smallTitle: string;
 
@@ -97,7 +99,11 @@ const ProductDetails: React.FC<{ curProduct: ProductsInfoObj }> = (props) => {
           <ProductAddToCart {...{ curProduct }} />
         </div>
         <div className={styles["user-reviews"]}>
-          <ProductRating curProduct={curProduct} />
+          <div className={styles["user-reviews__container"]}>
+            <ProductRating curProduct={curProduct} />
+            <ProductReview />
+          </div>
+          <ProductComment />
         </div>
       </div>
     </section>
