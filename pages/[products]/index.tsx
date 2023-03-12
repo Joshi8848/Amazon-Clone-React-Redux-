@@ -12,11 +12,8 @@ import Pets from "../../JSON/Pets.json";
 import VideoGames from "../../JSON/VideoGames.json";
 import WomensFashion from "../../JSON/WomensFashion.json";
 import ProductPage from "../../components/Body/Products/ProductCategory/ProductPage";
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import Backdrop from "../../components/modal/Backdrop";
-import { useDispatch, useSelector } from "react-redux";
-import { AppRootState } from "../../components/store";
-import { suggestionsAction } from "../../components/store/suggestions";
 
 export interface productKey {
   title:
